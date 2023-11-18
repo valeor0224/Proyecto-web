@@ -1,0 +1,44 @@
+.Contenedor-Ayuda {
+    min-height: 900px;
+    position: relative;
+    background: url('../../../assets/img/gato-header.png'), lightgray 50% / cover no-repeat;  
+    background-size: cover;
+    overflow: hidden;
+    justify-content: right;
+}
+
+
+
+.Contenedor-Ayuda :first-child{
+    font-family: var(--titles-font);
+    padding: 25px;
+    font-size: xx-large;
+    font-weight: bold; 
+    background-color: transparent;
+}
+
+.Contenedor-Ayuda :nth-child(2){
+    font-family: var(--info-font);
+    padding: 25px;
+    background-color: transparent;
+}
+
+
+
+.Contenedor-Ayuda button {
+    padding: 0.9rem 1.75rem;
+    background-color: var(--pink);
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    margin-right: 2rem; 
+    max-width: 200px;
+    margin-top: 25px;
+}
+
+

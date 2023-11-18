@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+
+:root {
+    --pink: #EA526F; 
+    --blue: #5BD5E4;
+    --green: #79B299;
+    --white: #FFFFFF;
+    --dark-gray: #585B56;
+    --black: #0000;
+    --titles-font: Brawler;
+    --info-font: 'Asap Condensed', sans-serif;
+    --button-border: 0.8rem;
+}
+
+.app{
+    min-height: 95.5vh;
+    justify-content: center;
+    
+  }

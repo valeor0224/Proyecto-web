@@ -1,0 +1,27 @@
+.contenedor-mision{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    min-height: 750px;
+    align-items: center;
+    padding: 3rem;
+}
+
+.contenedor-mision {
+     
+}
+
+.columns-mision{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    
+   
+}
+
+.column-mision{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+}

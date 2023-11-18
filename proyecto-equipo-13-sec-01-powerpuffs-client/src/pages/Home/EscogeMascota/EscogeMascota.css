@@ -1,0 +1,47 @@
+.contenedor-escoger{
+    display: flex;
+    flex-direction: column;
+    min-height: 850px;
+    gap: 200px;
+
+}
+
+.Texto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+    
+
+}
+
+.Texto :first-child{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: var(--titles-font);
+}
+
+.Texto :last-child{
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+}
+
+.Mas-Info{
+    background-color: var(--blue);
+    justify-content: center;
+
+}
+
+.Mas-Info button{
+    background-color:var(--pink);
+    border-radius: var(--button-border);
+    color: var(--white);
+    border: none;
+    min-height: 3.5rem;
+    font-family: var(--info-font);
+    cursor: pointer;
+}
+
+
