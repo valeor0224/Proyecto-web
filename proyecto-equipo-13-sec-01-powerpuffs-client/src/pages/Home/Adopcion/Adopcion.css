@@ -3,6 +3,7 @@
     min-height: 750px;
     display: flex;
     flex-direction: column;
+    padding: 5rem ;
 }
 
 .texto-adopcion{
