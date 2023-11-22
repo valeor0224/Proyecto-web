@@ -15,7 +15,7 @@ import locationLogo from "../../assets/img/location.png";
             <span>Nom evento</span>
             <div className='ubicacion'>
             <img src={locationLogo} alt="location" />
-                <span>Santa Tecla, San Salvador</span>
+                <span>San Salvador, San Salvador</span>
             </div>
             <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. nobis exercitationem.</span>
 

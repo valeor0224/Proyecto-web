@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <div className="navbar-links-container">
         <a href="/">INICIO</a>
-        <a href="/adopt">ADOPTA</a>
+        <a href="/Adopta">ADOPTA</a>
         <a href="/events">EVENTOS</a>
         <a href="/news">NOTICIAS</a>
         <a href="/adopt-forms">FORMAS DE AYUDAR</a>

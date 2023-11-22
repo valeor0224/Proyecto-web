@@ -13,9 +13,7 @@ function Home() {
   //const [someState, setSomeState] = useState(initialValue);
 
   return (
-    <>
-      <BrowserRouter>
-        <Header />
+    <>  
         <div className="Home">
           <HeaderContainer />
           <EscogeMascota />
@@ -24,8 +22,7 @@ function Home() {
           <Adopcion />
           <Eventos />
         </div>
-      </BrowserRouter>
-      <Footer />
+     
     </>
   );
 }

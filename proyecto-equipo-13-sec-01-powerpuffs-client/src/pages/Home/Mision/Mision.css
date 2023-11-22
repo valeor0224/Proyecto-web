@@ -1,27 +1,43 @@
-.contenedor-mision{
+.contenedor-mision {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
     min-height: 750px;
     align-items: center;
-    padding: 3rem;
+    padding: 5rem 10rem 5rem 10rem;
+    gap: 3rem
 }
 
-.contenedor-mision {
-     
+.mision-title{
+    font-family: var(--titles-font);
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-size: xx-large;
+
 }
 
-.columns-mision{
+.columns-mision {
     display: flex;
     flex-direction: row;
-    text-align: center;
-    
-   
+    justify-content: center; /* Center the content horizontally */
 }
 
-.column-mision{
+.mision-subtitulo{
+    color: var(--pink);
+    margin: auto;
+    font-size: larger;
+}
+
+.column-mision {
     display: flex;
     flex-direction: column;
     font-family: var(--info-font);
     color: var(--dark-gray);
+    margin: 0 20px; /* Add margin for spacing between columns */
+    padding: 3rem;
+    justify-content: center;
+}
+
+.mision-parrafo{
+    margin-top: 2rem;
 }
