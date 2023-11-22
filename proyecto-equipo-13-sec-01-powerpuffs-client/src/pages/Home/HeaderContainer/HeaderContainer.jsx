@@ -12,9 +12,9 @@ const HeaderContainer = () => {
           <span>Patitas Seguras</span>
         </div>
 
-        <span>
+        <p>
           Nada se compara con saber que un animalito estará viviendo en un hogar con una familia, con el amor, cuidado y respeto que se merece. Ayúdanos a lograr esto, ¡adopta!
-        </span>
+        </p>
 
         <button>ADOPTAR</button>
 
