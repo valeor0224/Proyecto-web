@@ -1,0 +1,72 @@
+.eventos-card-container {
+    height: 250px;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-gray);
+    border-radius: 37.99px 37.99px 37.99px 37.99px;
+}
+
+
+.cuadro-fecha {
+    background-color: var(--blue);
+    width: 30%;
+    border-radius: 37.99px 37.99px 0px 37.99px;
+    font-family: var(--title-font);
+    color: var(--dark-gray);
+    font-size: xxx-large;
+    text-align: center;
+    font-weight: 620;
+    padding: 4rem 2.5rem;
+
+}
+
+.cuadro-fecha span {
+    background-color: transparent;
+
+}
+
+.cuadro-informacion {
+    background-color: var(--dark-gray);
+    border-radius: 0 37.99px 37.99px 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    font-family: var(--info-font);
+    color: var(--white);
+    padding-left: 1rem; 
+    padding-right: 1rem;   
+    line-height: 1.5;
+
+
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    margin: 0.5rem;
+
+}
+
+.ubicacion img {
+    background-color: transparent;
+    max-height: 30px;
+}
+
+.cuadro-informacion span {
+    background-color: transparent;
+}
+
+.cuadro-informacion button {
+    background-color: var(--pink);
+    border: none;
+    border-radius: var(--button-border);
+    cursor: pointer;
+    width: 11.68194rem;
+    height: 3.51406rem; 
+    color: var(--white);
+    padding: 0.5rem;
+    margin-top: 1rem;
+}

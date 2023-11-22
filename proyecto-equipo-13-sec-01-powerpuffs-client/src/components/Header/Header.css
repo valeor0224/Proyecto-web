@@ -1,0 +1,116 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  background-color: var(--pink);
+  padding: 1.5rem;
+}
+
+.nav-logo-container {
+  background-color: var(--pink);
+  margin-left: 2rem;
+}
+
+.nav-logo-container img {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: var(--pink);
+  cursor: pointer;
+}
+
+.navbar-links-container {
+  display: flex;
+  background-color: var(--pink);
+  font-family: var(--info-font);
+  align-items: center;
+  z-index: 1; /* Add z-index to ensure the menu is on top */
+}
+
+.navbar-links-container a {
+  background-color: var(--pink);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: var(--info-font);
+  padding: 20px;
+}
+
+.primary-button {
+  font-family: var(--info-font);
+  padding: 0.9rem 1.75rem;
+  background-color: var(--green);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  order: 2;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar-links-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    background-color: var(--pink);
+    
+    z-index: 2; 
+    
+  }
+
+  .navbar-links-container a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    padding: 20px;
+    font-weight: 600;
+    order: 1;
+  }
+
+  .navbar-links-container button {
+    
+    width: 100%;
+    text-align: center;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    border-radius: 0;
+    padding: 20px;
+    
+    font-weight: 600;
+    order: 0;
+  }
+
+  .navbar-links-container.show {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    z-index: 3; 
+  }
+}
+  
+  

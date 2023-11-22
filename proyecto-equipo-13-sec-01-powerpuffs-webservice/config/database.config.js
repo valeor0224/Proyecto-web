@@ -1,3 +1,4 @@
+
 const debug = require('debug')('app:databaseweb');
 const mongoose = require('mongoose');
 
@@ -17,6 +18,7 @@ const connect = async () => {
 Disconnect to database method
 */
 const disconnect = async () => {
+
   try {
     await mongoose.disconnect();
     debug("Connection to database end");
@@ -29,3 +31,4 @@ module.exports = {
   connect,
   disconnect
 };
+
