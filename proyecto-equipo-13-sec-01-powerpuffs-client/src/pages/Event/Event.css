@@ -1,0 +1,6 @@
+.Event-title{
+    padding: 10px;
+    text-align: center;
+    font-family: var(--titles-font);
+    color: var(--dark-gray);
+}
