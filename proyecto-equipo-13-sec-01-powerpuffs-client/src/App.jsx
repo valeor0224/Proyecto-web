@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
@@ -17,4 +16,6 @@ function App() {
     </BrowserRouter>
     
   );
-export default App
+}
+
+export default App;
