@@ -1,6 +1,6 @@
 .eventos-card-container {
     height: 250px;
-    width: 650px;
+    width: 550px;
     display: flex;
     flex-direction: row;
     background-color: var(--dark-gray);

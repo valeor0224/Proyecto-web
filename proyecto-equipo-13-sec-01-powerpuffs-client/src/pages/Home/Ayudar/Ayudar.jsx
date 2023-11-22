@@ -8,8 +8,8 @@ const Ayudar = () => {
         <div className='Contenedor-Ayuda'>
 
 
-            <span>¡Conviértete en patrocinador del refugio!</span>
-            <span>
+            <span className='Contenedor-Ayuda-title'>¡Conviértete en patrocinador del refugio!</span>
+            <span className='Contenedor-Ayuda-subtitle'>
                 ¿No puedes adoptar ninguna mascota, pero aún quieres ayudar al refugio? También puedes brindarnos tu ayuda económicamente.
             </span>
 

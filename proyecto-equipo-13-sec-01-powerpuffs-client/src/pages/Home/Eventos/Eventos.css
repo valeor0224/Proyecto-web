@@ -1,5 +1,56 @@
-.eventos-container {
-    min-height: 750px;
-
+.staircase-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem;
+  height: auto;
 }
 
+.card {
+  width: 100%;
+  padding: auto;
+  border: none;
+  
+  text-align: left;
+}
+
+/* Target specific cards using :nth-child */
+.card:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card:nth-child(3) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.eventos-home-info {
+  display: flex;
+  flex-direction: column;  
+  margin-left: 20px; /* Adjust the margin as needed */
+  padding-bottom: 5rem;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 3;
+  text-align: left;
+}
+
+.eventos-home-title{
+  color: var(--pink);
+  font-family: var(--titles-font);
+  font-size: xx-large;
+}
+
+.eventos-home-text{
+  color: var(--dark-gray);
+  font-family: var(--info-font);
+  width: 300px;
+}
