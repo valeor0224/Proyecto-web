@@ -56,7 +56,7 @@ function EventContainer({ events }) {
         <div className="event2-container">
             <div className="event-filter-container">
                 <div className="event-filter-txt" >
-                    <img src="/src/assets/img/Vector.png" alt="Filter-icon" onClick={toggleFilterVisibility}/>
+                    <img id="filter-icon" src="/src/assets/img/Vector.png" alt="Filter-icon" onClick={toggleFilterVisibility}/>
                     <h2>Refina tu búsqueda para encontrar eventos que se adapten a tus preferencias.</h2>
                 </div>
                 {isFilterVisible && (
