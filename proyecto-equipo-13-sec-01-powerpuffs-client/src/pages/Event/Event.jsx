@@ -1,5 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import './Event.css'
 import EventCalendar from './EventCalendar/EventCalendar';
 import EventCarrousel from './EventCarrousel/EventCarrousel';
@@ -23,7 +21,7 @@ function Event() {
   return (
     <>  
         <div className="Event">
-          <h1 className="Event-title">EVENTOS</h1>
+          <h1 className="Event-title">Eventos</h1>
           <EventCarrousel events={events}/>
           <EventContainer events={events}/>
           <EventCalendar/>
