@@ -110,6 +110,7 @@ function EventContainer({ events }) {
                         viewType={event.viewType}
                         eventImage={event.eventImage}
                         eventType={event.eventType}
+                        eventHour={event.eventHour}
                     />
                 ))}
                 {filteredEvents.length > visibleCardCount && (
@@ -119,7 +120,7 @@ function EventContainer({ events }) {
                 )}
                 {filteredEvents.length === 0 && (
                     <div className="no-result">
-                        <p>Sin resultados encontrados.</p>
+                        <p>Sin resultados.</p>
                     </div>
                 )}
             </div>
