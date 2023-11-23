@@ -1,0 +1,336 @@
+.article-view .cuadro-informacion button:hover{
+  
+    color: var(--pink-hover);
+    
+}
+.news-view .cuadro-informacion button:hover{
+  
+    color: var(--pink-hover);
+    
+}
+
+.article-view .news-card-container {
+    height: auto;
+    width: 390px;
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--green);
+    border-radius: 37.99px 37.99px 37.99px 37.99px;
+
+    margin-bottom: 10px;
+}
+
+.article-view .cont-izquierdo{
+    display: none;
+    width: 40%;
+    border-radius: 36.90px 0px 36.90px 36.90px;
+}
+
+.article-view .img-cont-hidden {
+    display: none;
+    background-color: transparent;
+}
+
+.article-view  .cuadro-informacion {
+    font-family: var(--info-font);
+    background-color: var(--green);
+    color: var(--white); 
+
+
+    border-radius:37.99px ;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem; 
+
+    line-height: 1.5;
+}
+
+.article-view .titulo-noticia {
+    background-color: transparent;
+
+    margin-top: 0.13rem;
+    margin-bottom: 0.2rem;
+}
+
+.article-view .titulo-noticia h1 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--titles-font);
+    font-size: 1.6rem;
+}
+
+.article-view .fecha-y-tipo{
+    display: flex;
+    flex-direction: row;
+
+    background-color: transparent;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.article-view .cuadro-fecha {
+    background-color: transparent;
+    
+    width: 120px;
+    height: 35px;
+    text-align: left;
+
+    align-items: center;
+}
+
+.article-view  .cuadro-fecha h1 {
+    font-family: var(--info-font);
+    color: var(--white);
+    font-size: 1.0rem;
+
+    background-color: transparent;
+    width: auto; 
+    padding: 5px 0px;
+}
+
+.article-view .tipo-noticia {
+    background-color: var(--pink);
+    border-radius: 37.99px;
+    
+    width: 180px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-view  .tipo-noticia h1 {
+    font-family: var(--info-font);
+    color: var(--white);
+    font-size: 1.0rem;
+
+    background-color: transparent;
+    padding: 3px 10px; 
+    text-align: center;
+}
+
+.article-view .descripcion  {
+    background-color: transparent;
+    width: 95%; 
+    margin-bottom: 5px;
+}
+.article-view .descripcion p {
+    background-color: transparent;
+    
+}
+
+.article-view .cuadro-informacion button {
+    background-color: transparent;
+    font-family: var(--info-font);
+    color: var(--pink);
+
+    text-decoration: underline;
+    text-align: left;
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+    width: 80px;
+    height: 35px; 
+
+    padding-bottom: 0.15rem;
+}
+
+.article-view .ubicacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+
+}
+
+.article-view  .ubicacion img {
+    background-color: transparent;
+    max-height: 30px;
+}
+
+.article-view  .ubicacion p {
+    background-color: transparent;
+    color: var(--white);
+}
+
+
+ /*###############################################################*/ 
+
+.news-view{
+    width: 450px;
+}
+
+
+.news-view .news-card-container {
+    height: auto;
+    width: 600px;
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--green);
+    border-radius: 37.99px 37.99px 37.99px 37.99px;
+
+    margin-bottom: 10px;
+}
+
+.news-view .cont-izquierdo{
+    width: 35%;
+    border-radius: 36.90px 0px 36.90px 36.90px;
+}
+
+.img-cont-visible {
+    border-radius: 36.90px 0px 36.90px 36.90px;
+    background-color: var(--green);
+    height: 100%;
+}
+
+.news-view .cuadro-informacion {
+    font-family: var(--info-font);
+    background-color: var(--green);
+    color: var(--white); 
+
+
+    border-radius:37.99px ;
+
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem; 
+
+    line-height: 1.5;
+}
+
+.news-view .titulo-noticia {
+    background-color: transparent;
+
+    margin-top: 0.13rem;
+    margin-bottom: 0.2rem;
+}
+
+.news-view .titulo-noticia h1 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--titles-font);
+    font-size: 1.6rem;
+}
+
+.news-view .fecha-y-tipo{
+    display: flex;
+    flex-direction: row;
+
+    background-color: transparent;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.news-view .cuadro-fecha {
+    background-color: transparent;
+    
+    width: 120px;
+    height: 35px;
+    text-align: left;
+
+    align-items: center;
+}
+
+.news-view  .cuadro-fecha h1 {
+    font-family: var(--info-font);
+    color: var(--white);
+    font-size: 1.0rem;
+
+    background-color: transparent;
+    width: auto; 
+    padding: 5px 0px;
+}
+
+.news-view .tipo-noticia {
+    background-color: var(--pink);
+    border-radius: 37.99px;
+    
+    width: 180px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-view  .tipo-noticia h1 {
+    font-family: var(--info-font);
+    color: var(--white);
+    font-size: 1.0rem;
+
+    background-color: transparent;
+    padding: 3px 10px; 
+    text-align: center;
+}
+
+.news-view .descripcion  {
+    background-color: transparent;
+    width: 95%; 
+    margin-bottom: 5px;
+}
+.news-view .descripcion p {
+    background-color: transparent;
+    
+}
+
+.news-view  .cuadro-informacion button {
+    background-color: transparent;
+    font-family: var(--info-font);
+    color: var(--pink);
+
+    text-decoration: underline;
+    text-align: left;
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+    width: 80px;
+    height: 35px; 
+
+    padding-bottom: 0.15rem;
+}
+
+.news-view  .ubicacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    margin: 0;
+
+}
+
+.news-view .ubicacion img {
+    background-color: transparent;
+    max-height: 30px;
+}
+
+.news-view .ubicacion p {
+    background-color: transparent;
+    color: var(--white);
+}
+
+
+
+@media (max-width: 1024px){
+    
+}

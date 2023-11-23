@@ -23,6 +23,7 @@ function Home() {
           <Ayudar />
           <Adopcion />
           <Eventos events={events}/>
+
         </div>
      
     </>
