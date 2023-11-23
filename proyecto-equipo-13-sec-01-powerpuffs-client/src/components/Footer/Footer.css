@@ -166,6 +166,16 @@
 
 @media (max-width: 924px){
 
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        align-self: center;
+    }
+
     .footer-top {
         display: flex;
         flex-direction: column;
@@ -174,7 +184,6 @@
         height: auto;
 
         align-self: center;
-        margin-left: 8%;
     }
 
 }

@@ -21,6 +21,7 @@ const Eventos = ({ events }) => {
             buttonText={event.buttonText}
             viewType="home"
             eventImage={event.eventImage}
+            eventHour={event.eventHour}
           />
         ))}
 

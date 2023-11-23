@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './EventosCard.css';
 import locationLogo from "../../../assets/img/location.png";
 
-const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType }) => {
+const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour }) => {
   const isHomeView = viewType === 'home';
 
 
@@ -18,7 +18,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
 
   const maxDescriptionLength = isHomeView ? 40 : 90;
 
-  
+
   const handleButtonClick = () => {
     const encodedEventName = encodeURIComponent(eventName);
     const encodedLocation = encodeURIComponent(location);
@@ -26,9 +26,11 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
     const encodedEventImage = encodeURIComponent(eventImage);
     const encodedFullDate = encodeURIComponent(`${getMonthAbbreviation(month)} ${day}, ${year}`);
     const encodedEventType = encodeURIComponent(eventType);
+    const encodedEventHour = encodeURIComponent(eventHour); 
 
-    navigate(`/EventArticle/${encodedEventName}/${encodedLocation}/${encodedDescription}/${encodedEventImage}/${encodedFullDate}/${encodedEventType}`);
+    navigate(`/EventArticle/${encodedEventName}/${encodedLocation}/${encodedDescription}/${encodedEventImage}/${encodedFullDate}/${encodedEventType}/${encodedEventHour}`); // Update the URL
   };
+
 
   const truncatedDescription = description.length > maxDescriptionLength
     ? `${description.substring(0, maxDescriptionLength)}...`
@@ -41,14 +43,15 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
       <div className='eventos-card-container'>
 
         <div className='cont-superior'>
-        <div className='cuadro-fecha'>
-          <h1>{`${day} ${getMonthAbbreviation(month)}`}</h1>
-          <span className='sr-only'>{year}</span>
-        </div>
+          <div className='cuadro-fecha'>
+            <h1>{`${day} ${getMonthAbbreviation(month)}`}</h1>
+            <span className='sr-only'>{year}</span>
+            <span className='sr-only'>{eventHour}</span>
+          </div>
 
-        <div className={`img-cont ${isHomeView ? 'img-cont-hidden' : 'img-cont-visible'}`}>
-          <img src={eventImage} alt="event-img" />
-        </div>
+          <div className={`img-cont ${isHomeView ? 'img-cont-hidden' : 'img-cont-visible'}`}>
+            <img src={eventImage} alt="event-img" />
+          </div>
         </div>
 
         <div className='cuadro-informacion'>
@@ -64,6 +67,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
           <div className='descripcion'>
             <p>{truncatedDescription}</p>
           </div>
+          
 
           <button className='mas-info' onClick={handleButtonClick}>
             MÁS INFORMACIÓN
