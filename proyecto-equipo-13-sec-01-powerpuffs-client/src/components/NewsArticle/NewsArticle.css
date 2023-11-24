@@ -1,0 +1,10 @@
+.fecha-compartir{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: self-start;
+
+    margin-top: -10px;
+
+}

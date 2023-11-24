@@ -13,7 +13,7 @@ const NewsContainer = ({ news }) => {
 
     const [filteredNews, setFilteredNews] = useState(news);
     const [isFilterVisible, setFilterVisibility] = useState(true);
-    const [visibleCardCount, setVisibleCardCount] = useState(4);
+    const [visibleCardCount, setVisibleCardCount] = useState(3);
 
     const handleFilterChange = (filterName, value) => {
         setFilters({
@@ -32,7 +32,7 @@ const NewsContainer = ({ news }) => {
         });
 
         setFilteredNews(newFilteredNews);
-        setVisibleCardCount(4);
+        setVisibleCardCount(3);
     };
 
     const handleFilterClear = () => {
@@ -43,7 +43,7 @@ const NewsContainer = ({ news }) => {
         });
 
         setFilteredNews(news);
-        setVisibleCardCount(6);
+        setVisibleCardCount(3);
     };
 
     const toggleFilterVisibility = () => {
@@ -51,7 +51,7 @@ const NewsContainer = ({ news }) => {
     };
 
     const handleViewMore = () => {
-        setVisibleCardCount((prevCount) => prevCount + 2);
+        setVisibleCardCount((prevCount) => prevCount + 1);
     };
 
     return (

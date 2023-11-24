@@ -5,7 +5,7 @@ import './HeaderContainer.css';
 
 const HeaderContainer = () => {
   return (
-    <div className='contenedor-gato'>
+    <div className='contenedor-gato-home'>
       <div className='contenido'>
         <div className="header-logo-container">
           <img src={patitasLogo} alt="Patitas Seguras" />

@@ -6,8 +6,9 @@ import Adopta from './pages/Adopta/Adopta';
 import Event from './pages/Event/Event';
 import EventArticle from './components/EventArticle/EventArticle.jsx';
 import News from './pages/News/News.jsx';
+import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
 
-import { events } from '../src/components/initial-data.js';
+import { events, news } from '../src/components/initial-data.js';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           element={<EventArticle events={events}/>}
         />
         <Route path="News" element={<News />} />
+        <Route
+          path="NewsArticle/:newsTitle/:location/:description/:newsImage/:fullDate/:newsType"
+          element={<NewsArticle news={news}/>}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
