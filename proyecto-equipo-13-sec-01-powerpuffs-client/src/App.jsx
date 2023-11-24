@@ -7,6 +7,7 @@ import Event from './pages/Event/Event';
 import EventArticle from './components/EventArticle/EventArticle.jsx';
 import News from './pages/News/News.jsx';
 import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
+import Login from './pages/Login/Login.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 
@@ -27,6 +28,7 @@ function App() {
           path="NewsArticle/:newsTitle/:location/:description/:newsImage/:fullDate/:newsType"
           element={<NewsArticle news={news}/>}
         />
+        <Route path="Login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
