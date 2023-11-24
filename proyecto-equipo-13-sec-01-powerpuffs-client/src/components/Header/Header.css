@@ -41,7 +41,11 @@ nav {
   font-size: 1rem;
   font-weight: 100;
   font-family: var(--info-font);
-  padding: 20px;
+  padding: 20px 10px;
+}
+
+.sign-out-button{
+  display: none;
 }
 
 .primary-button {
@@ -66,6 +70,89 @@ nav {
   display: none;
 }
 
+.user-profile-container {
+  position: relative;
+  background-color: var(--pink);
+  border: none;
+}
+
+.user-profile-container p {
+  display: none;
+}
+
+.user-profile-container button {
+  font-family: var(--info-font);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.user-profile-pic {
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.user-profile-pic:hover {
+  transform: scale(0.9);
+}
+
+
+.user-profile-dropdown {
+  position: absolute;
+  top: 155%;
+  right: 0;
+
+  width: 200px;
+  background-color: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: none;
+}
+
+.user-profile-container .user-profile-dropdown {
+  display: block;
+}
+
+.user-profile-dropdown button {
+
+  border-radius:  0.5rem;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.user-profile-dropdown button:hover {
+  background-color: transparent;
+}
+
+.dropdown-cont{
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border-radius:  0.5rem;
+  margin: 0 auto;
+}
+
+.dropdown-cont img{
+  background-color: transparent;
+  padding: 15px;
+}
+
+.dropdown-cont:hover{
+  background-color: var(--dark-gray);
+
+}
+
+
 @media (max-width: 1024px) {
   .navbar-links-container {
     display: none;
@@ -74,9 +161,8 @@ nav {
     top: 110px;
     left: 0;
     width: 100%;
-    background-color: var(--pink);
     
-    z-index: 2; 
+    z-index: 1; 
     
   }
 
@@ -91,17 +177,19 @@ nav {
     border-bottom: 1px white solid;
     padding: 20px;
     font-weight: 600;
-    order: 1;
+    order: 2;
+    
   }
 
-  .navbar-links-container button {
+  .navbar-links-container .user-profile-pic-cont,
+  .navbar-links-container .primary-button {
     
     width: 100%;
     text-align: center;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
     border-radius: 0;
-    padding: 20px;
+    padding: 15px;
     
     font-weight: 600;
     order: 0;
@@ -109,7 +197,38 @@ nav {
 
   .navbar-links-container.show {
     display: flex;
+    z-index: 2; 
   }
+
+  .sign-out-button{
+    background-color: var(--dark-gray);
+    font-family: var(--info-font);
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    text-align: center;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    border-radius: 0;
+    padding: 15px;
+    
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 1.0rem;
+
+    gap: 10px;
+    order: 1;
+  }
+
+  .sign-out-button img{
+    background-color: transparent;
+  }
+
 
   .hamburger-menu {
     display: block;
@@ -122,6 +241,74 @@ nav {
     padding: 1rem;
     z-index: 3; 
   }
+
+  .user-profile-pic-cont {
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-direction: row;
+    border: none;
+
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    width: 100%;
+  }
+
+  .user-profile-pic-cont:hover,
+  .sign-out-button:hover {
+    background-color: gray;
+  }
+  
+  .user-profile-container {
+    align-items: center;
+    background-color: var(--dark-gray);
+    width: 100%;
+  }
+
+ 
+  
+  .user-profile-container p{
+    font-family: var(--info-font);
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 1.0rem;
+    display: block; 
+    margin: 0 auto 0 0;
+  }
+  
+  .user-profile-pic {
+    background-color: transparent;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+
+    margin: 0 0 0 auto;
+  
+    cursor: pointer;
+  }
+  
+  .user-profile-container .user-profile-dropdown {
+    display: none;
+  }
+  
+  .user-profile-dropdown button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .user-profile-dropdown button:hover {
+    background-color: var(--pink);
+  }
+  
 }
   
   

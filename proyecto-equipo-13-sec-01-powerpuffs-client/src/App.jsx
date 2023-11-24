@@ -8,13 +8,14 @@ import EventArticle from './components/EventArticle/EventArticle.jsx';
 import News from './pages/News/News.jsx';
 import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
 import Login from './pages/Login/Login.jsx';
+import AuthService from './services/AuthService';
 
-import { events, news } from '../src/components/initial-data.js';
+import { events, news} from '../src/components/initial-data.js';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <Header user={AuthService.getUser()} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
@@ -28,7 +29,7 @@ function App() {
           path="NewsArticle/:newsTitle/:location/:description/:newsImage/:fullDate/:newsType"
           element={<NewsArticle news={news}/>}
         />
-        <Route path="Login" element={<Login />} />
+        <Route path="Login" element={<Login user={AuthService.getUser()} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

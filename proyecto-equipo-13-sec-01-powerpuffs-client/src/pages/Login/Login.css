@@ -13,6 +13,7 @@
 
     background-size: 28%;
     overflow: hidden;
+
 }
 
 .wpp-cont::before {
@@ -114,6 +115,7 @@
     margin: 1rem auto;
 
     justify-content: center;
+    align-items: center;
     z-index: 1;
 }
 
@@ -132,6 +134,8 @@
     border: none;
     border-radius: var(--button-border);
     z-index: 1;
+
+    order: 1;
 }
 
 .log-in #login-btn:hover{
@@ -146,6 +150,8 @@
 
     gap: 8px;
     z-index: 1;
+
+    order: 2;
 }
 
 .register-btn span{
@@ -168,6 +174,18 @@
     text-decoration: underline;
 }
 
+.error-message {
+    background-color: transparent;
+    font-family: var(--titles-font);
+    color: var(--pink);
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+
+    order: 0;
+}
+
 @media (max-width: 1024px){
 
     .login-container{
@@ -184,6 +202,23 @@
 
         width: 90%;
 
+    }
+
+    .log-in {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        justify-content: center;
+    }
+
+    .log-in #login-btn{
+        
+        font-weight: 600;
+        font-size: 1.4rem;
+    
+        height: 80px;
+        width: 280px;
+        margin-bottom: 0 auto;
     }
     
 
