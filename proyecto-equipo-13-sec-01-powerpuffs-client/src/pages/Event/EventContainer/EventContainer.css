@@ -29,6 +29,7 @@
     font-size: 1.3rem;
     width: 40px;
     cursor: pointer;
+    border-radius: 0px;
 }
 
 .event-filter-txt #filter-icon:hover{
