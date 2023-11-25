@@ -181,6 +181,14 @@ nav {
     
   }
 
+  .admin-links, .moderador-links, .user-other-links{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    order: 3;
+  }
+
   .navbar-links-container .user-profile-pic-cont,
   .navbar-links-container .primary-button {
     
