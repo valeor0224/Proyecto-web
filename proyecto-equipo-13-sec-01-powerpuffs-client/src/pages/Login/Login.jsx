@@ -4,12 +4,14 @@ import './Login.css';
 import Back from '../../assets/img/Back.png';
 import patitasLogoPink from '../../assets/img/pink-logo.png';
 import authService from '../../services/AuthService';
+import { useUserContext } from '../../UserContext';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const { setRole } = useUserContext();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -23,7 +25,14 @@ const Login = () => {
     const isAuthenticated = authService.login(email, password);
 
     if (isAuthenticated) {
-      navigate(-1); // Go back to the previous page
+      const user = authService.getUser();
+      const roleId = user?.roleId || null;
+
+      // Set the user role globally
+      setRole(roleId);
+
+      // Navigate back to the previous page
+      navigate(-1);
     } else {
       setError('Invalid email or password');
     }

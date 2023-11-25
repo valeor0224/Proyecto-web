@@ -197,7 +197,7 @@ export const user = [
         userAddress: "Rpto Metro",
         userDepto: "San Salvador",
         userDescription:"About me.......",
-        userProfilePic: "https://cataas.com/cat",
+        userProfilePic: "https://i0.wp.com/puppis.blog/wp-content/uploads/2022/02/abc-cuidado-de-los-gatos-min.jpg?resize=1024%2C681&ssl=1",
     },
     {
         id: "2",

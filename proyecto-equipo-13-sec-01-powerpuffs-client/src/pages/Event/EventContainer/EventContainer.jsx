@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import './EventContainer.css';
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 
-function EventContainer({ events }) {
+
+function EventContainer({ events, userRole }) {
+    console.log(userRole);
+
     const [filters, setFilters] = useState({
         location: "",
         date: "",
@@ -111,6 +114,7 @@ function EventContainer({ events }) {
                         eventImage={event.eventImage}
                         eventType={event.eventType}
                         eventHour={event.eventHour}
+                        userRole={userRole}
                     />
                 ))}
                 {filteredEvents.length > visibleCardCount && (

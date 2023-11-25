@@ -10,16 +10,20 @@ import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
 import Login from './pages/Login/Login.jsx';
 import AuthService from './services/AuthService';
 
-import { events, news} from '../src/components/initial-data.js';
+import { events, news } from '../src/components/initial-data.js';
+
+import { useUserContext } from './UserContext.jsx';
 
 function App() {
+  const { userRole } = useUserContext();
+
   return (
     <BrowserRouter>
       <Header user={AuthService.getUser()} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
-        <Route path="Event" element={<Event />} />
+        <Route path="Event" element={<Event userRole={userRole}  />} />
         <Route
           path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour"
           element={<EventArticle events={events}/>}

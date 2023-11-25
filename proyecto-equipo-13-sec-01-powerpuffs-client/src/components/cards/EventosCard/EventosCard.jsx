@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './EventosCard.css';
 import locationLogo from "../../../assets/img/location.png";
+import dotsLogo from "../../../assets/img/3-dots.png";
+import deleteLogo from "../../../assets/img/delete.png";
+import editLogo from "../../../assets/img/edit.png";
 
-const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour }) => {
+const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour, userRole}) => {
   const isHomeView = viewType === 'home';
-
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const getMonthAbbreviation = (month) => {
     const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
@@ -26,7 +29,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
     const encodedEventImage = encodeURIComponent(eventImage);
     const encodedFullDate = encodeURIComponent(`${getMonthAbbreviation(month)} ${day}, ${year}`);
     const encodedEventType = encodeURIComponent(eventType);
-    const encodedEventHour = encodeURIComponent(eventHour); 
+    const encodedEventHour = encodeURIComponent(eventHour);
 
     navigate(`/EventArticle/${encodedEventName}/${encodedLocation}/${encodedDescription}/${encodedEventImage}/${encodedFullDate}/${encodedEventType}/${encodedEventHour}`); // Update the URL
   };
@@ -36,7 +39,21 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
     ? `${description.substring(0, maxDescriptionLength)}...`
     : description;
 
+  const handleThreeDotsClick = (e) => {
+    e.stopPropagation();
+    setShowDropdown(!showDropdown);
+  };
 
+  const handleEditClick = () => {
+    setShowDropdown(false);
+  };
+
+  const handleDeleteClick = () => {
+
+    setShowDropdown(false);
+  };
+
+  console.log(userRole);
 
   return (
     <div className={`eventos-container ${isHomeView ? 'home-view' : 'event-view'}`}>
@@ -55,9 +72,27 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
         </div>
 
         <div className='cuadro-informacion'>
-
-          <div className='titulo-evento'>
-            <h1>{eventName}</h1>
+          <div className="config-event-box">
+            <div className='titulo-evento'>
+              <h1>{eventName}</h1>
+              </div>
+              {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+              <div className="admin-config-event">
+                <button className="three-dots-event" onClick={handleThreeDotsClick}>
+                  <img src={dotsLogo} alt="dots-logo" />
+                </button>
+                {showDropdown && (
+                  <div className="dropdown-menu-event">
+                    <button onClick={handleEditClick}>
+                      <img src={editLogo} alt="edit-logo" />
+                    </button>
+                    <button onClick={handleDeleteClick}>
+                      <img src={deleteLogo} alt="delete-logo" />
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : null}
           </div>
 
           <div className='ubicacion'>
@@ -67,11 +102,26 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
           <div className='descripcion'>
             <p>{truncatedDescription}</p>
           </div>
-          
 
-          <button className='mas-info' onClick={handleButtonClick}>
-            MÁS INFORMACIÓN
-          </button>
+          <div className="config-event-box2">
+
+          {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+            <div className="dropdown-menu-event2">
+              <button onClick={handleEditClick}>
+                <img src={editLogo} alt="edit-logo" />
+              </button>
+              <button onClick={handleDeleteClick}>
+                <img src={deleteLogo} alt="delete-logo" />
+              </button>
+            </div>
+            ) : null}
+            <button className='mas-info-event' onClick={handleButtonClick}>
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+
+
+
         </div>
       </div>
     </div>
