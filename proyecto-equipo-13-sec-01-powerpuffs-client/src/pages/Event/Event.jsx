@@ -18,7 +18,8 @@ function Event( { userRole }) {
   //     .then(data => setEvents(data.events));
   // }, []);
 
-  console.log(userRole);
+  
+  // console.log(userRole);
   
   return (
     <>  

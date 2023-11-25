@@ -1,10 +1,10 @@
 import { user } from '../components/initial-data.js';
 
-// AuthService.js
 class AuthService {
   constructor() {
-    // Try to retrieve user data from localStorage
+    
     this.user = JSON.parse(localStorage.getItem('user')) || null;
+    this.listeners = [];
   }
 
   login(email, password) {
@@ -13,10 +13,12 @@ class AuthService {
     );
 
     if (foundUser) {
-      // Save user data to localStorage on successful login
+
       this.user = foundUser;
       localStorage.setItem('user', JSON.stringify(foundUser));
-      localStorage.setItem('userRole', foundUser.roleId); // Save roleId to localStorage
+      localStorage.setItem('userRole', foundUser.roleId); 
+
+      this.notifyListeners();
       return true;
     } else {
       return false;
@@ -24,10 +26,12 @@ class AuthService {
   }
 
   logout() {
-    // Remove user data and roleId from localStorage on logout
+
     localStorage.removeItem('user');
     localStorage.removeItem('userRole');
     this.user = null;
+
+    this.notifyListeners();
   }
 
   getUser() {
@@ -36,6 +40,17 @@ class AuthService {
 
   isAuthenticated() {
     return !!this.user;
+  }
+
+  registerListener(listener) {
+    this.listeners.push(listener);
+  }
+
+  unregisterListener(listener) {
+    this.listeners = this.listeners.filter((l) => l !== listener);
+  }
+  notifyListeners() {
+    this.listeners.forEach((listener) => listener());
   }
 }
 
