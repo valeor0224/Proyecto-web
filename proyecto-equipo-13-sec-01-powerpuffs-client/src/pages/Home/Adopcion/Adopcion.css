@@ -20,7 +20,7 @@
 
 .texto-adopcion-titulo {
     color: var(--pink);
-    font-family: var(--titulos);
+    font-family: var(--titles-font);
     font-size: xx-large;
     background-color: transparent;
 }

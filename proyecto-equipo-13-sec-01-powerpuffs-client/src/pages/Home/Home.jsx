@@ -9,6 +9,8 @@ import Ayudar from './Ayudar/Ayudar';
 import Adopcion from './Adopcion/Adopcion';
 import Eventos from './Eventos/Eventos';
 
+import { events } from '../../components/initial-data.js';
+
 function Home() {
   //const [someState, setSomeState] = useState(initialValue);
 
@@ -20,7 +22,8 @@ function Home() {
           <Mision />
           <Ayudar />
           <Adopcion />
-          <Eventos />
+          <Eventos events={events}/>
+
         </div>
      
     </>

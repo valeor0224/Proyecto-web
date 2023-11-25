@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './EscogeMascota.css';
-import ImageSlider from '../../../cards/ImageSlider/ImageSlider';
-
+import ImageSlider from "../../../components/cards/ImageSlider/ImageSlider";
 
 
 const EscogeMascota = () => {

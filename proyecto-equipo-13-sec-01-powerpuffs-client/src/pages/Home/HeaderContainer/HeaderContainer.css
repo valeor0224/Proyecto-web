@@ -3,6 +3,7 @@
     position: relative;
     background-image: url('../../../assets/img/gato-header.png');
     background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -12,9 +13,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(255, 182, 193, 0.123); 
-    z-index: 1;
+    min-height: 100%;
+    background-color: rgba(255, 141, 158, 0.308); 
+    z-index: 0;
 }
 
 .header-logo-container span {
@@ -22,7 +23,7 @@
     padding: 25px;
     font-size: xx-large;
     font-weight: bold;
-    z-index: 2; 
+    z-index: 1; 
 }
 
 .contenido {
@@ -30,14 +31,20 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 2; 
+    z-index: 1; 
     background-color: transparent;
-    padding-top: 250px;
     line-height: 35px;
     color: var(--white);
     padding-left: 70px;
     font-family: var(--info-font);
     align-items: center;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.contenido p{
+    background-color: transparent;
+    font-weight: bold;
 }
 
 .header-logo-container {
@@ -55,6 +62,7 @@
     border-radius: 0.5rem;
     font-size: 1.1rem;
     cursor: pointer;
+    font-family: var(--info-font);
     font-weight: 500;
     transition: 0.2s;
     margin-right: 2rem; 
@@ -68,3 +76,49 @@
 .contenido span {
     background-color: transparent;
 }
+
+@media (max-width: 1024px) {
+    .contenedor-gato {
+      min-height: 345px;
+      width: 100%;
+      position: relative;
+      background-image: url('../../../assets/img/gato-header.png');
+      background-size: 150%;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .contenedor-gato::before{
+        min-height: 345px;
+    }
+  
+    .contenido {
+      width: 90%;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: left;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -55%); 
+    }
+
+    .contenido {
+        font-size: 1rem;
+    }
+  
+    .contenido button {
+      margin-right: 0;
+      margin-top: 15px;
+    }
+
+    .header-logo-container img{
+        display: none;
+    }
+
+    .header-logo-container span{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+  }

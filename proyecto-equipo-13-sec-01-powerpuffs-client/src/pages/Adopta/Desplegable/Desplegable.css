@@ -1,0 +1,180 @@
+/* DropdownBox.css */
+
+.dropdown-container {
+  background-color: var(--blue);
+  height: 150px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+}
+
+.text-closed {
+  color: var(--white);
+  background-color: transparent;
+}
+
+.dropdown-label {
+  margin-right: 10px;
+  font-weight: bold;
+  background-color: var(--blue);
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: transparent;
+  
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: var(--blue);
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 500px;
+  padding: 5px;
+  z-index: 1;
+  background-color: var(--blue);
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 5rem;
+  
+}
+
+.dropdown-content > div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+label {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--info-font);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Updated styles for label selects */
+label select {
+  width: 300px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #FFFFFF; /* White color */
+  border-radius: 5px;
+  background-color: #FFFFFF; /* White color */
+  color: var(--dark-gray); /* Blue color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.selected-value {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--dark-gray);
+}
+
+img {
+  background-color: var(--blue);
+  max-width: 300px;
+}
+
+.button-container {
+  background-color: transparent;
+  align-self: center;
+  margin-top: 5rem;
+}
+
+.text-desplegable-form{
+  min-width: 250px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  
+}
+
+.button-container button[type="submit"] {
+  background-color: var(--pink); /* White color */
+  color: var(--white); /* Blue color */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none; /* White color */
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 1.44724px 5.78894px 5.78894px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-container button[type="reset"] {
+  background-color: var(--green); /* White color */
+  color: var(--white); /* Blue color */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none; /* White color */
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 1.44724px 5.78894px 5.78894px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.desplegable-closed {
+  width: 100%;
+  position: relative;
+}
+
+.desplegable-closed.open {
+  position: absolute;
+  bottom: -500px; /* Adjust as needed */
+  box-shadow: 0px 6.07839px 6.07839px 0px rgba(0, 0, 0, 0.25);
+  
+}
+
+.dropdown-toggle {
+  position: absolute;
+  right: 0;
+  box-shadow: 0px 6.07839px 6.07839px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+
+h1{
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--titles-font);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+}
