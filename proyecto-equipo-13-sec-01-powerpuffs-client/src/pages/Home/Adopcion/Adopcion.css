@@ -4,10 +4,15 @@
     display: flex;
     flex-direction: column;
     padding: 5rem;
+    padding-top: 0px;
     gap: 3rem;
     align-items: center; /* Center the contents horizontally */
     justify-content: center; /* Center the contents vertically */
     
+}
+
+.adopcion-proceso span{
+    margin-top: 10px;
 }
 
 .texto-adopcion {
