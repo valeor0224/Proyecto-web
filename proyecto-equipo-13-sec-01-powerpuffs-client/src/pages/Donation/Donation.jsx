@@ -38,15 +38,16 @@ function Donation() {
 
                         <label htmlFor="departamento">Departamento:</label>
                         <select id="departamento" name="departamento">
+                        <option value="" selected disabled>Seleccione una opción</option>
                                 <option value="Ahuachapan">Ahuachapán</option>
                                 <option value="Cabañas">Cabañas</option>
                                 <option value="Chalatenango">Chalatenango</option>
                                 <option value="Cuscatlan">Cuscatlán</option>
                                 <option value="La-Libertad">La Libertad</option>
                                 <option value="Morazan">Morazan</option>
-                                <option value="La-Paz">La-Paz</option>
+                                <option value="La-Paz">La Paz</option>
                                 <option value="Santa-Ana">Santa Ana</option>
-                                <option value="San-Miguel">SanMiguel</option>
+                                <option value="San-Miguel">San Miguel</option>
                                 <option value="San-Salvador">San Salvador</option>
                                 <option value="San-Vicente">San Vicente</option>
                                 <option value="Sonsonate">Sonsonate</option>
@@ -68,6 +69,7 @@ function Donation() {
                             <label htmlFor="dedicar">¿A que te gustaría dedicar tu donativo?</label>
                             {/* Dropdown box for "Dedicar" */}
                             <select id="dedicar" name="dedicar">
+                            <option value="" selected disabled>Seleccione una opción</option>
                                 <option value="actividad">Actividad informativa y de asesoramiento técnico y legal</option>
                                 <option value="proyecto">Proyecto específico</option>
                                 <option value="otros">Otros</option>
