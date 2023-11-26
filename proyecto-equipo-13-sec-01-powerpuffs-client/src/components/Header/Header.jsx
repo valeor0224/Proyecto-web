@@ -119,10 +119,11 @@ const Header = ({ userRole }) => {
             <NavLink to="/Adopta">ADOPTA</NavLink>
             <NavLink to="/Event">EVENTOS</NavLink>
             <NavLink to="/news">NOTICIAS</NavLink>
-            <NavLink to="/Formas-de-ayudar">FORMAS DE AYUDAR</NavLink>
+            <NavLink to="/Donation">FORMAS DE AYUDAR</NavLink>
             <NavLink to="/Contactanos">CONTÁCTANOS</NavLink>
           </div>
         )}
+
         {isLoggedIn ? (
           <div className="user-profile-container">
             <button className="user-profile-pic-cont">
