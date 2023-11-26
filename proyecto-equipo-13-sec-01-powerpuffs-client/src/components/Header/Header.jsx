@@ -74,7 +74,7 @@ const Header = () => {
         <NavLink to="/Adopta">ADOPTA</NavLink>
         <NavLink to="/Event">EVENTOS</NavLink>
         <NavLink to="/news">NOTICIAS</NavLink>
-        <NavLink to="/adopt-forms">FORMAS DE AYUDAR</NavLink>
+        <NavLink to="/Donation">FORMAS DE AYUDAR</NavLink>
         <NavLink to="/contact">CONTÁCTANOS</NavLink>
         {isLoggedIn ? (
           <div className="user-profile-container" ref={dropdownRef}>
