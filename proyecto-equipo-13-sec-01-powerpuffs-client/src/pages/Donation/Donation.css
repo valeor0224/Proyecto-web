@@ -2,6 +2,7 @@
 
 .header-donation {
     background-image: url('https://s3-alpha-sig.figma.com/img/6c36/d72e/e90542c48b80cb2180ec6d4e319d3cf8?Expires=1701648000&Signature=MxHfrJJrPcu6tSXvpP55F9osX3WI4bjS1ofk0b0IxlLgUeZF7edaXf~UETg~jkcqll3RFmOuVaMz~yjryZ7Hu9mHhK1Hb91Dzy9npdq0dQsmYxoMgE9dzyQnFly2tmBEF~oDFbIApWIcj9x00m7JzA8DcNHbn7rUoFIgFbYM6L1w3U3lCVuJi6UDlPj6PXAE5fqSXk1B9n~HFXNoldt1jIoD8lc87zcgkh6gqjZadZVHpgQGKOdVKrb1CwzdlST-xkFSHdQtlx18rM3kiSx9QaKmNnDCkdiwbtnprQFqB96CQktMfYXkkwidbLi15eplWE5U40ExHVbORYq8ll7Nfw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    background-color: rgba(255, 182, 193, 0.8); /* Adjust the alpha value (0.0 to 1.0) for transparency */
     width: 100%;
     height: 300px;
     background-size: cover;
@@ -9,6 +10,8 @@
     color: var(--white);
     padding: 20px;
     text-align: center;
+
+   
 }
 
 .donation-form-container {
@@ -20,6 +23,7 @@
     background-color: transparent;
     font-size: 2em;
     margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 .donation-page h2 {
@@ -32,10 +36,12 @@
     color: var(--pink);
     font-family: var(--info-font);
     margin-bottom: 20px;
+
 }
 
 .donation-form-container p {
     font-family: var(--info-font);
+
 }
 
 .header-donation p {
@@ -49,20 +55,44 @@
 .donation-form-top,
 .donation-form-bottom {
     margin: 20px 0;
+
 }
 
 .donation-form-top {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    column-gap: 20px; /* Adjust the gap between columns as needed */
-    align-items: start; /* Align items to the top */
-    justify-content: start; /* Justify items to the start (left) */
+    grid-template-columns: 1fr 1fr;
+    /* Two columns with equal width */
+    column-gap: 20px;
+    /* Adjust the gap between columns as needed */
+    align-items: start;
+    /* Align items to the top */
+    justify-content: start;
+    /* Justify items to the start (left) */
 }
 
-.donation-form-top > * {
-    grid-column: 2; /* Place all direct children in the second column */
-    align-self: center; /* Align each item to the center vertically within the column */
+.imagenes-top {
+    grid-column: 1;
+    /* Place the imagenes-top in the first column */
+    display: flex;
+    flex-direction: column;
 }
+
+.imagenes-top img {
+    max-width: 100%;
+    /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.personal-data {
+    grid-column: 2;
+    /* Place the personal-data in the second column */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 
 .donation-form-top label {
     margin-bottom: 5px;
@@ -76,23 +106,35 @@
     margin-bottom: 5px;
     font-family: var(--info-font);
     color: var(--dark-gray);
+
 }
 
 .donation-form-top input,
-.donation-form-bottom input,
-.donation-form-top select {
+.donacion-fields input,
+.donation-form-top select,
+.donation-form-bottom select {
     width: 700px;
     height: 50px;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius: 0.5rem;
+    color: var(--dark-gray);
+}
+
+.terminos p {
+    width: 750px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.terminos span {
+    font-weight: bold;
 }
 
 
 
 #dedicar {
-    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -130,12 +172,36 @@
     margin-top: 20px;
 }
 
-.Agradecimiento{
+.agradecimiento {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
-.Agradecimiento img{
+.agradecimiento p{
+    width: 650px;
+    color: var(--dark-gray);
+    margin-left: 20px;
+
+}
+
+.agradecimiento img {
     border-radius: 0px;
+}
+
+.donation-form-bottom {
+    background-image: url('/home/valeria/Documents/FINAL PUFF/proyecto-equipo-13-sec-01-powerpuffs/proyecto-equipo-13-sec-01-powerpuffs-client/src/assets/img/gato-donation-bottom.png');
+    
+    background-size: cover;
+    background-position: center;
+    color: var(--dark-gray);
+    /* Adjust text color as needed */
+    padding: 20px;
+    border-radius: 10px;
+    /* Adjust border radius as needed */
+    margin-top: 0px;
+    /* Adjust margin as needed */
+    width: 100%;
+    height: 1191.057px;
 }
