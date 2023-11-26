@@ -20,7 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header user={AuthService.getUser()} />
+      <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
