@@ -23,7 +23,7 @@ const Header = () => {
         <a href="/Adopta">ADOPTA</a>
         <a href="/Event">EVENTOS</a>
         <a href="/news">NOTICIAS</a>
-        <a href="/adopt-forms">FORMAS DE AYUDAR</a>
+        <a href="/Donation">FORMAS DE AYUDAR</a>
         <a href="/contact">CONTÁCTANOS</a>
         <button className="primary-button">INICIAR SESIÓN</button>
       </div>

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Adopta from './pages/Adopta/Adopta';
 import Event from './pages/Event/Event';
+import Donation from './pages/Donation/Donation.jsx';
 import EventArticle from './components/EventArticle/EventArticle.jsx';
 
 import { events } from '../src/components/initial-data.js';
@@ -20,6 +21,7 @@ function App() {
           path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour"
           element={<EventArticle events={events}/>}
         />
+        <Route path="Donation" element={<Donation />} />
       </Routes>
       <Footer />
     </BrowserRouter>
