@@ -5,13 +5,16 @@ import "./Eventos.css";
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 
 const Eventos = ({ events }) => {
+
   const latestEvents = events.slice(-3);
 
   return (
+
     <div className="staircase-container">
-      {latestEvents.map((event, index) => (
-        <div key={index} className="card">
+      <div className="card">
+        {latestEvents.map((event, index) => (
           <EventosCard
+            key={index}
             date={event.date}
             eventName={event.eventName}
             location={event.location}
@@ -22,8 +25,10 @@ const Eventos = ({ events }) => {
             eventType={event.eventType}
             eventHour={event.eventHour}
           />
-        </div>
-      ))}
+        ))}
+
+      </div>
+
 
       <div className="eventos-home-info">
         <span className="eventos-home-title">Eventos</span>

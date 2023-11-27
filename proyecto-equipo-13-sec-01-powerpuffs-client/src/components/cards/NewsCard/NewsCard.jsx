@@ -33,7 +33,7 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
         const encodedLocation = encodeURIComponent(location);
         const encodedDescription = encodeURIComponent(description);
         const encodedNewsImage = encodeURIComponent(newsImage);
-        const encodedFullDate = encodeURIComponent(`${getMonthAbbreviation(month)} ${day}, ${year}`);
+        const encodedFullDate = encodeURIComponent(dateCreated);
         const encodedNewsType = encodeURIComponent(newsType);
 
         navigate(`/NewsArticle/${encodedNewsTitle}/${encodedLocation}/${encodedDescription}/${encodedNewsImage}/${encodedFullDate}/${encodedNewsType}`); // Update the URL
@@ -49,8 +49,8 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
 
                 <div className='cont-izquierdo'>
                     
-                    <div className={`img-cont ${isArticleView ? 'img-cont-hidden' : 'img-cont-visible'}`}>
-                        <img src={newsImage} alt="news-img" />
+                    <div className={`img-contN ${isArticleView ? 'img-cont-hiddenN' : 'img-cont-visibleN'}`}>
+                        <img id="news-img" src={newsImage} alt="news-img" />
                     </div>
                 </div>
 

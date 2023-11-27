@@ -1,0 +1,77 @@
+.contenedor-gato {
+    min-height: 700px;
+    position: relative;
+    background-image: url('../../../assets/img/gato-header2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.contenedor-gato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(255, 141, 158, 0.308); 
+    z-index: 0;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--info-font);
+
+    padding: 25px 25px 25px 50px;
+}
+
+.contenido h1 {
+    font-family: var(--titles-font);
+    padding: 25px;
+    font-size: xx-large;
+    z-index: 1;
+}
+
+/* Remove unnecessary styles */
+.contenido p,
+.contenido h1 {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+    .contenedor-gato {
+      min-height: 345px;
+      width: 100%;
+      position: relative;
+      background-image: url('../../../assets/img/gato-header2.png');
+      background-size: 170%;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+  
+    .contenido {
+      width: 90%;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: left;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -55%); 
+    }
+  
+    .contenido h1{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+  }

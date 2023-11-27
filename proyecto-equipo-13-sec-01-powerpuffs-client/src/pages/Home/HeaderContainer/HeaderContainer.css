@@ -1,4 +1,4 @@
-.contenedor-gato {
+.contenedor-gato-home {
     min-height: 900px;
     position: relative;
     background-image: url('../../../assets/img/gato-header.png');
@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.contenedor-gato::before {
+.contenedor-gato-home::before {
     content: '';
     position: absolute;
     top: 0;
@@ -78,18 +78,19 @@
 }
 
 @media (max-width: 1024px) {
-    .contenedor-gato {
+    .contenedor-gato-home {
       min-height: 345px;
       width: 100%;
       position: relative;
       background-image: url('../../../assets/img/gato-header.png');
-      background-size: 150%;
+      background-size: 170%;
       background-position: center;
       background-repeat: no-repeat;
       overflow: hidden;
     }
 
-    .contenedor-gato::before{
+
+    .contenedor-gato-home::before{
         min-height: 345px;
     }
   

@@ -4,24 +4,38 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Adopta from './pages/Adopta/Adopta';
 import Event from './pages/Event/Event';
-import Donation from './pages/Donation/Donation.jsx';
 import EventArticle from './components/EventArticle/EventArticle.jsx';
+import News from './pages/News/News.jsx';
+import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
+import Login from './pages/Login/Login.jsx';
+import AuthService from './services/AuthService';
+import Donation from './pages/Donation/Donation.jsx';
 
-import { events } from '../src/components/initial-data.js';
+import { events, news } from '../src/components/initial-data.js';
+
+import { useUserContext } from './UserContext.jsx';
 
 function App() {
+  const { userRole } = useUserContext();
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
-        <Route path="Event" element={<Event />} />
+        <Route path="Event" element={<Event userRole={userRole}  />} />
+        <Route path="Donation" element={<Donation/>} />
         <Route
           path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour"
           element={<EventArticle events={events}/>}
         />
-        <Route path="Donation" element={<Donation />} />
+        <Route path="News" element={<News />} />
+        <Route
+          path="NewsArticle/:newsTitle/:location/:description/:newsImage/:fullDate/:newsType"
+          element={<NewsArticle news={news}/>}
+        />
+        <Route path="Login" element={<Login user={AuthService.getUser()} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

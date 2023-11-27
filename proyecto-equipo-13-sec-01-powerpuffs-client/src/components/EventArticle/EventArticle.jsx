@@ -11,7 +11,16 @@ import hourLogo from "../../assets/img/hour.png";
 const EventArticle = ({ events }) => {
 
   const { eventName, location, description, eventImage, fullDate, eventType, eventHour } = useParams();
-  const latestEvents = events.slice(-3);
+
+  
+  const currentIndex = events.findIndex(eventItem => eventItem.eventName === eventName);
+
+  
+  const latestEvents = events
+    .filter((_, index) => index !== currentIndex)
+    .slice(-3)
+    .reverse();
+
 
   return (
     <div className='page-section'>
@@ -81,20 +90,22 @@ const EventArticle = ({ events }) => {
         <h2>Eventos</h2>
         <span>Conoce los eventos que están por realizarse próximamente.</span>
 
-        {latestEvents.map((event, index) => (
-        <EventosCard
-          key={index}
-          date={event.date}
-          eventName={event.eventName}
-          location={event.location}
-          description={event.description}
-          buttonText={event.buttonText}
-          viewType="home"
-          eventImage={event.eventImage}
-          eventType={event.eventType}
-          eventHour={event.eventHour}
-        />
-      ))}
+
+        {latestEvents.map((eventItem, index) => (
+            <EventosCard
+              key={index}
+              date={eventItem.date}
+              eventName={eventItem.eventName}
+              location={eventItem.location}
+              description={eventItem.description}
+              buttonText={eventItem.buttonText}
+              viewType="home"
+              eventImage={eventItem.eventImage}
+              eventType={eventItem.eventType}
+              eventHour={eventItem.eventHour}
+            />
+          ))}
+
       
         </div>
       </div>
