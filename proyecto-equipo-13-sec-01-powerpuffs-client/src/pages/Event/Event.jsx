@@ -1,5 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import './Event.css'
 import EventCalendar from './EventCalendar/EventCalendar';
 import EventCarrousel from './EventCarrousel/EventCarrousel';
@@ -32,5 +30,6 @@ function Event() {
     </>
   );
 }
+
 
 export default Event;
