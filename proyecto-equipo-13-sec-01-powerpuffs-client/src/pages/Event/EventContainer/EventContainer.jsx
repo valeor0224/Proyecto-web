@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import './EventContainer.css';
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 
-function EventContainer({ events }) {
+
+function EventContainer({ events, userRole }) {
+    console.log(userRole);
     const [filters, setFilters] = useState({
         location: "",
         date: "",
@@ -56,7 +58,7 @@ function EventContainer({ events }) {
         <div className="event2-container">
             <div className="event-filter-container">
                 <div className="event-filter-txt" >
-                    <img src="/src/assets/img/Vector.png" alt="Filter-icon" onClick={toggleFilterVisibility}/>
+                    <img id="filter-icon" src="/src/assets/img/Vector.png" alt="Filter-icon" onClick={toggleFilterVisibility}/>
                     <h2>Refina tu búsqueda para encontrar eventos que se adapten a tus preferencias.</h2>
                 </div>
                 {isFilterVisible && (
@@ -111,6 +113,7 @@ function EventContainer({ events }) {
                         eventImage={event.eventImage}
                         eventType={event.eventType}
                         eventHour={event.eventHour}
+                        userRole={userRole}
                     />
                 ))}
                 {filteredEvents.length > visibleCardCount && (
