@@ -14,8 +14,8 @@ const Adopcion = () => {
         <div className="adopcion-proceso">
 
             <div className="texto-adopcion">
-                <span className="texto-adopcion-titulo">Proceso de adopción</span>
-                <span className="texto-adopcion-info">Ayúdanos a darle una nueva familia y un nuevo hogar a estos animales.</span>
+                <h1 className="texto-adopcion-titulo">Proceso de adopción</h1>
+                <h2 className="texto-adopcion-info">Ayúdanos a darle una nueva familia y un nuevo hogar a estos animales.</h2>
             </div>
             <div className="proceso">
                 <div className="paso">

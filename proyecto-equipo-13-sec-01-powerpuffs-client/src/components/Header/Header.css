@@ -19,12 +19,6 @@ nav {
   cursor: pointer;
 }
 
-.nav-logo-container a {
-  max-height: 100%;
-  max-width: 100%;
-  background-color: var(--pink);
-  cursor: pointer;
-}
 
 .navbar-links-container {
   display: flex;
@@ -46,6 +40,7 @@ nav {
 
 .sign-out-button{
   display: none;
+
 }
 
 .primary-button {
@@ -69,6 +64,7 @@ nav {
 .hamburger-menu {
   display: none;
 }
+
 
 .user-profile-container {
   position: relative;
@@ -152,7 +148,6 @@ nav {
 
 }
 
-
 @media (max-width: 1024px) {
   .navbar-links-container {
     display: none;
@@ -160,8 +155,7 @@ nav {
     position: absolute;
     top: 110px;
     left: 0;
-    width: 100%;
-    
+    width: 100%;    
     z-index: 1; 
     
   }

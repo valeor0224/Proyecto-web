@@ -89,6 +89,7 @@
       overflow: hidden;
     }
 
+
     .contenedor-gato-home::before{
         min-height: 345px;
     }

@@ -4,6 +4,7 @@ import EventCarrousel from './EventCarrousel/EventCarrousel';
 import EventContainer from './EventContainer/EventContainer';
 import { events } from '../../components/initial-data.js';
 
+
 function Event( { userRole }) {
   //const [someState, setSomeState] = useState(initialValue);
 
@@ -16,9 +17,7 @@ function Event( { userRole }) {
   //   fetch('path-to-initial-data.js')
   //     .then(response => response.json())
   //     .then(data => setEvents(data.events));
-  // }, []);
-
-  
+  // }, []); 
   // console.log(userRole);
   
   return (

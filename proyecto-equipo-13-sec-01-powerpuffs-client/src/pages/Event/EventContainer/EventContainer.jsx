@@ -5,7 +5,6 @@ import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 
 function EventContainer({ events, userRole }) {
     console.log(userRole);
-
     const [filters, setFilters] = useState({
         location: "",
         date: "",

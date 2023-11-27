@@ -5,6 +5,7 @@ import gatoTop from '../../assets/img/gato-donation-top.png';
 import blob from '../../assets/img/blob-donation.png';
 import plato from '../../assets/img/plato-donation.png';
 
+
 import './Donation.css';
 
 function Donation() {
@@ -127,9 +128,6 @@ function Donation() {
                         </div>
 
                     </div>
-
-
-
 
 
                 </div>

@@ -1,5 +1,6 @@
+// Eventos.jsx
+
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Eventos.css";
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 

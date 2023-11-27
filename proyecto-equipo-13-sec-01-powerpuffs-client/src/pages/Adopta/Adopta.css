@@ -1,0 +1,24 @@
+.slider-container{
+    padding: 8rem;
+    align-items: center;
+    text-align: left;   
+}
+
+.text-above-slider{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 90%;
+    padding-left: 10rem
+    
+}
+
+.text-above-slider h1{
+    color: var(--blue);
+    font-family: var(--titles-font);
+}
+
+.text-above-slider p{
+    color: var(--dark-gray);
+    font-family: var(--info-font);
+}

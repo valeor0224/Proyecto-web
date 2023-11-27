@@ -11,6 +11,7 @@ import hourLogo from "../../assets/img/hour.png";
 const EventArticle = ({ events }) => {
 
   const { eventName, location, description, eventImage, fullDate, eventType, eventHour } = useParams();
+
   
   const currentIndex = events.findIndex(eventItem => eventItem.eventName === eventName);
 
@@ -19,6 +20,7 @@ const EventArticle = ({ events }) => {
     .filter((_, index) => index !== currentIndex)
     .slice(-3)
     .reverse();
+
 
   return (
     <div className='page-section'>
@@ -88,6 +90,7 @@ const EventArticle = ({ events }) => {
         <h2>Eventos</h2>
         <span>Conoce los eventos que están por realizarse próximamente.</span>
 
+
         {latestEvents.map((eventItem, index) => (
             <EventosCard
               key={index}
@@ -102,6 +105,7 @@ const EventArticle = ({ events }) => {
               eventHour={eventItem.eventHour}
             />
           ))}
+
       
         </div>
       </div>
