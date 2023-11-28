@@ -1,0 +1,61 @@
+.AdoptionForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-AdoptionForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-AdoptionForm h1{
+    font-family: var(--titles-font);
+    color: var(--dark-gray)
+}
+
+.top-AdoptionForm p{
+    font-family: var(--info-font);
+    color: var(--pink)
+}
+
+.datos-personales-AdoptionForm{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--info-font);
+}
+
+.datos-personales-AdoptionForm-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-personales-AdoptionForm-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.preguntas-AdoptionForm{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--info-font);
+}
+
+.preguntas-AdoptionForm-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.preguntas-AdoptionForm-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.acepta-politica-adopcion{
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+}
+

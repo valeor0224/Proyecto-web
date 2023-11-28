@@ -24,50 +24,134 @@ function AdoptionForm() {
                 </div>
             </div>
 
+            <h2>
+                VERIFICA TUS DATOS PERSONALES
+            </h2>
+
             <div className='datos-personales-AdoptionForm'>
-                <h2>
-                    VERIFICA TUS DATOS PERSONALES
-                </h2>
 
 
-                <label htmlFor="nombre">Tu nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="John" />
+                <div className='datos-personales-AdoptionForm-left'>
+                    <label htmlFor="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="John" />
 
-                <label htmlFor="apellido">Tu apellido:</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+                    <label htmlFor="fecha-nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" />
 
-                <label htmlFor="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="correo@correo.com" />
+                    <label htmlFor="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="telefono" />
+                </div>
 
-                <label htmlFor="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" placeholder="telefono" />
+                <div className='datos-personales-AdoptionForm-right'>
+                    <label htmlFor="apellido">Tu apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
 
-                <label htmlFor="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+                    <label htmlFor="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="correo@correo.com" />
+
+                    <label htmlFor="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+                </div>
+
+
+
+
 
             </div>
 
             <div className='preguntas-AdoptionForm'>
 
-                <label htmlFor="Educacion">Nivel de Educación:</label>
-                <select id="Educacion" name="Educacion">
-                    <option value="" selected disabled>Seleccione una opción</option>
-                    <option value="Media">Media</option>
-                </select>
 
-                <label htmlFor="profesion">Profesión:</label>
-                <input type="text" id="profesion" name="profesion" placeholder="" />
+                <div className='preguntas-AdoptionForm-left'>
+                    <label htmlFor="Educacion">Nivel de Educación:</label>
+                    <select id="Educacion" name="Educacion">
+                        <option value="" selected disabled>Seleccione una opción</option>
+                        <option value="Media">Media</option>
+                    </select>
 
-                <label htmlFor="Casa">Tipo de inmueble en el que habita:</label>
-                <select id="Casa" name="Casa">
-                    <option value="" selected disabled>Seleccione una opción</option>
-                    <option value="Apartamento">Apartamento</option>
-                </select>
-                
+                    <label htmlFor="profesion">Profesión:</label>
+                    <input type="text" id="profesion" name="profesion" placeholder="" />
 
-                
+                    <label htmlFor="Casa">Tipo de inmueble en el que habita:</label>
+                    <select id="Casa" name="Casa">
+                        <option value="" selected disabled>Seleccione una opción</option>
+                        <option value="Apartamento">Apartamento</option>
+                    </select>
+
+                    <label htmlFor="espacio">¿Tiene espacio suficiente para una mascota?</label>
+                    <label>
+                        <input type="radio" name="agree" value="yes" />
+                        Si
+                    </label>
+
+                    <label>
+                        <input type="radio" name="agree" value="no" />
+                        No
+                    </label>
+
+                    <label htmlFor="acuerdo">Las demás personas que viven con usted están de acuerdo con esta adopción</label>
+                    <label>
+                        <input type="radio" name="agree" value="yes" />
+                        Si
+                    </label>
+
+                    <label>
+                        <input type="radio" name="agree" value="no" />
+                        No
+                    </label>
+
+                    <label htmlFor="gastos">La mascota incurrirá gastos, denos un estimado mensual que tenga en mente.:</label>
+                    <input type="number" id="gastos" name="gastos" min="0" step="0.01" placeholder="$" />
+
+                    <label htmlFor="alergias">Es alérgico o alguién más en tu casa lo es?</label>
+                    <input type="text" id="alergias" name="alergias" placeholder="" />
 
 
+                    <label htmlFor="razon">¿Por qué quieres adoptar este gato?</label>
+                    <input type="text" id="razon" name="razon" placeholder="" />
+
+                </div>
+
+                <div className='preguntas-AdoptionForm-right'>
+                    <label htmlFor="mascotas">¿Tiene más mascotas?</label>
+                    <input type="text" id="mascotas" name="mascotas" placeholder="" />
+
+                    <label htmlFor="mascotas-pasada">Ha tenido una mascota antes? ¿Qué pasó con ella(s)?</label>
+                    <input type="text" id="mascotas-pasadas" name="mascotas-pasada" placeholder="" />
+
+                    <label htmlFor="responsabilidad">Está dispuesto a asumir la responsabilidad en caso de enfermedad degenerativa o crónica de su mascota adoptada?</label>
+                    <label>
+                        <input type="radio" name="agree" value="yes" />
+                        Si
+                    </label>
+
+                    <label>
+                        <input type="radio" name="agree" value="no" />
+                        No
+                    </label>
+
+
+                    <label htmlFor="cuidados">¿Conoces los cuidados que requiere una mascota como la que deseas adoptar? Descríbalos</label>
+                    <input type="text" id="cuidados" name="cuidados" placeholder="" />
+
+                    <label htmlFor="renuncia">¿Qué circunstancias justificaría que usted renuncie a su mascota?, ¿La entregaría de regreso a PATITAS SEGURAS?</label>
+                    <input type="text" id="renuncia" name="renuncia" placeholder="" />
+
+                </div>
+
+
+
+            </div>
+
+            <div className='acepta-politica-adopcion'>
+                Cuando entregamos en adopción es política, y por el bienestar del animal, visitar periódicamente al adoptado para verificar su buen trato y estado. Y mantener contacto con el adoptante, para conocer su estado y para brindar a su adoptante la atención e información necesaria en caso de cualquier situación de salud, o necesidad sobre el animal adoptado, y brindarle ayuda veterinaria si la requiere según el caso y si estás lejos pedir fotos o video que demuestren su bienestar. EL ANIMALITO ENTREGADO EN ADOPCIÓN SERÁ RETIRADO POR LA AGRUPACIÓN SI AL REALIZAR LA VISITA PERIÓDICA SE COMPRUEBA QUE SE ENCUENTRA EN MAL ESTADO FÍSICO, DE SALUD O EN CONDICIONES NO APTAS PARA SU BIENESTAR.
+                <label>
+                    <input type="radio" name="aceptar" value="yes" />
+                    ACEPTO
+                </label>
+                <button className='enviar-solicitud'>
+                    ENVIAR SOLICITUD
+                </button>
             </div>
 
         </div>
