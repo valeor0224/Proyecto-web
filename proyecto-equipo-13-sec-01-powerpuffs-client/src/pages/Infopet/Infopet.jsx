@@ -18,7 +18,7 @@ function Infopet() {
             <div className="Info-pet-page">
                 <PhotoName imgCat={gatoImage} nameCat={nameCat} />
                 <HistoriaCard ageCat={ageCat} sexCat={sexCat} colorCat={colorCat} />
-                <AplicarCard />
+                <AplicarCard imgCat={gatoImage} nameCat={nameCat} />
             </div>
         </>
     );

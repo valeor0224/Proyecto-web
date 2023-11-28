@@ -1,11 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+import { useParams } from 'react-router-dom';
 import './AdoptionForm.css';
 
 function AdoptionForm() {
     // Uncomment the line below if you need local state in this component
     // const [someState, setSomeState] = useState(initialValue);
+    const { gatoImage, nameCat } = useParams();
+
+    console.log('gatoImage:', gatoImage);
+    console.log('nameCat:', nameCat);
+
+
+    const [aceptoChecked, setAceptoChecked] = useState(null);
+
+    const handleAceptoChange = () => {
+        // Toggle the state if already selected, set to true if not selected, set to null if unselected
+        setAceptoChecked(aceptoChecked === null ? true : !aceptoChecked);
+    };
+
+    const isSubmitDisabled = aceptoChecked === null;
+
+    const handleSubmit = () => {
+        // Handle form submission logic here
+        // Only called when "ACEPTO" is checked
+        if (aceptoChecked) {
+            // Perform form submission
+            console.log('Form submitted!');
+        }
+    };
 
     return (
+        
         <div className="AdoptionForm">
             <div className='top-AdoptionForm'>
                 <h1>
@@ -18,8 +43,9 @@ function AdoptionForm() {
                     NOS RESERVAMOS el derecho de dar en adopción luego de evaluar este formulario
                 </p>
                 <div className='top-AdoptionForm-img'>
+                <img src={gatoImage} alt="gato-img" />
                     <h2>
-                        Adoptar a
+                        Adoptar a {nameCat}
                     </h2>
                 </div>
             </div>
@@ -146,10 +172,10 @@ function AdoptionForm() {
             <div className='acepta-politica-adopcion'>
                 Cuando entregamos en adopción es política, y por el bienestar del animal, visitar periódicamente al adoptado para verificar su buen trato y estado. Y mantener contacto con el adoptante, para conocer su estado y para brindar a su adoptante la atención e información necesaria en caso de cualquier situación de salud, o necesidad sobre el animal adoptado, y brindarle ayuda veterinaria si la requiere según el caso y si estás lejos pedir fotos o video que demuestren su bienestar. EL ANIMALITO ENTREGADO EN ADOPCIÓN SERÁ RETIRADO POR LA AGRUPACIÓN SI AL REALIZAR LA VISITA PERIÓDICA SE COMPRUEBA QUE SE ENCUENTRA EN MAL ESTADO FÍSICO, DE SALUD O EN CONDICIONES NO APTAS PARA SU BIENESTAR.
                 <label>
-                    <input type="radio" name="aceptar" value="yes" />
+                    <input type="radio" name="aceptar" value="yes" onChange={handleAceptoChange} checked={aceptoChecked === true} />
                     ACEPTO
                 </label>
-                <button className='enviar-solicitud'>
+                <button className='enviar-solicitud' onClick={handleSubmit} disabled={isSubmitDisabled}>
                     ENVIAR SOLICITUD
                 </button>
             </div>

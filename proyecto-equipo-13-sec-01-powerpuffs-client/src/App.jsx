@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
-        <Route path="AdoptionForm" element={<AdoptionForm />} />
+        <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
         <Route path="Event" element={<Event userRole={userRole}  />} />
         <Route path="Donation" element={<Donation/>} />
         <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
