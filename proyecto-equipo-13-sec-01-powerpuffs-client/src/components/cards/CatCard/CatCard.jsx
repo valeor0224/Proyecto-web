@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CatCard.css';
 import gatoImage from "../../../assets/img/location.png";
+import Infopet from '../../../pages/Infopet/Infopet';
 
 const CatCard = ({ gatoImage, nameCat, ageCat, sexCat, colorCat }) => {
     // Destructuring props for easy access
@@ -10,18 +11,20 @@ const CatCard = ({ gatoImage, nameCat, ageCat, sexCat, colorCat }) => {
     // Function to handle button click, which navigates to a detailed event article page
     const handleButtonClick = () => {
         // Encoding data to be passed in the URL
+        const encodedImageCat = encodeURIComponent(gatoImage);
         const encodedNameCat = encodeURIComponent(nameCat);
         const encodedAgeCat = encodeURIComponent(ageCat);
         const encodedSexCat = encodeURIComponent(sexCat);
         const encodedColorCat = encodeURIComponent(colorCat);
 
         // Update the URL with the encoded data
-        navigate(`/GatoCard/${encodedNameCat}/${encodedAgeCat}/${encodedSexCat}/${encodedColorCat}`);
+        navigate(`/Infopet/${encodedImageCat}/${encodedNameCat}/${encodedAgeCat}/${encodedSexCat}/${encodedColorCat}`);
     };
 
     // Rendering the component
     return (
         <div className='CatCard'>
+            
             
                 <div className='cont-izquierdo'>
                         <img src={gatoImage} alt="gato-img" />
