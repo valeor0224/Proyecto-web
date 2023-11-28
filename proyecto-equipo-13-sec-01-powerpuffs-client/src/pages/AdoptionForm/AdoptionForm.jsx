@@ -43,11 +43,30 @@ function AdoptionForm() {
                 <input type="text" id="telefono" name="telefono" placeholder="telefono" />
 
                 <label htmlFor="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
 
             </div>
 
             <div className='preguntas-AdoptionForm'>
+
+                <label htmlFor="Educacion">Nivel de Educación:</label>
+                <select id="Educacion" name="Educacion">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="Media">Media</option>
+                </select>
+
+                <label htmlFor="profesion">Profesión:</label>
+                <input type="text" id="profesion" name="profesion" placeholder="" />
+
+                <label htmlFor="Casa">Tipo de inmueble en el que habita:</label>
+                <select id="Casa" name="Casa">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="Apartamento">Apartamento</option>
+                </select>
+                
+
+                
+
 
             </div>
 
