@@ -11,7 +11,7 @@ function PhotoName({ gatoImage, nameCat }) {
                 <h1>{nameCat}</h1>
             </div>
             <div className='imgCat'>
-                <img src="https://cataas.com/cat" alt="gato-img" />
+                <img src={gatoImage} alt="gato-img" />
             </div>
             
         </div>
