@@ -12,11 +12,25 @@
     
 }
 
+.historia-container h1{
+    margin-bottom: 1rem;
+
+}
+
+.historia-container p{
+    margin-bottom: 1rem;
+}
+
 .historia-text{
     margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .barras-porcentaje{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
+
+
