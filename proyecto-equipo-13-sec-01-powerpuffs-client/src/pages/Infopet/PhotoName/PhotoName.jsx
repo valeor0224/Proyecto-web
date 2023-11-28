@@ -7,12 +7,13 @@ function PhotoName({ gatoImage, nameCat }) {
 
     return (
         <div className="photoName">
-            <div className='imgCat'>
-                <img src={gatoImage} alt="gato-img" />
-            </div>
             <div className='nombre-gato'>
                 <h1>{nameCat}</h1>
             </div>
+            <div className='imgCat'>
+                <img src="https://cataas.com/cat" alt="gato-img" />
+            </div>
+            
         </div>
     );
 }

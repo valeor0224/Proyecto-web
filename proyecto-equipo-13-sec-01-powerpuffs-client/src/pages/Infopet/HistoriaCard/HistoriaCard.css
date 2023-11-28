@@ -12,6 +12,10 @@
     
 }
 
+.historia-text{
+    margin-right: 2rem;
+}
+
 .barras-porcentaje{
     display: flex;
     flex-direction: column;
