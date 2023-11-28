@@ -193,12 +193,13 @@ export const catsData = [
         ageCat: "Senior",
         sexCat: "Female",
         gatoImage: "https://cataas.com/cat"
+        
     },
     {
-        nameCat: "name",
-        colorCat: "color",
-        ageCat: "age",
-        sexCat: "sex",
+        nameCat: "kiki",
+        colorCat: "white",
+        ageCat: "Kitten",
+        sexCat: "Male",
         gatoImage: "https://cataas.com/cat"
     },
     {
