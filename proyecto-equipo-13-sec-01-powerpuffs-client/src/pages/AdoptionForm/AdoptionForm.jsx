@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './AdoptionForm.css';
 
@@ -30,7 +30,7 @@ function AdoptionForm() {
     };
 
     return (
-        
+
         <div className="AdoptionForm">
             <div className='top-AdoptionForm'>
                 <h1>
@@ -39,25 +39,26 @@ function AdoptionForm() {
                 <p>
                     Recuerda: Adoptar una mascota es una decisión seria, implica alegrías, innumerables recompensas y responsabilidades, como velar por la alimentación, salud y seguridad del animalito durante toda su vida (que oscila entre 10 hasta 18 años), brindarle amor, compañía y no abandonarlo si nos vamos de viaje o nos mudamos de casa.
                 </p>
-                <p>
+                <span>
                     NOS RESERVAMOS el derecho de dar en adopción luego de evaluar este formulario
-                </p>
+                </span>
                 <div className='top-AdoptionForm-img'>
-                <img src={gatoImage} alt="gato-img" />
+                    <img src='https://cataas.com/cat' alt="gato-img" />
                     <h2>
                         Adoptar a {nameCat}
                     </h2>
                 </div>
             </div>
 
-            <h2>
-                VERIFICA TUS DATOS PERSONALES
-            </h2>
+
+
 
             <div className='datos-personales-AdoptionForm'>
 
-
                 <div className='datos-personales-AdoptionForm-left'>
+                    <h2>
+                        VERIFICA TUS DATOS PERSONALES
+                    </h2>
                     <label htmlFor="nombre">Tu nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="John" />
 
@@ -89,6 +90,9 @@ function AdoptionForm() {
 
 
                 <div className='preguntas-AdoptionForm-left'>
+                    <h2>
+                        PREGUNTAS
+                    </h2>
                     <label htmlFor="Educacion">Nivel de Educación:</label>
                     <select id="Educacion" name="Educacion">
                         <option value="" selected disabled>Seleccione una opción</option>

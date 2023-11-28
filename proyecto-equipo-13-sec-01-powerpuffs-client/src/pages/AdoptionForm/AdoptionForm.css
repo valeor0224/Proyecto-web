@@ -1,67 +1,117 @@
-.AdoptionForm{
+.AdoptionForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 15rem;
+
 }
 
-.top-AdoptionForm{
+.AdoptionForm h2 {
+    color: var(--pink);
+    font-family: var(--info-font);
+}
+
+.top-AdoptionForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+
 }
 
-.top-AdoptionForm h1{
+.top-AdoptionForm h1 {
     font-family: var(--titles-font);
     color: var(--dark-gray)
 }
 
-.top-AdoptionForm p{
+.top-AdoptionForm span {
+    font-family: var(--info-font);
+    color: var(--pink);
+    font-weight: bold;
+
+}
+
+.AdoptionForm label {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    max-width: 500px;
+}
+
+
+.top-AdoptionForm-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--pink);
+    font-family: var(--info-font);
+
+}
+
+.top-AdoptionForm img {
+    border-radius: 12rem;
+    width: 12rem;
+    height: 12rem;
+    box-shadow: 0px 4.2px 4.2px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
+}
+
+
+.top-AdoptionForm p {
     font-family: var(--info-font);
     color: var(--pink)
 }
 
-.datos-personales-AdoptionForm{
+.datos-personales-AdoptionForm {
     display: flex;
     flex-direction: row;
     font-family: var(--info-font);
+    column-gap: 5rem;
 }
 
-.datos-personales-AdoptionForm-left{
+.datos-personales-AdoptionForm-left {
     display: flex;
     flex-direction: column;
 }
 
-.datos-personales-AdoptionForm-right{
+.datos-personales-AdoptionForm-right {
     display: flex;
     flex-direction: column;
 }
 
-.preguntas-AdoptionForm{
+.preguntas-AdoptionForm {
     display: flex;
     flex-direction: row;
     font-family: var(--info-font);
+    column-gap: 5rem;
+
+    justify-content: center;
 }
 
-.preguntas-AdoptionForm-left{
+.preguntas-AdoptionForm-left {
     display: flex;
     flex-direction: column;
 }
 
-.preguntas-AdoptionForm-right{
+.preguntas-AdoptionForm-right {
     display: flex;
     flex-direction: column;
 }
 
-.acepta-politica-adopcion{
+.acepta-politica-adopcion {
     font-family: var(--info-font);
     color: var(--dark-gray);
     display: flex;
     flex-direction: column;
+
 }
 
 .AdoptionForm input,
-.AdoptionForm select{
-    width: 700px;
+.AdoptionForm select {
+    width: 500px;
     height: 50px;
     padding: 8px;
     margin-bottom: 10px;
@@ -70,3 +120,15 @@
     color: var(--dark-gray);
 }
 
+
+.enviar-solicitud {
+    display: flex;
+    height: 3rem;
+    width: 15rem;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
