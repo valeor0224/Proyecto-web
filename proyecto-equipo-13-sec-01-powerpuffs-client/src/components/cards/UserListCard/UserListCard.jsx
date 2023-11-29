@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
 import './UserListCard.css';
 import EditRoleCard from '../EditRoleCard/EditRoleCard';
-import { deleteUserById } from '../../initial-data'; // Update the path
 
 const UserTable = ({ users, onDeleteUser, openEditRolePopup }) => {
-  
-  const handleDeleteUser = (userId) => {
-    // Delete user from the initial data
-    deleteUserById(userId);
-
-    // Call the onDeleteUser function
-    onDeleteUser(userId);
-  };
-
   return (
-    <table border="1">
+    <table className='user-table'>
       <thead>
         <tr>
           <th>ID</th>
@@ -27,14 +17,14 @@ const UserTable = ({ users, onDeleteUser, openEditRolePopup }) => {
       </thead>
       <tbody>
         {users.map((user) => (
-          <tr key={user.id}>
+          <tr key={user.id} className="rounded-row"> {/* Add the rounded-row class */}
             <td>{user.id}</td>
             <td>{user.userName}</td>
             <td>{user.userLastName}</td>
             <td>{user.userEmail}</td>
             <td>{user.roleId}</td>
             <td>
-              <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+              <button onClick={() => onDeleteUser(user.id)}>Delete</button>
               <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
             </td>
           </tr>
@@ -44,10 +34,9 @@ const UserTable = ({ users, onDeleteUser, openEditRolePopup }) => {
   );
 };
 
-const UserListCard = ({ userData, setUserData }) => {
+const UserListCard = ({ userData, onDeleteUser }) => {
   const [showEditRolePopup, setShowEditRolePopup] = useState(false);
   const [selectedUserId, setSelectedUserId] = useState(null);
-  const [deleteMessage, setDeleteMessage] = useState('');
 
   const openEditRolePopup = (userId) => {
     console.log('Selected User ID:', userId);
@@ -59,17 +48,6 @@ const UserListCard = ({ userData, setUserData }) => {
     setShowEditRolePopup(false);
     setSelectedUserId(null);
   };
-
-  const onDeleteUser = (userId) => {
-    // Filter out the user with the specified ID
-    const updatedUserData = userData.filter((user) => user.id !== userId);
-    setUserData(updatedUserData);
-
-    // Set the delete message
-    setDeleteMessage(`User with ID ${userId} has been deleted.`);
-  };
-
- 
 
   const renderUserTables = (role, users) => {
     return (
@@ -97,7 +75,6 @@ const UserListCard = ({ userData, setUserData }) => {
       {showEditRolePopup && (
         <EditRoleCard userId={selectedUserId} onClose={closeEditRolePopup} userData={userData} />
       )}
-      {deleteMessage && <p>{deleteMessage}</p>}
     </div>
   );
 };

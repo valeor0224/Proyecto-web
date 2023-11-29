@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
 import './UserList.css';
 import UserListCard from '../../components/cards/UserListCard/UserListCard';
-import { user as initialUserData } from '../../components/initial-data';  // Renamed the imported constant
+import { user as userData } from '../../components/initial-data';
 
 function UserList() {
-  const [userData, setUserData] = useState(initialUserData);  // Used the imported constant for initial state
+
   return (
     <>
-      <div className="user-list">
-        <UserListCard userData={userData} setUserData={setUserData} />  {/* Passed setUserData as a prop */}
+      <div className="user-list-page">
+        <h1>LISTA DE USUARIOS</h1>
+        <div className='user-list-container'>
+          <div className='tab-userlist'>
+            <h2>
+              Usuarios
+            </h2>
+          </div>
+          <UserListCard userData={userData} />
+
+        </div>
+
       </div>
     </>
   );

@@ -363,9 +363,3 @@ export const user = [
     },
 ];
 
-export const deleteUserById = (userId) => {
-    const index = user.findIndex((u) => u.id === userId);
-    if (index !== -1) {
-      user.splice(index, 1);
-    }
-  };
