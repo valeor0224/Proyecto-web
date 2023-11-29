@@ -4,10 +4,11 @@ import EditRoleCard from '../EditRoleCard/EditRoleCard';
 
 const UserListCard = ({ userData, onDeleteUser }) => {
   const [showEditRolePopup, setShowEditRolePopup] = useState(false);
-  const [selectedUserId, setSelectedUserId] = useState(null);
+  const [selectedUserId, setSelectedUserId] = useState(null);  // Make sure to declare setSelectedUserId
 
-  const openEditRolePopup = (userId) => {
-    setSelectedUserId(userId);
+  const openEditRolePopup = (user) => {
+    console.log('Selected User:', user);
+    setSelectedUserId(user);
     setShowEditRolePopup(true);
   };
 
@@ -91,7 +92,7 @@ const UserListCard = ({ userData, onDeleteUser }) => {
             <th>User Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            <th>Role ID</th> 
+            <th>Role ID</th>
             <th>Actions</th> {/* Added Actions column */}
 
           </tr>
@@ -103,18 +104,19 @@ const UserListCard = ({ userData, onDeleteUser }) => {
               <td>{user.userName}</td>
               <td>{user.userLastName}</td>
               <td>{user.userEmail}</td>
-              <td>{user.roleId}</td> 
+              <td>{user.roleId}</td>
               <td>
                 <button onClick={() => onDeleteUser(user.id)}>Delete</button>
-                <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
+                <button onClick={() => openEditRolePopup(user)}>Edit Role</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {showEditRolePopup && (
-        <EditRoleCard userId={selectedUserId} onClose={closeEditRolePopup} />
+        <EditRoleCard userId={selectedUserId} onClose={closeEditRolePopup} userData={userData} />
       )}
+
     </div>
   );
 };
