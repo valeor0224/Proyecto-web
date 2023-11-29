@@ -362,3 +362,10 @@ export const user = [
         userProfilePic: "https://cataas.com/cat",
     },
 ];
+
+export const deleteUserById = (userId) => {
+    const index = user.findIndex((u) => u.id === userId);
+    if (index !== -1) {
+      user.splice(index, 1);
+    }
+  };
