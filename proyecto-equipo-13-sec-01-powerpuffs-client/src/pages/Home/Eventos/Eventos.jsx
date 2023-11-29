@@ -1,5 +1,6 @@
+// Eventos.jsx
+
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Eventos.css";
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 import { useUserContext } from "../../../UserContext";
@@ -20,12 +21,10 @@ const Eventos = ({ events }) => {
     .reverse();
 
   return (
-
     <div className="staircase-container">
-      <div className="card">
-        {latestEvents.map((event, index) => (
+      {latestEvents.map((event, index) => (
+        <div key={index} className="card">
           <EventosCard
-            key={index}
             date={event.date}
             eventName={event.eventName}
             location={event.location}
@@ -36,10 +35,8 @@ const Eventos = ({ events }) => {
             eventType={event.eventType}
             eventHour={event.eventHour}
           />
-        ))}
-
-      </div>
-
+        </div>
+      ))}
 
       <div className="eventos-home-info">
         <span className="eventos-home-title">Eventos</span>

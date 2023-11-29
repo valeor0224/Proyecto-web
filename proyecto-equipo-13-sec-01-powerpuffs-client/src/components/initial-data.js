@@ -206,11 +206,81 @@ export const news = [
         location: "San Salvador",
         description: "Lorem ipsum 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1",
         viewType: "",
-        newsImage:"https://cataas.com/cat",
+        newsImage: "https://cataas.com/cat",
         newsType: "Servicio Social",
     },
-   
+
 ];
+
+
+export const catsData = [
+    {
+        nameCat: "Poppy",
+        colorCat: "Orange",
+        ageCat: "Senior",
+        sexCat: "Female",
+        gatoImage: "https://cataas.com/cat"
+        
+    },
+    {
+        nameCat: "kiki",
+        colorCat: "white",
+        ageCat: "Kitten",
+        sexCat: "Male",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    },
+    {
+        nameCat: "name",
+        colorCat: "color",
+        ageCat: "age",
+        sexCat: "sex",
+        gatoImage: "https://cataas.com/cat"
+    }
+
+]
+
 
 export const user = [
     {

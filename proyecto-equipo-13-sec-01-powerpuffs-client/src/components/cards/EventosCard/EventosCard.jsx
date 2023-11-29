@@ -13,6 +13,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
   const [showDropdown, setShowDropdown] = useState(false);
   
 
+
   const getMonthAbbreviation = (month) => {
     const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     return monthNames[parseInt(month, 10) - 1];
@@ -61,6 +62,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
 
   console.log(userRole);
 
+
   return (
     <div className={`eventos-container ${isHomeView ? 'home-view' : 'event-view'}`}>
       <div className='eventos-card-container'>
@@ -78,6 +80,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
         </div>
 
         <div className='cuadro-informacion'>
+
           <div className="config-event-box">
             <div className='titulo-evento'>
               <h1>{eventName}</h1>
@@ -107,6 +110,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
               </div>
               </div>
             ) : null}
+
           </div>
 
           <div className='ubicacion'>
@@ -116,6 +120,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
           <div className='descripcion'>
             <p>{truncatedDescription}</p>
           </div>
+
 
           <div className="config-event-box2">
 

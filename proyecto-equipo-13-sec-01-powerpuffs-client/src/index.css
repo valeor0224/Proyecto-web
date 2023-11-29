@@ -5,12 +5,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #ffffff;
   }
 
 :root {
     --pink: #EA526F; 
-    --blue: #56b8c5ea;
+    --blue: #56b8c5;
     --green: #79B299;
     --white: #FFFFFF;
     --dark-gray: #585B56;

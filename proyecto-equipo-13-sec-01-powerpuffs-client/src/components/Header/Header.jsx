@@ -6,6 +6,7 @@ import singoutLogo from '../../assets/img/logout.png';
 import './Header.css';
 import AuthService from '../../services/AuthService'; // Import the AuthService
 
+
 const Header = ({ userRole }) => {
 
   //console.log(userRole);
@@ -16,6 +17,7 @@ const Header = ({ userRole }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(AuthService.isAuthenticated());
   const dropdownRef = useRef(null);
   const [userProfilePic, setUserProfilePic] = useState(AuthService.getUser()?.userProfilePic);
+
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -84,7 +86,7 @@ const Header = ({ userRole }) => {
       AuthService.unregisterListener(updateProfilePic);
     };
   }, []);
-  
+
   return (
     <nav>
       <div className="nav-logo-container">
@@ -96,6 +98,7 @@ const Header = ({ userRole }) => {
         {showMenu ? 'X' : '☰'}
       </button>
       <div className={`navbar-links-container ${showMenu ? 'show' : ''}`}>
+
         {userRole === '1' ? (
           <div className="admin-links">
             <NavLink to="/">INICIO</NavLink>
@@ -119,10 +122,11 @@ const Header = ({ userRole }) => {
             <NavLink to="/Adopta">ADOPTA</NavLink>
             <NavLink to="/Event">EVENTOS</NavLink>
             <NavLink to="/news">NOTICIAS</NavLink>
-            <NavLink to="/Formas-de-ayudar">FORMAS DE AYUDAR</NavLink>
+            <NavLink to="/Donation">FORMAS DE AYUDAR</NavLink>
             <NavLink to="/Contactanos">CONTÁCTANOS</NavLink>
           </div>
         )}
+
         {isLoggedIn ? (
           <div className="user-profile-container">
             <button className="user-profile-pic-cont">
@@ -156,6 +160,7 @@ const Header = ({ userRole }) => {
             INICIAR SESIÓN
           </button>
         )}
+
       </div>
     </nav>
   );

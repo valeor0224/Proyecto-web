@@ -9,6 +9,8 @@ import News from './pages/News/News.jsx';
 import NewsArticle from './components/NewsArticle/NewsArticle.jsx';
 import Login from './pages/Login/Login.jsx';
 import AuthService from './services/AuthService';
+import Donation from './pages/Donation/Donation.jsx';
+import Infopet from './pages/Infopet/Infopet.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 
@@ -24,6 +26,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
         <Route path="Event" element={<Event />} />
+        <Route path="Donation" element={<Donation/>} />
+        <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
         <Route
           path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour/:eventBudget/:eventStatus/:eventCreatedBy"
           element={<EventArticle events={events}/>}

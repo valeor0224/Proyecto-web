@@ -16,9 +16,7 @@ function Event( ) {
   //   fetch('path-to-initial-data.js')
   //     .then(response => response.json())
   //     .then(data => setEvents(data.events));
-  // }, []);
-
-  
+  // }, []); 
   // console.log(userRole);
   
   return (
@@ -33,5 +31,6 @@ function Event( ) {
     </>
   );
 }
+
 
 export default Event;

@@ -31,6 +31,7 @@ const EventArticle = ({ events }) => {
     .slice(-3)
     .reverse();
 
+
   return (
     <div className='page-section'>
       <div className="event-article-container">
@@ -151,7 +152,6 @@ const EventArticle = ({ events }) => {
               eventHour={eventItem.eventHour}
             />
           ))}
-
         </div>
       </div>
     </div>

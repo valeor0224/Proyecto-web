@@ -1,0 +1,36 @@
+.historia-container{
+
+    background-color: var(--green);
+    color: var(--white);
+    font-family: var(--info-font);
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 5.16923px 5.16923px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 60%;
+    
+}
+
+.historia-container h1{
+    margin-bottom: 1rem;
+
+}
+
+.historia-container p{
+    margin-bottom: 1rem;
+}
+
+.historia-text{
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.barras-porcentaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
