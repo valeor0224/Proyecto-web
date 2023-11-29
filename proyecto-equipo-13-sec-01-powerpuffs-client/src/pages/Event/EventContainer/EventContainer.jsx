@@ -111,7 +111,7 @@ function EventContainer({ events }) {
                                     <option value="declinado">Declinado</option>
                                 </select>
                             </div>
-                        ) : null};
+                        ) : null}
 
 
                         <div className="filter-buttons">

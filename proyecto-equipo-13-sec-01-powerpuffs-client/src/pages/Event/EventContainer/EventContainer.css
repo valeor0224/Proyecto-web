@@ -40,8 +40,9 @@
 .event-filter {
     font-family: var(--info-font);
     display: grid;
+    width: 80%;
     grid-template-columns: repeat(2, 1fr);
-    margin: 20px;
+    margin: auto;
 }
 
 .event-filter-item{
@@ -178,6 +179,10 @@
 
     }
 
+    .event-filter-container{
+        width: 80%;
+    }
+
     .event-filter-txt {
         width: auto;
         text-align: left;
@@ -194,8 +199,9 @@
 
     .event-filter{
         display: flex;
+        width: 100%;
         flex-direction: column;
-        padding: 0px 10px;
+        margin: auto;
     }
 
     .event-filter-item p{
