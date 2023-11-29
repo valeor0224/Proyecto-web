@@ -25,13 +25,12 @@ function App() {
       <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Adopta" element={<Adopta />} />
+
         <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
-        <Route path="Event" element={<Event userRole={userRole}  />} />
         <Route path="Donation" element={<Donation/>} />
         <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
         <Route
-          path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour"
+          path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour/:eventBudget/:eventStatus/:eventCreatedBy"
           element={<EventArticle events={events}/>}
         />
         <Route path="News" element={<News />} />
