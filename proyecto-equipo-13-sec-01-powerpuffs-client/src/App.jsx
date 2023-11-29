@@ -25,7 +25,7 @@ function App() {
       <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="Adopta" element={<Adopta />} />
         <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
         <Route path="Donation" element={<Donation/>} />
         <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
