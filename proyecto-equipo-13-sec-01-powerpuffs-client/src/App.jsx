@@ -11,6 +11,7 @@ import Login from './pages/Login/Login.jsx';
 import AuthService from './services/AuthService';
 import Donation from './pages/Donation/Donation.jsx';
 import Infopet from './pages/Infopet/Infopet.jsx';
+import AdoptionForm from './pages/AdoptionForm/AdoptionForm.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 
@@ -24,8 +25,8 @@ function App() {
       <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Adopta" element={<Adopta />} />
-        <Route path="Event" element={<Event />} />
+
+        <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
         <Route path="Donation" element={<Donation/>} />
         <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
         <Route
