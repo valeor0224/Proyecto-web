@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './UserListCard.css';
+import EditRoleCard from '../EditRoleCard/EditRoleCard';
 
 const UserListCard = ({ userData, onDeleteUser }) => {
+  const [showEditRolePopup, setShowEditRolePopup] = useState(false);
+  const [selectedUserId, setSelectedUserId] = useState(null);
+
+  const openEditRolePopup = (userId) => {
+    setSelectedUserId(userId);
+    setShowEditRolePopup(true);
+  };
+
+  const closeEditRolePopup = () => {
+    setShowEditRolePopup(false);
+    setSelectedUserId(null);
+  };
+
   // Filter users based on roleId
   const adminUsers = userData.filter((user) => user.roleId === '1');
   const moderadorUsers = userData.filter((user) => user.roleId === '2');
@@ -17,8 +32,7 @@ const UserListCard = ({ userData, onDeleteUser }) => {
             <th>Last Name</th>
             <th>Email</th>
             <th>Role ID</th>
-            <th>Actions</th> {/* Added Actions column */}
-            {/* Add other columns as needed */}
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -31,12 +45,13 @@ const UserListCard = ({ userData, onDeleteUser }) => {
               <td>{user.roleId}</td>
               <td>
                 <button onClick={() => onDeleteUser(user.id)}>Delete</button>
+                <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
               </td>
-              {/* Add other columns as needed */}
             </tr>
           ))}
         </tbody>
       </table>
+
 
       <h2>Moderador</h2>
       <table border="1">
@@ -61,6 +76,7 @@ const UserListCard = ({ userData, onDeleteUser }) => {
               <td>{user.roleId}</td>
               <td>
                 <button onClick={() => onDeleteUser(user.id)}>Delete</button>
+                <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
               </td>
             </tr>
           ))}
@@ -90,11 +106,15 @@ const UserListCard = ({ userData, onDeleteUser }) => {
               <td>{user.roleId}</td> 
               <td>
                 <button onClick={() => onDeleteUser(user.id)}>Delete</button>
+                <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {showEditRolePopup && (
+        <EditRoleCard userId={selectedUserId} onClose={closeEditRolePopup} />
+      )}
     </div>
   );
 };
