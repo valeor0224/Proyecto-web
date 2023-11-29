@@ -75,7 +75,7 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
                         <p>{truncatedDescription}</p>
                     </div>
 
-                    <button className='mas-info' onClick={handleButtonClick}>
+                    <button className='mas-info-news' onClick={handleButtonClick}>
                         Leer más
                     </button>
 

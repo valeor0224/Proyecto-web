@@ -28,6 +28,7 @@ function App() {
         <Route path="Adopta" element={<Adopta />} />
         <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
         <Route path="Donation" element={<Donation/>} />
+        <Route path="Event" element={<Event />} />
         <Route path="/Infopet/:encodedImageCat/:encodedNameCat/:encodedAgeCat/:encodedSexCat/:encodedColorCat" element={<Infopet/>} />
         <Route
           path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour/:eventBudget/:eventStatus/:eventCreatedBy"
