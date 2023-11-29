@@ -3,28 +3,28 @@ import { useParams } from 'react-router-dom';
 import './AdoptionForm.css';
 
 function AdoptionForm() {
-    // Uncomment the line below if you need local state in this component
-    // const [someState, setSomeState] = useState(initialValue);
     const { gatoImage, nameCat } = useParams();
 
-    console.log('gatoImage:', gatoImage);
-    console.log('nameCat:', nameCat);
-
-
     const [aceptoChecked, setAceptoChecked] = useState(null);
+    const [espacioChecked, setEspacioChecked] = useState(null);
+    const [acuerdoChecked, setAcuerdoChecked] = useState(null);
 
     const handleAceptoChange = () => {
-        // Toggle the state if already selected, set to true if not selected, set to null if unselected
         setAceptoChecked(aceptoChecked === null ? true : !aceptoChecked);
     };
 
-    const isSubmitDisabled = aceptoChecked === null;
+    const handleEspacioChange = (value) => {
+        setEspacioChecked(value);
+    };
+
+    const handleAcuerdoChange = (value) => {
+        setAcuerdoChecked(value);
+    };
+
+    const isSubmitDisabled = aceptoChecked === null || espacioChecked === null || acuerdoChecked === null;
 
     const handleSubmit = () => {
-        // Handle form submission logic here
-        // Only called when "ACEPTO" is checked
         if (aceptoChecked) {
-            // Perform form submission
             console.log('Form submitted!');
         }
     };
@@ -108,27 +108,30 @@ function AdoptionForm() {
                         <option value="Apartamento">Apartamento</option>
                     </select>
 
-                    <label htmlFor="espacio">¿Tiene espacio suficiente para una mascota?</label>
-                    <label>
-                        <input type="radio" name="agree" value="yes" />
-                        Si
-                    </label>
+                    <div className="radio-group">
+                        <label htmlFor="espacio">¿Tiene espacio suficiente para una mascota?</label>
+                        <div className="radio-option">
+                            <input type="radio" name="espacio" value="si" id="espacioSi" onChange={() => handleEspacioChange(true)} checked={espacioChecked === true} />
+                            <label htmlFor="espacioSi">Si</label>
+                        </div>
+                        <div className="radio-option">
+                            <input type="radio" name="espacio" value="no" id="espacioNo" onChange={() => handleEspacioChange(false)} checked={espacioChecked === false} />
+                            <label htmlFor="espacioNo">No</label>
+                        </div>
+                    </div>
 
-                    <label>
-                        <input type="radio" name="agree" value="no" />
-                        No
-                    </label>
+                    <div className="radio-group">
+                        <label htmlFor="acuerdo">Las demás personas que viven con usted están de acuerdo con esta adopción</label>
+                        <div className="radio-option">
+                            <input type="radio" name="acuerdo" value="si" id="acuerdoSi" onChange={() => handleAcuerdoChange(true)} checked={acuerdoChecked === true} />
+                            <label htmlFor="acuerdoSi">Si</label>
+                        </div>
+                        <div className="radio-option">
+                            <input type="radio" name="acuerdo" value="no" id="acuerdoNo" onChange={() => handleAcuerdoChange(false)} checked={acuerdoChecked === false} />
+                            <label htmlFor="acuerdoNo">No</label>
+                        </div>
+                    </div>
 
-                    <label htmlFor="acuerdo">Las demás personas que viven con usted están de acuerdo con esta adopción</label>
-                    <label>
-                        <input type="radio" name="agree" value="yes" />
-                        Si
-                    </label>
-
-                    <label>
-                        <input type="radio" name="agree" value="no" />
-                        No
-                    </label>
 
                     <label htmlFor="gastos">La mascota incurrirá gastos, denos un estimado mensual que tenga en mente.:</label>
                     <input type="number" id="gastos" name="gastos" min="0" step="0.01" placeholder="$" />
@@ -149,16 +152,19 @@ function AdoptionForm() {
                     <label htmlFor="mascotas-pasada">Ha tenido una mascota antes? ¿Qué pasó con ella(s)?</label>
                     <input type="text" id="mascotas-pasadas" name="mascotas-pasada" placeholder="" />
 
-                    <label htmlFor="responsabilidad">Está dispuesto a asumir la responsabilidad en caso de enfermedad degenerativa o crónica de su mascota adoptada?</label>
-                    <label>
-                        <input type="radio" name="agree" value="yes" />
-                        Si
-                    </label>
 
-                    <label>
-                        <input type="radio" name="agree" value="no" />
-                        No
-                    </label>
+                    <div className="radio-group">
+                        <label htmlFor="responsabilidad">Está dispuesto a asumir la responsabilidad en caso de enfermedad degenerativa o crónica de su mascota adoptada?</label>
+                        <div className="radio-option">
+                            <input type="radio" name="responsabilidad" value="yes" id="responsabilidadYes" />
+                            <label htmlFor="responsabilidadYes">Si</label>
+                        </div>
+                        <div className="radio-option">
+                            <input type="radio" name="responsabilidad" value="no" id="responsabilidadNo" />
+                            <label htmlFor="responsabilidadNo">No</label>
+                        </div>
+                    </div>
+
 
 
                     <label htmlFor="cuidados">¿Conoces los cuidados que requiere una mascota como la que deseas adoptar? Descríbalos</label>
@@ -169,19 +175,27 @@ function AdoptionForm() {
 
                 </div>
 
-
-
             </div>
 
             <div className='acepta-politica-adopcion'>
                 Cuando entregamos en adopción es política, y por el bienestar del animal, visitar periódicamente al adoptado para verificar su buen trato y estado. Y mantener contacto con el adoptante, para conocer su estado y para brindar a su adoptante la atención e información necesaria en caso de cualquier situación de salud, o necesidad sobre el animal adoptado, y brindarle ayuda veterinaria si la requiere según el caso y si estás lejos pedir fotos o video que demuestren su bienestar. EL ANIMALITO ENTREGADO EN ADOPCIÓN SERÁ RETIRADO POR LA AGRUPACIÓN SI AL REALIZAR LA VISITA PERIÓDICA SE COMPRUEBA QUE SE ENCUENTRA EN MAL ESTADO FÍSICO, DE SALUD O EN CONDICIONES NO APTAS PARA SU BIENESTAR.
-                <label>
-                    <input type="radio" name="aceptar" value="yes" onChange={handleAceptoChange} checked={aceptoChecked === true} />
-                    ACEPTO
-                </label>
-                <button className='enviar-solicitud' onClick={handleSubmit} disabled={isSubmitDisabled}>
-                    ENVIAR SOLICITUD
-                </button>
+                <div className="radio-group">
+
+                    <div className="radio-option">
+                        <input type="radio" name="aceptar" value="yes" onChange={handleAceptoChange} checked={aceptoChecked === true} />
+                        <label>ACEPTO</label>
+                    </div>
+
+
+
+                </div>
+
+                <div className='button-enviar-solicitud'>
+                    <button className='enviar-solicitud' onClick={handleSubmit} disabled={isSubmitDisabled}>
+                        ENVIAR SOLICITUD
+                    </button>
+                </div>
+
             </div>
 
         </div>
