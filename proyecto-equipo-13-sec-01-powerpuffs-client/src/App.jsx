@@ -23,9 +23,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
-        <Route path="Event" element={<Event userRole={userRole}  />} />
+        <Route path="Event" element={<Event />} />
         <Route
-          path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour"
+          path="EventArticle/:eventName/:location/:description/:eventImage/:fullDate/:eventType/:eventHour/:eventBudget/:eventStatus/:eventCreatedBy"
           element={<EventArticle events={events}/>}
         />
         <Route path="News" element={<News />} />

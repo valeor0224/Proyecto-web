@@ -9,6 +9,22 @@
     
 }
 
+
+.home-view .AM-event-info{
+    display: none;
+}
+.event-view .AM-event-info{
+    display: none;
+}
+
+.home-view .AM-container-event{
+    display: none;
+}
+.event-view .AM-container-event{
+    background-color: transparent;
+    margin-top: 12px;
+}
+
 .home-view .eventos-card-container {
     height: auto;
     width: 390px;
@@ -308,9 +324,12 @@
 
 .event-view .admin-config-event{
     display: block;
+    width: 30px;
     background-color: transparent;
     margin-top: auto;
     margin-right: 1.2rem;
+
+    align-items: center;
 
     position: relative;
 }
@@ -318,12 +337,14 @@
 .event-view .three-dots-event{
     display: block;
     background-color: transparent;
+    width: 100%;
     border: none;
 }
 
 .event-view .three-dots-event:hover{
     transform: scale(0.9);
     background-color: transparent;
+    border-radius: 5px;
 }
 
 .event-view .three-dots-event img{
@@ -332,14 +353,14 @@
 
 .event-view .dropdown-menu-event {
     position: absolute;
-    top: -40%;
-    right: -1350%;
+    top: -30%;
+    right: -250%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 0 15px 15px 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    min-width: 55px;
+    width: 55px;
     background-color: var(--dark-gray);
 
     display: block;

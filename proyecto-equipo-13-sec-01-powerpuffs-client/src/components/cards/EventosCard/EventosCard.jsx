@@ -5,10 +5,13 @@ import locationLogo from "../../../assets/img/location.png";
 import dotsLogo from "../../../assets/img/3-dots.png";
 import deleteLogo from "../../../assets/img/delete.png";
 import editLogo from "../../../assets/img/edit.png";
+import { useUserContext } from '../../../UserContext';
 
-const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour, userRole}) => {
+const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour, eventBudget, eventStatus, eventCreatedBy}) => {
+  const { userRole } = useUserContext();
   const isHomeView = viewType === 'home';
   const [showDropdown, setShowDropdown] = useState(false);
+  
 
   const getMonthAbbreviation = (month) => {
     const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
@@ -30,8 +33,11 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
     const encodedFullDate = encodeURIComponent(`${getMonthAbbreviation(month)} ${day}, ${year}`);
     const encodedEventType = encodeURIComponent(eventType);
     const encodedEventHour = encodeURIComponent(eventHour);
-
-    navigate(`/EventArticle/${encodedEventName}/${encodedLocation}/${encodedDescription}/${encodedEventImage}/${encodedFullDate}/${encodedEventType}/${encodedEventHour}`); // Update the URL
+    const encodedEventBudget = encodeURIComponent(eventBudget);
+    const encodedEventStatus = encodeURIComponent(eventStatus);
+    const encodedEventCreatedBy = encodeURIComponent(eventCreatedBy);
+  
+    navigate(`/EventArticle/${encodedEventName}/${encodedLocation}/${encodedDescription}/${encodedEventImage}/${encodedFullDate}/${encodedEventType}/${encodedEventHour}/${encodedEventBudget}/${encodedEventStatus}/${encodedEventCreatedBy}`); // Update the URL
   };
 
 
@@ -77,6 +83,13 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
               <h1>{eventName}</h1>
               </div>
               {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+            <div className="AM-container-event">
+              <div className="AM-event-info">
+                <span className="sr-only1">{eventBudget}</span>
+                <span className="sr-only1">{eventStatus}</span>
+                <span className="sr-only1">{eventCreatedBy}</span>
+              </div>
+
               <div className="admin-config-event">
                 <button className="three-dots-event" onClick={handleThreeDotsClick}>
                   <img src={dotsLogo} alt="dots-logo" />
@@ -91,6 +104,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
                     </button>
                   </div>
                 )}
+              </div>
               </div>
             ) : null}
           </div>
