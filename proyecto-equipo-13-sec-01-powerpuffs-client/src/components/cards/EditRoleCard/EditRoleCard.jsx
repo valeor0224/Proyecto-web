@@ -10,7 +10,7 @@ function EditRoleCard({ userId, onClose, userData }) {
     const user = userData.find(user => user.id === userId) || {};
 
     // Destructure relevant user fields with default values
-    const { userName = 'lol', userEmail = '', userDepto = '', roleId = '' } = user;
+    const { userName = 'deafultname', userEmail = '', userDepto = '', roleId = '' } = user;
 
     return (
         <>

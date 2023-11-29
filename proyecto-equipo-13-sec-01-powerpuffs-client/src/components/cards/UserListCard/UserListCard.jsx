@@ -107,7 +107,7 @@ const UserListCard = ({ userData, onDeleteUser }) => {
               <td>{user.roleId}</td>
               <td>
                 <button onClick={() => onDeleteUser(user.id)}>Delete</button>
-                <button onClick={() => openEditRolePopup(user)}>Edit Role</button>
+                <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
               </td>
             </tr>
           ))}

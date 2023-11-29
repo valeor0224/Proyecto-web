@@ -348,4 +348,17 @@ export const user = [
         userDescription:"About me??!!?",
         userProfilePic: "https://cataas.com/cat",
     },
+    {
+        id: "5",
+        userName: "UsuarioUsuario3",
+        userLastName: "UsuarioUsuario3",
+        userEmail: "usuario3@gmail.com",
+        password: "123456",
+        roleId: "3",
+        userPhone:"503 7777 0000",
+        userAddress: "Calle el atol",
+        userDepto: "Morazan",
+        userDescription:"About me??!!?",
+        userProfilePic: "https://cataas.com/cat",
+    },
 ];
