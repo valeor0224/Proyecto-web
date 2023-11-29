@@ -4,8 +4,7 @@ import EventCarrousel from './EventCarrousel/EventCarrousel';
 import EventContainer from './EventContainer/EventContainer';
 import { events } from '../../components/initial-data.js';
 
-
-function Event( { userRole }) {
+function Event( ) {
   //const [someState, setSomeState] = useState(initialValue);
 
   
@@ -25,7 +24,7 @@ function Event( { userRole }) {
         <div className="Event">
           <h1 className="Event-title">Eventos</h1>
           <EventCarrousel events={events}/>
-          <EventContainer events={events} userRole={userRole}/>
+          <EventContainer events={events} />
           <EventCalendar/>
         </div>
      

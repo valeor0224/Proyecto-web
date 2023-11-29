@@ -3,9 +3,22 @@
 import React from "react";
 import "./Eventos.css";
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
+import { useUserContext } from "../../../UserContext";
 
 const Eventos = ({ events }) => {
-  const latestEvents = events.slice(-3);
+
+  const { userRole } = useUserContext();
+
+  const latestEvents = events
+    .filter((eventItem) => {
+      if (userRole === "1" || userRole === "2") {
+        return true;
+      } else {
+        return eventItem.eventStatus.toLowerCase() === "aprobado";
+      }
+    })
+    .slice(-3)
+    .reverse();
 
   return (
     <div className="staircase-container">

@@ -8,6 +8,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Recaudación",
         eventHour: "17:00",
+        eventBudget: "$100.00",
+        eventStatus: "pendiente",
+        eventCreatedBy: "",
     },
     {
         date: "25/06/2023",
@@ -18,6 +21,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Recaudación",
         eventHour: "18:00",
+        eventBudget: "$200.00",
+        eventStatus: "aprobado",
+        eventCreatedBy: "",
     },
     {
         date: "26/06/2023",
@@ -28,6 +34,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Recaudación",
         eventHour: "12:00",
+        eventBudget: "$300.00",
+        eventStatus: "pendiente",
+        eventCreatedBy: "",
     },
     {
         date: "27/06/2024",
@@ -38,6 +47,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Campaña de esterilización",
         eventHour: "16:00",
+        eventBudget: "$200.00",
+        eventStatus: "declinado",
+        eventCreatedBy: "",
     },
     {
         date: "29/06/2024",
@@ -48,6 +60,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Campaña de esterilización",
         eventHour: "09:00",
+        eventBudget: "$200.00",
+        eventStatus: "aprobado",
+        eventCreatedBy: "",
     },
     {
         date: "30/06/2024",
@@ -58,6 +73,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Festival de mascotas",
         eventHour: "20:00",
+        eventBudget: "$200.00",
+        eventStatus: "pendiente",
+        eventCreatedBy: "",
     },
     {
         date: "01/07/2024",
@@ -68,6 +86,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Festival de mascotas",
         eventHour: "08:00",
+        eventBudget: "$700.00",
+        eventStatus: "aprobado",
+        eventCreatedBy: "",
     },
     {
         date: "02/07/2024",
@@ -78,6 +99,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Festival de mascotas",
         eventHour: "13:00",
+        eventBudget: "$800.00",
+        eventStatus: "aprobado",
+        eventCreatedBy: "",
     },
     {
         date: "02/07/2024",
@@ -88,6 +112,9 @@ export const events = [
         eventImage:"https://cataas.com/cat",
         eventType: "Recaudación",
         eventHour: "15:00",
+        eventBudget: "$200.00",
+        eventStatus: "pendiente",
+        eventCreatedBy: "",
     },
 ];
 
@@ -280,7 +307,20 @@ export const user = [
         userAddress: "Proceres Blv",
         userDepto: "La Libertad",
         userDescription:"About me!!!!!!",
-        userProfilePic: "https://cataas.com/cat",
+        userProfilePic: "https://preview.redd.it/exhausted-cat-developer-v0-kaepljx1y93a1.jpg?width=640&crop=smart&auto=webp&s=fcc47d300bbbe914b596f511dfb642a35f09f22f",
+    },
+    {
+        id: "5",
+        userName: "UsuarioModerador2",
+        userLastName: "ModeradorUsuario2",
+        userEmail: "moderador2@gmail.com",
+        password: "123456",
+        roleId: "2",
+        userPhone:"503 7777 8888",
+        userAddress: "Proceres Blv",
+        userDepto: "La Libertad",
+        userDescription:"About me!!!!!!",
+        userProfilePic: "https://img-9gag-fun.9cache.com/photo/ap93yAE_460s.jpg",
     },
     {
         id: "3",
