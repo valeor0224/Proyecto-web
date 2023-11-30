@@ -1,28 +1,34 @@
 .Contenedor-Ayuda {
     min-height: 900px;
     position: relative;
-    background: url('../../../assets/img/gato-header.png') 50% / cover no-repeat;
+    background: url('../../../assets/img/cat2-home.png') 50% / cover no-repeat;
     background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: right;
+    color: var(--white);
+    background-color: var(--green);
+   
 }
 
-.Contenedor-Ayuda-title {
+.Contenedor-Ayuda-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin-left: 900px;
+    gap: 2rem;
+
+}
+
+.Contenedor-Ayuda-text h1{
     font-family: var(--titles-font);
-    padding: 25px;
-    font-size: xx-large;
-    font-weight: bold;
-    background-color: transparent;
 }
 
-.Contenedor-Ayuda-subtitle {
+.Contenedor-Ayuda-text h3{
     font-family: var(--info-font);
-    padding: 25px;
-    color: var();
-    background-color: transparent;
 }
 
 .Contenedor-Ayuda button {

@@ -14,27 +14,27 @@ const Adopcion = () => {
         <div className="adopcion-proceso">
 
             <div className="texto-adopcion">
-                <h1 className="texto-adopcion-titulo">Proceso de adopción</h1>
-                <h2 className="texto-adopcion-info">Ayúdanos a darle una nueva familia y un nuevo hogar a estos animales.</h2>
+                <h1>Proceso de adopción</h1>
+                <h2>Ayúdanos a darle una nueva familia y un nuevo hogar a estos animales.</h2>
             </div>
             <div className="proceso">
                 <div className="paso">
                     <img src={personaLogo} alt="logo persona" />
-                    <span className="text-proceso">Crea tu cuenta</span>
+                    <p className="text-proceso">Crea tu cuenta</p>
                 </div>
                 <div className="paso">
                     <img src={mascotaLogo} alt="logo form" />
-                    <span className="text-proceso">Escoge a tu felino preferido</span>
+                    <p>Escoge a tu felino preferido</p>
 
                 </div>
                 <div className="paso">
                     <img src={formLogo} alt="logo mascota" />
-                    <span className="text-proceso">Completa el formulario de adopción</span>
+                    <p>Completa el formulario de adopción</p>
 
                 </div>
                 <div className="paso">
                     <img src={respuestaLogo} alt="logo respuesta" />
-                    <span className="text-proceso">Espera la respuesta por parte del refugio</span>
+                    <p>Espera la respuesta por parte del refugio</p>
 
 
                 </div>

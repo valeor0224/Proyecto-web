@@ -6,17 +6,17 @@ import './Mision.css';
 const Mision = () => {
     return (
         <div className='contenedor-mision'>
-            <span className='mision-title'>Nuestra misión</span>
+            <h1> Nuestra misión</h1>
             <div className='columns-mision'>
                 <div className='column-mision'>
-                    <span className='mision-subtitulo'>LO QUE HACEMOS</span>
-                    <span className='mision-parrafo'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem.</span>
+                    <h2>LO QUE HACEMOS</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem.</p>
                 </div>
 
 
                 <div className='column-mision'>
-                    <span className='mision-subtitulo'>LO QUE QUEREMOS</span>
-                    <span className='mision-parrafo'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem.</span>
+                    <h2>LO QUE QUEREMOS</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ad ut id, amet consectetur non labore nulla incidunt molestiae veniam excepturi, quam repellendus odio vero minima adipisci odit nobis exercitationem.</p>
                 </div>
 
             </div>
