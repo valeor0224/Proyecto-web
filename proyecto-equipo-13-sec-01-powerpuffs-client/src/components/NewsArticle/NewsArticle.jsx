@@ -8,8 +8,8 @@ import { useUserContext } from '../../UserContext';
 
 
 const NewsArticle = ({ news }) => {
-  const { userRole } = useUserContext();
-  console.log(userRole);
+  const { user2 } = useUserContext();
+  console.log(user2.roleId);
  
   const { search } = useLocation();
 const params = new URLSearchParams(search);
@@ -49,7 +49,7 @@ const newsCreatedBy = params.get('newsCreatedBy');
           <p>{newsType}</p>
         </div>
 
-        {userRole === '1' || userRole === '2' ? (
+        {user2?.roleId === '1' || user2?.roleId === '2' ? (
             <div className="AM-data">
               
               <div className='event-createdby'>

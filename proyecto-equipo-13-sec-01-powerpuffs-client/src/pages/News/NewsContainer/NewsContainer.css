@@ -175,8 +175,11 @@
 
 
     .newspage-filter-containerN{
+        display: flex;
         margin: 20px auto;
         width: 75%;
+        justify-content: center;
+        align-items: center;
     }
     
     .newspage-filter-txtN{
@@ -203,8 +206,11 @@
     }
     
     .newspage-filter-itemN{
+        display: flex;
         gap: 0;
         width: 100%;
+        justify-content: center;
+        align-items: center;
         margin: 10px auto;
     }
     

@@ -16,15 +16,13 @@ import UserList from './pages/UserList/UserList.jsx';
 
 
 import { events, news } from '../src/components/initial-data.js';
-
-import { useUserContext } from './UserContext.jsx';
+import SmallAddEvent from './pages/Event/SmallAddEvent/SmallAddEvent.jsx';
 
 function App() {
-  const { userRole } = useUserContext();
 
   return (
     <BrowserRouter>
-      <Header user={AuthService.getUser()} userRole={userRole} />
+      <Header user={AuthService.getUser()} />
       <Routes>
         <Route path="user-list" element={<UserList />} />
         <Route path="/" element={<Home />} />
@@ -43,6 +41,8 @@ function App() {
           path="NewsArticle"
           element={<NewsArticle news={news} />}
         />
+        
+        <Route path="/SmallAddEvent" element={ <SmallAddEvent />} />
 
 
 

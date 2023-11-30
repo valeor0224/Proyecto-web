@@ -8,7 +8,7 @@ import editLogo from "../../../assets/img/edit.png";
 import { useUserContext } from '../../../UserContext';
 
 const EventosCard = ({ date, eventName, location, description, viewType, eventImage, eventType, eventHour, eventBudget, eventStatus, eventCreatedBy}) => {
-  const { userRole } = useUserContext();
+  const { user2 } = useUserContext();
   const isHomeView = viewType === 'home';
   const [showDropdown, setShowDropdown] = useState(false);
   
@@ -60,9 +60,6 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
     setShowDropdown(false);
   };
 
-  console.log(userRole);
-
-
   return (
     <div className={`eventos-container ${isHomeView ? 'home-view' : 'event-view'}`}>
       <div className='eventos-card-container'>
@@ -85,7 +82,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
             <div className='titulo-evento'>
               <h1>{eventName}</h1>
               </div>
-              {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+              {user2?.roleId === '1' || user2?.roleId === '2' ? (  // Show only if roleId is 1 or 2
             <div className="AM-container-event">
               <div className="AM-event-info">
                 <span className="sr-only1">{eventBudget}</span>
@@ -124,7 +121,7 @@ const EventosCard = ({ date, eventName, location, description, viewType, eventIm
 
           <div className="config-event-box2">
 
-          {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+          {user2?.roleId === '1' || user2?.roleId === '2' ? ( // Show only if roleId is 1 or 2
             <div className="dropdown-menu-event2">
               <button onClick={handleEditClick}>
                 <img src={editLogo} alt="edit-logo" />

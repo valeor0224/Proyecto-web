@@ -1,0 +1,546 @@
+.add-event-container{
+    font-family: var(--info-font);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.add-event-trigger{
+    background-color: var(--pink);
+    width: 800px;
+    height: 190px;
+
+    border-radius: var(--button-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.add-event-trigger:hover{
+    background-color: var(--pink-hover);
+    transform: scale(0.97);
+}
+
+.user-pic-E{
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-pic-E {
+    width: 90px; 
+    height: 90px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+
+    background-color: transparent;
+    margin-bottom: 65%;
+}
+
+.modal-txt-btn{
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    width: 70%;
+}
+
+.modal-placeholder{
+    background-color: white;
+    border-radius: 15px;
+    height: 50px;
+    padding: 15px;
+
+    color: var(--dark-gray);
+}
+
+.upload-pic-modal{
+    display: flex;
+    align-items: center;
+
+    width: 160px;
+    height: 50px;
+
+
+    margin-left: 0;
+    padding: 0 11px;
+
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.upload-pic-modal:hover{
+    background-color: var(--blue-hover);
+}
+
+.modal-close-button{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto 0px 10px;
+    border: none;
+}
+
+.modal-close-button:hover{
+    transform: scale(0.87);
+}
+
+.add-event-modal{
+    background-color: var(--pink);
+    width: 800px;
+    height: auto;
+
+    border-radius: var(--button-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 20px;
+
+    justify-content: center;
+}
+
+.title-E-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.user-pic-Ev{
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-pic-Ev {
+    width: 90px; 
+    height: 90px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    background-color: transparent;
+}
+
+.title-E-pic input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+
+    border: none;
+
+    padding: 5px 15px;
+}
+
+.date-loc-h-Ev{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date-loc-h-Ev label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.date-loc-h-Ev input {
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+}
+
+.description-cost-Ev{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    width: 100%;
+}
+
+.description-cost-Ev textarea{
+    width: 600px;
+    min-height: 250px;
+
+    gap: 5px;
+
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.description-cost-Ev #costoEv{
+    display: flex;
+    justify-content: center;
+
+    margin-right: auto;
+    margin-left: 90px;
+
+    gap: 5px;
+}
+
+.description-cost-Ev input{
+
+    gap: 5px;
+
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.submit-tippic-Ev{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin-bottom: 20px;
+
+    justify-content: space-between;
+}
+
+.tipo-pic-Ev{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 90px;
+}
+
+.tipo-pic-Ev label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--blue);
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    font-size: 1.0rem;
+    padding: auto;
+    height: 40px;
+
+    border-radius: 8px;
+}
+
+.tipo-pic-Ev #subir-foto{
+    width: 120px;
+}
+
+.tipo-pic-Ev span{
+    padding-top: 6px;
+    margin-left: 12px;
+    z-index: 1;
+}
+
+.tipo-pic-Ev input{
+    margin: 0;
+    width: 80px;
+    z-index: 2;
+    transform: translate(-300%, 10%);
+    visibility: hidden;
+    
+}
+
+.tipo-pic-Ev input:hover{
+    background-color: var(--blue-hover);
+
+}
+
+.tipo-pic-Ev select{
+    font-family: var(--info-font);
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--dark-gray);
+
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+
+
+.submit-tippic-Ev button{
+    font-weight: 600;
+    font-family: var(--info-font);
+    background-color: var(--blue);
+    color: var(--dark-gray);
+
+    width: 180px;
+
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.add-event-trigger:hover{
+    background-color: var(--pink-hover);
+    cursor: pointer;
+
+    transform: scale(0.97);
+}
+
+@media (max-width: 1024px){
+
+
+    .add-event-trigger{
+        background-color: var(--pink);
+        width: 95%;
+        height: 180px;
+        gap: 10px;
+    }
+
+    .add-event-container{
+        font-family: var(--info-font);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+    
+    
+    .modal-close-button{
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto 0px 10px;
+        border: none;
+    }
+    
+    .modal-close-button:hover{
+        transform: scale(0.87);
+    }
+    
+    .add-event-modal{
+        width: 85%;
+    }
+
+    .large-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pink);
+
+        margin: 0px;
+        padding: 20px 15px;
+    
+        border: none;
+        border-radius: var(--button-border);
+    }
+    
+    
+    
+    .description-cost-Ev #costoEv{
+        display: flex;
+        justify-content: center;
+    
+        margin-right: auto;
+        margin-left: 90px;
+    
+        gap: 10px;
+    }
+    
+    
+    
+    .submit-tippic-Ev{
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 120px;
+    }
+    
+    .tipo-pic-Ev{    
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+
+        gap: 10px;
+        margin-right: auto;
+    }
+
+    @media (max-width: 910px){
+
+        
+        .title-E-pic{
+        
+            gap: 20px;
+        }
+        
+        
+        .profile-pic-Ev {
+            width: 80px; 
+            height: 80px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            background-color: transparent;
+        }
+        
+        .title-E-pic input{
+            width: 100%;
+            height: 50px;
+        
+            padding: 5px 15px;
+        }
+        
+        .date-loc-h-Ev{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            
+        }
+        
+        .date-loc-h-Ev label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        
+            gap: 40px;
+            margin-left: 15px;
+        }
+        
+        .date-loc-h-Ev input {
+            border-radius: 8px;
+            border: none;
+            padding: 5px;
+            width: 250px;
+        }
+        
+        .date-loc-h-Ev .pic-date-Ev{
+            height: 35px;
+        }
+        
+        .description-cost-Ev{
+            display: flex;
+            flex-direction: column;
+        
+            align-items: center;
+            justify-content: center;
+        
+            gap: 15px;
+            width: auto;
+        }
+        
+        .description-cost-Ev textarea{
+            width: 330px;
+            min-height: 250px;
+            padding: 10px;
+        }
+        
+        .description-cost-Ev #costoEv{
+            display: flex;
+            justify-content: center;
+        
+            margin-right: auto;
+            margin-left: 40px;
+        
+            gap: 10px;
+        }
+        
+        .description-cost-Ev input{
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+        }
+        
+        .submit-tippic-Ev{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+        }
+        
+        .tipo-pic-Ev{    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-right: 85px;
+            
+        }
+        
+        .tipo-pic-Ev label{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        
+            height: 40px;
+        
+            border-radius: 8px;
+        }
+        
+        .tipo-pic-Ev #subir-foto{
+            padding-left: 10px;
+        }
+        
+        .tipo-pic-Ev select{
+            padding: 10px;
+        
+            width: 150px;
+        }
+        
+        .tipo-pic-Ev input{
+            
+            width: 105px;
+            transform: translate(-500%, 10%);
+            visibility: visible;
+        
+        }
+        
+        .tipo-pic-Ev span {
+            padding-top: 7px; 
+            font-weight: 600;
+        }
+        
+        .submit-tippic-Ev button{
+            width: 100%;
+            padding: 10px;
+        }
+
+    }
+    
+    
+}

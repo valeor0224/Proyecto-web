@@ -5,9 +5,12 @@ import userLogo from '../../assets/img/profile-icon.png';
 import singoutLogo from '../../assets/img/logout.png';
 import './Header.css';
 import AuthService from '../../services/AuthService'; // Import the AuthService
+import { useUserContext } from '../../UserContext';
 
 
-const Header = ({ userRole }) => {
+const Header = () => {
+
+  const {user2} = useUserContext();
 
   //console.log(userRole);
 
@@ -97,6 +100,8 @@ const Header = ({ userRole }) => {
     setShowMenu(false);
   };
 
+  console.log(user2?.roleId);
+
   return (
     <nav>
       <div className="nav-logo-container">
@@ -109,7 +114,7 @@ const Header = ({ userRole }) => {
       </button>
       <div className={`navbar-links-container ${showMenu ? 'show' : ''}`}>
 
-        {userRole === '1' ? (
+        {user2?.roleId === '1' ? (
           <div className="admin-links">
             <NavLink to="/" onClick={handleNavLinkClick}>INICIO</NavLink>
             <NavLink to="/Solicitudes-de-adopcion" onClick={handleNavLinkClick}>SOLICITUDES DE ADOPCIÓN</NavLink>
@@ -118,7 +123,7 @@ const Header = ({ userRole }) => {
             <NavLink to="/news" onClick={handleNavLinkClick}>NOTICIAS</NavLink>
             <NavLink to="/User-list" onClick={handleNavLinkClick}>USUARIOS</NavLink>
           </div>
-        ) : userRole === '2' ? (
+        ) : user2?.roleId === '2' ? (
           <div className="moderador-links" >
             <NavLink to="/" onClick={handleNavLinkClick}>INICIO</NavLink>
             <NavLink to="/Solicitudes-de-adopcion" onClick={handleNavLinkClick}>SOLICITUDES DE ADOPCIÓN</NavLink>
