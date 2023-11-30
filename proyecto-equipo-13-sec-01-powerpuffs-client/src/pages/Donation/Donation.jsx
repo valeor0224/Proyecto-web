@@ -4,11 +4,16 @@ import { useState } from 'react';
 import gatoTop from '../../assets/img/gato-donation-top.png';
 import blob from '../../assets/img/blob-donation.png';
 import plato from '../../assets/img/plato-donation.png';
+import Tarjeta from '../../components/FormaPago/Tarjeta';
+import Transferencia from '../../components/FormaPago/Transferencia';
 
 
 import './Donation.css';
 
 function Donation() {
+    const [showTarjetaPopup, setShowTarjetaPopup] = useState(false);
+    const [showTransferenciaPopup, setShowTransferenciaPopup] = useState(false);
+
     const [formData, setFormData] = useState({
         name: '',
         apellido: '',
@@ -35,9 +40,42 @@ function Donation() {
         // Do something with formData (e.g., save to JSON, send to server)
         const jsonData = JSON.stringify(formData);
         console.log(jsonData);
+        alert('¡El formulario ha sido enviado con éxito!');
 
         // Additional logic for saving or sending data can be added here
     };
+
+
+    const handlePaymentMethodChange = (e) => {
+        const { value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            paymentMethod: value,
+        }));
+
+        // Open or close popups based on the selected payment method
+        setShowTarjetaPopup(value === 'method1');
+        setShowTransferenciaPopup(value === 'method2');
+    };
+
+    const handleTarjetaClose = (tarjetaAmount) => {
+        // Perform any additional cleanup or logic needed when the Tarjeta component is closed
+        setShowTarjetaPopup(false);
+        setFormData((prevData) => ({
+            ...prevData,
+            amount: tarjetaAmount,
+        }));
+    };
+
+    // In Donation.js
+    const handleTransferenciaClose = (transferAmount) => {
+        setShowTransferenciaPopup(false);
+        setFormData((prevData) => ({
+            ...prevData,
+            amount: transferAmount,
+        }));
+    };
+
 
     return (
         <>
@@ -63,16 +101,16 @@ function Donation() {
 
 
                             <label htmlFor="apellido">Tu apellido:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange}/>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange} />
 
                             <label htmlFor="dui">Número de Documento de Identidad:</label>
-                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" value={formData.dui} onChange={handleChange}/>
+                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" value={formData.dui} onChange={handleChange} />
 
                             <label htmlFor="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" placeholder="correo@correo.com" value={formData.email} onChange={handleChange}/>
+                            <input type="email" id="email" name="email" placeholder="correo@correo.com" value={formData.email} onChange={handleChange} />
 
                             <label htmlFor="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" name="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange}/>
+                            <input type="text" id="telefono" name="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange} />
 
                             <label htmlFor="departamento">Departamento:</label>
                             <select id="departamento" name="departamento" value={formData.departamento} onChange={handleChange}>
@@ -106,7 +144,7 @@ function Donation() {
                         <div className='donacion-fields'>
                             <h3>Donación</h3>
                             {/* Input fields for donation amount */}
-                            <label htmlFor="amount">Cantidad a donar:</label>
+                           {/* <label htmlFor="amount">Cantidad a donar:</label>-->
                             <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="$" />
 
                             <label htmlFor="dedicar">¿A que te gustaría dedicar tu donativo?</label>
@@ -119,21 +157,26 @@ function Donation() {
                             </select>
 
                             <label htmlFor="otro">En caso de haber seleccionado “Otros” en el apartado anterior, especifique:</label>
-                            <input type="text" id="otro" name="otro" placeholder="Especifique acá" value={formData.otro} onChange={handleChange}/>
+                            <input type="text" id="otro" name="otro" placeholder="Especifique acá" value={formData.otro} onChange={handleChange} />
                         </div>
+
 
                         <div className='formas-pago'>
                             <h3>Forma de pago</h3>
                             <label>
-                                <input type="radio" name="paymentMethod" value="method1" />
+                                <input type="radio" name="paymentMethod" value="method1" onChange={handlePaymentMethodChange} />
                                 Tarjeta
                             </label>
 
                             <label>
-                                <input type="radio" name="paymentMethod"   />
+                                <input type="radio" name="paymentMethod" value="method2" onChange={handlePaymentMethodChange} />
                                 Transferencia
                             </label>
                         </div>
+
+                        {showTarjetaPopup && <Tarjeta onClose={handleTarjetaClose} />}
+                        {showTransferenciaPopup && <Transferencia onClose={handleTransferenciaClose} />}
+
 
                         <div className='terminos'>
                             <p>Le informamos que los datos que voluntariamente nos proporcione en el presente formulario serán tratados por nuestra organización con la finalidad de dar respuesta a su solicitud y gestionar su colaboración. Sus datos no serán cedidos a terceros, salvo cuando sea indispensable para la prestación del servicio u obligaciones legales. Puede ejercer sus derechos de acceso, rectificación, limitación, portabilidad, oposición y supresión de los datos a través del correo electrónico nomrefugio@gmail.com</p>
@@ -165,6 +208,7 @@ function Donation() {
 
                 </div>
             </div>
+
         </>
     );
 }

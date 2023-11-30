@@ -1,0 +1,96 @@
+/* Tarjeta.css */
+
+.transferencia-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .transferencia-popup h1 {
+    font-family: var(--titles-font);
+    padding: 1rem;
+  
+  }
+  
+  .transferencia-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--info-font);
+  
+  }
+  
+  .transferencia-popup p {
+    margin-right: 1rem;
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+  
+  }
+  
+  .transferencia-popup label {
+    margin-right: 8px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .transferencia-popup input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .transferencia-popup select{
+    max-width: 200px;
+  }
+  
+  
+  .button-transferencia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  
+  
+  }
+  
+  .submit-transferencia {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  .submit-transferencia:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-transferencia {
+    background-color: rgb(211, 13, 13);
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  .cancel-transferencia:hover {
+    background-color: rgb(207, 52, 52);
+  }

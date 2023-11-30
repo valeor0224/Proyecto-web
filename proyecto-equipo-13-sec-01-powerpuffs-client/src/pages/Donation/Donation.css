@@ -2,7 +2,8 @@
 
 .header-donation {
     background-image: url('https://s3-alpha-sig.figma.com/img/6c36/d72e/e90542c48b80cb2180ec6d4e319d3cf8?Expires=1701648000&Signature=MxHfrJJrPcu6tSXvpP55F9osX3WI4bjS1ofk0b0IxlLgUeZF7edaXf~UETg~jkcqll3RFmOuVaMz~yjryZ7Hu9mHhK1Hb91Dzy9npdq0dQsmYxoMgE9dzyQnFly2tmBEF~oDFbIApWIcj9x00m7JzA8DcNHbn7rUoFIgFbYM6L1w3U3lCVuJi6UDlPj6PXAE5fqSXk1B9n~HFXNoldt1jIoD8lc87zcgkh6gqjZadZVHpgQGKOdVKrb1CwzdlST-xkFSHdQtlx18rM3kiSx9QaKmNnDCkdiwbtnprQFqB96CQktMfYXkkwidbLi15eplWE5U40ExHVbORYq8ll7Nfw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-    background-color: rgba(255, 182, 193, 0.8); /* Adjust the alpha value (0.0 to 1.0) for transparency */
+    background-color: rgba(255, 182, 193, 0.8);
+    /* Adjust the alpha value (0.0 to 1.0) for transparency */
     width: 100%;
     height: 300px;
     background-size: cover;
@@ -11,7 +12,7 @@
     padding: 20px;
     text-align: center;
 
-   
+
 }
 
 .donation-form-container {
@@ -162,24 +163,30 @@
 
 
 .donation-aceptar {
+    margin-top: 2rem;
+    cursor: pointer;
     background-color: var(--pink);
     font-family: var(--info-font);
-    color: white;
-    padding: 10px;
+    font-size: 15px;
+    color: var(--white);
+    display: flex;
+    height: 50px;
+    font-weight: 600;
+    padding: 24.062px 48.124px;
+    align-items: center;
+    gap: 15.039px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    border-radius: 12px;
 }
 
 .agradecimiento {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 }
 
-.agradecimiento p{
+.agradecimiento p {
     width: 650px;
     color: var(--dark-gray);
     margin-left: 20px;
@@ -192,7 +199,7 @@
 
 .donation-form-bottom {
     background-image: url('/home/valeria/Documents/FINAL PUFF/proyecto-equipo-13-sec-01-powerpuffs/proyecto-equipo-13-sec-01-powerpuffs-client/src/assets/img/gato-donation-bottom.png');
-    
+
     background-size: cover;
     background-position: center;
     color: var(--dark-gray);
