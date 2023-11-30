@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './EstadoSoliCardAdmin.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import AdopcionAdminCard from '../cards/AdopcionAdminCard/AdopcionAdminCard';
 
 const EstadoSoliCardAdmin = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -11,17 +12,16 @@ const EstadoSoliCardAdmin = () => {
   };
 
   return (
-    <div>
+    <div className='Tab-container'>
       <Tabs selectedIndex={selectedTab} onSelect={handleTabSelect}>
         <TabList>
-          <Tab>Tab 1</Tab>
-          <Tab>Tab 2</Tab>
-          <Tab>Tab 3</Tab>
+          <Tab>Pendientes</Tab>
+          <Tab>En Proceso</Tab>
+          <Tab>Finalizado</Tab>
         </TabList>
 
         <TabPanel>
-          <h2>Content for Tab 1</h2>
-          {/* Add your content for Tab 1 here */}
+          <AdopcionAdminCard/>
         </TabPanel>
         <TabPanel>
           <h2>Content for Tab 2</h2>

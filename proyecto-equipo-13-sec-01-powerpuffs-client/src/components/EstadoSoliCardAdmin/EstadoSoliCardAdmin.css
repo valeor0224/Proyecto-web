@@ -1,0 +1,23 @@
+/* EstadoSoliCardAdmin.css */
+.Tab-container {
+  max-width: 700px;
+  padding: 10px;
+  border-radius: 1rem;
+  border: thick;
+
+}
+
+.Tab {
+  background-color: #461b5f; /* Change this color to your desired tab color */
+  color: #ec3232; /* Change text color to white or another contrasting color */
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #2980b9;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.Tab:focus {
+  outline: none;
+  background-color: #461b5f;
+}

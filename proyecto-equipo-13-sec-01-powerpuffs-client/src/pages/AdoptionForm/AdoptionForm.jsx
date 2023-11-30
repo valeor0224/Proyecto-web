@@ -26,8 +26,8 @@ function AdoptionForm() {
         mascotas: '',
         mascotasPasadas: '',
         responsabilidadChecked: false,
-        cuidados: '',
-        renuncia: '',
+        conocimientoCuidados: '',
+        circunstanciasRenuncia: '',
         aceptoChecked: false, // Set initial value for boolean fields
     });
 
