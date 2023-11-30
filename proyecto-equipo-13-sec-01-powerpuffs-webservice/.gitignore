@@ -72,4 +72,4 @@ routes/
 validators/
 
 #controllers
-controllers/
+auth.controller.js
