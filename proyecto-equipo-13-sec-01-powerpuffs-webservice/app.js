@@ -5,7 +5,7 @@ const logger = require('morgan');
 const dbweb= require('./config/database.config');
 
 
-//const apiRouter = require("./routes/index.router");
+const apiRouter = require("./routes/index.router");
 
 const app = express();
 dbweb.connect();
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //Api Router
-//app.use("/api", apiRouter);
+app.use("/api", apiRouter);
 
 
 module.exports = app;
