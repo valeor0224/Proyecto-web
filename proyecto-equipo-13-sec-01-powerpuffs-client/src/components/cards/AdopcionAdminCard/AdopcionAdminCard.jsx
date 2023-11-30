@@ -12,23 +12,30 @@ function AdopcionAdminCard() {
 
   return (
     <div className="AdopcionAdmin-Container">
-      {formSubmissions.map((submission, index) => (
-        <div key={index} className="AdopcionAdmin-Card">
-          <p>Name: {submission.nombre}</p>
-          <p>Submission date: {submission.submissionDate}</p>
-          <button
-            className='envelop-adopcion-admin'
-            onClick={() => handleOpenButtonClick(submission)}
-          >
-            Open
-          </button>
-        </div>
-      ))}
+      <div className='container-cards-adop'>
+        {formSubmissions.map((submission, index) => (
+          <div key={index} className="AdopcionAdmin-Card">
+            <p>Name: {submission.nombre}</p>
+            <p>Submission date: {submission.submissionDate}</p>
+            <button
+              className='envelop-adopcion-admin'
+              onClick={() => handleOpenButtonClick(submission)}
+            >
+              Open
+            </button>
+          </div>
+        ))}
 
-      {/* Display DisplayAdopAdmin when selectedData is available */}
-      {selectedData && (
-        <DisplayAdopAdmin data={selectedData} onClose={() => setSelectedData(null)} />
-      )}
+      </div>
+
+      <div className='displayadopadmin-container'>
+        {/* Display DisplayAdopAdmin when selectedData is available */}
+        {selectedData && (
+          <DisplayAdopAdmin data={selectedData} onClose={() => setSelectedData(null)} />
+        )}
+
+      </div>
+
     </div>
   );
 }
