@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import "./NewsContainer.css";
 import NewsCard from "../../../components/cards/NewsCard/NewsCard";
 
 const NewsContainer = ({ news }) => {
 
+    
     const [filters, setFilters] = useState({
         location: "",
         dateCreated: "",
@@ -54,17 +54,19 @@ const NewsContainer = ({ news }) => {
         setVisibleCardCount((prevCount) => prevCount + 1);
     };
 
-    return (
-        <div className="news2-container">
+    console.log(news.newsCreatedBy);
 
-            <div className="event-filter-containerN">
-                <div className="event-filter-txtN" >
+    return (
+        <div className="newspage-container">
+
+            <div className="newspage-filter-containerN">
+                <div className="newspage-filter-txtN" >
                     <img id="filter-icon" src="/src/assets/img/Vector.png" alt="Filter-icon" onClick={toggleFilterVisibility}/>
                     <h2>Refina tu búsqueda para encontrar noticias de tu interés.</h2>
                 </div>
                 {isFilterVisible && (
-                    <div className="event-filterN">
-                        <div className="event-filter-itemN">
+                    <div className="newspage-filterN">
+                        <div className="newspage-filter-itemN">
                             <p> Ubicación: </p>
                             <input
                                 type="text"
@@ -73,7 +75,7 @@ const NewsContainer = ({ news }) => {
                                 onChange={(e) => handleFilterChange("location", e.target.value)}
                             />
                         </div>
-                        <div className="event-filter-itemN">
+                        <div className="newspage-filter-itemN">
                             <p> Fecha: </p>
                             <input
                                 type="text"
@@ -82,7 +84,7 @@ const NewsContainer = ({ news }) => {
                                 onChange={(e) => handleFilterChange("dateCreated", e.target.value)}
                             />
                         </div>
-                        <div className="event-filter-itemN">
+                        <div className="newspage-filter-itemN">
                             <p> Tipo de noticia: </p>
                             <select
                                 value={filters.newsType}
@@ -102,7 +104,7 @@ const NewsContainer = ({ news }) => {
                     </div>
                 )}
             </div>
-            <div className="news-container">
+            <div className="newspage-container">
                 {filteredNews.slice(0, visibleCardCount).map((news, index) => (
                      <NewsCard
                      key={index}
@@ -114,6 +116,7 @@ const NewsContainer = ({ news }) => {
                      viewType=""
                      newsImage={news.newsImage}
                      newsType={news.newsType}
+                     newsCreatedBy={news.newsCreatedBy}
                    />
                 ))}
                 {filteredNews.length > visibleCardCount && (

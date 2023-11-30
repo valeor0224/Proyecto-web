@@ -19,16 +19,20 @@ const Header = ({ userRole }) => {
   const [userProfilePic, setUserProfilePic] = useState(AuthService.getUser()?.userProfilePic);
 
 
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   const handleButtonNav = () => {
     navigate(`/Login`);
+    setShowMenu(false);
   };
 
   const handleButtonNav2 = () => {
     navigate(`/My-profile`);
+    setShowMenu(false);
+    setShowDropdown(false);
   };
 
   const handleProfilePicClick = () => {
@@ -38,6 +42,7 @@ const Header = ({ userRole }) => {
   const handleLogout = () => {
     AuthService.logout();
     setShowDropdown(false);
+    setShowMenu(false);
   };
 
   useEffect(() => {
@@ -87,10 +92,15 @@ const Header = ({ userRole }) => {
     };
   }, []);
 
+  const handleNavLinkClick = () => {
+    
+    setShowMenu(false);
+  };
+
   return (
     <nav>
       <div className="nav-logo-container">
-        <NavLink to="/">
+        <NavLink to="/" >
           <img src={patitasLogo} alt="Patitas Seguras" />
         </NavLink>
       </div>
@@ -101,29 +111,29 @@ const Header = ({ userRole }) => {
 
         {userRole === '1' ? (
           <div className="admin-links">
-            <NavLink to="/">INICIO</NavLink>
-            <NavLink to="/Solicitudes-de-adopcion">SOLICITUDES DE ADOPCIÓN</NavLink>
-            <NavLink to="/Donaciones-tool">DONACIONES</NavLink>
-            <NavLink to="/Event">EVENTOS</NavLink>
-            <NavLink to="/news">NOTICIAS</NavLink>
-            <NavLink to="/User-list">USUARIOS</NavLink>
+            <NavLink to="/" onClick={handleNavLinkClick}>INICIO</NavLink>
+            <NavLink to="/Solicitudes-de-adopcion" onClick={handleNavLinkClick}>SOLICITUDES DE ADOPCIÓN</NavLink>
+            <NavLink to="/Donaciones-tool" onClick={handleNavLinkClick}>DONACIONES</NavLink>
+            <NavLink to="/Event" onClick={handleNavLinkClick}>EVENTOS</NavLink>
+            <NavLink to="/news" onClick={handleNavLinkClick}>NOTICIAS</NavLink>
+            <NavLink to="/User-list" onClick={handleNavLinkClick}>USUARIOS</NavLink>
           </div>
         ) : userRole === '2' ? (
           <div className="moderador-links" >
-            <NavLink to="/">INICIO</NavLink>
-            <NavLink to="/Solicitudes-de-adopcion">SOLICITUDES DE ADOPCIÓN</NavLink>
-            <NavLink to="/Event">EVENTOS</NavLink>
-            <NavLink to="/news">NOTICIAS</NavLink>
-            <NavLink to="/Contactanos-inbox">BANDEJA DE ENTRADA</NavLink>
+            <NavLink to="/" onClick={handleNavLinkClick}>INICIO</NavLink>
+            <NavLink to="/Solicitudes-de-adopcion" onClick={handleNavLinkClick}>SOLICITUDES DE ADOPCIÓN</NavLink>
+            <NavLink to="/Event" onClick={handleNavLinkClick}>EVENTOS</NavLink>
+            <NavLink to="/news" onClick={handleNavLinkClick}>NOTICIAS</NavLink>
+            <NavLink to="/Contactanos-inbox" onClick={handleNavLinkClick}>BANDEJA DE ENTRADA</NavLink>
           </div>
         ) : (
           <div className="user-other-links" ref={dropdownRef}>
-            <NavLink to="/">INICIO</NavLink>
-            <NavLink to="/Adopta">ADOPTA</NavLink>
-            <NavLink to="/Event">EVENTOS</NavLink>
-            <NavLink to="/news">NOTICIAS</NavLink>
-            <NavLink to="/Donation">FORMAS DE AYUDAR</NavLink>
-            <NavLink to="/Contactanos">CONTÁCTANOS</NavLink>
+            <NavLink to="/" onClick={handleNavLinkClick}>INICIO</NavLink>
+            <NavLink to="/Adopta" onClick={handleNavLinkClick}>ADOPTA</NavLink>
+            <NavLink to="/Event" onClick={handleNavLinkClick}>EVENTOS</NavLink>
+            <NavLink to="/news" onClick={handleNavLinkClick}>NOTICIAS</NavLink>
+            <NavLink to="/Donation" onClick={handleNavLinkClick}>FORMAS DE AYUDAR</NavLink>
+            <NavLink to="/Contactanos" onClick={handleNavLinkClick}>CONTÁCTANOS</NavLink>
           </div>
         )}
 

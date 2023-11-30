@@ -67,6 +67,7 @@ const EventArticle = ({ events }) => {
               <p>{eventType}</p>
             </div>
           </div>
+          
           {userRole === '1' || userRole === '2' ? (
             <div className="AM-data">
               <div className='budget'>
