@@ -40,6 +40,7 @@ function Donation() {
         // Do something with formData (e.g., save to JSON, send to server)
         const jsonData = JSON.stringify(formData);
         console.log(jsonData);
+        alert('¡El formulario ha sido enviado con éxito!');
 
         // Additional logic for saving or sending data can be added here
     };

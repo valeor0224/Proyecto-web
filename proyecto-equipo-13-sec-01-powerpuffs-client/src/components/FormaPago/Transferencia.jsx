@@ -12,9 +12,11 @@ function Transferencia({ onClose }) {
         e.preventDefault();
 
         if (!recipient || !amount || !banco || !cuenta || !correo) {
-            alert('La transacción ha sido exitosa!');
+            alert('Please fill in all fields');
             return;
         }
+
+        alert('La transacción ha sido exitosa!');
         // For educational purposes, log the submitted data
         console.log('Submitted:', { recipient, amount, banco, cuenta, correo });
         // You can add further actions here if needed
