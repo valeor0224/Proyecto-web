@@ -1,0 +1,110 @@
+import React, { useState } from 'react';
+import './Transferencia.css';
+
+function Transferencia({ onClose }) {
+    const [recipient, setRecipient] = useState('');
+    const [amount, setAmount] = useState('');
+    const [banco, setBanco] = useState('');
+    const [cuenta, setCuenta] = useState('');
+    const [correo, setCorreo] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!recipient || !amount || !banco || !cuenta || !correo) {
+            alert('La transacción ha sido exitosa!');
+            return;
+        }
+        // For educational purposes, log the submitted data
+        console.log('Submitted:', { recipient, amount, banco, cuenta, correo });
+        // You can add further actions here if needed
+
+        // Close the popup after submission
+        onClose();
+    };
+
+    const handleCancel = () => {
+        setRecipient('');
+        setAmount('');
+        setBanco('');
+        setCuenta('');
+        setCorreo('');
+
+        onClose(); // Close the popup when cancel is clicked
+    };
+
+    return (
+        <div className="transferencia-popup">
+            <h1>Ingrese sus datos</h1>
+            <form onSubmit={handleSubmit}>
+
+                <label>
+                    <p>Banco:</p>
+                    <select
+                        value={banco}
+                        onChange={(e) => setBanco(e.target.value)}
+                    >
+                        <option value="" disabled>Seleccione un banco</option>
+                        <option value="Banco-Agricola">Banco Agrícola</option>
+                        <option value="Banco-Cuscatlan">Banco Cuscatlán</option>
+                        <option value="Banco-Hipotecario">Banco Hipotecario</option>
+                        <option value="Davivienda">Davivienda</option>
+                        {/* Add more banks as needed */}
+                    </select>
+                </label>
+
+
+                <label>
+                    <p>Número de cuenta:</p>
+                    <input
+                        type="text"
+                        value={cuenta}
+                        onChange={(e) => setCuenta(e.target.value)}
+                        placeholder="Ingrese su número de cuenta"
+                    />
+                </label>
+
+                <label>
+                    <p>Correo electrónico:</p>
+                    <input
+                        type="email"
+                        value={correo}
+                        onChange={(e) => setCorreo(e.target.value)}
+                        placeholder="ej. correo@correo.com"
+                    />
+                </label>
+
+                <label>
+                    <p>Amount:</p>
+                    <input
+                        type="text"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder="Enter transfer amount"
+                    />
+                </label>
+
+                <label>
+                    <p>Recipient:</p>
+                    <input
+                        type="text"
+                        value={recipient}
+                        onChange={(e) => setRecipient(e.target.value)}
+                        placeholder="Enter recipient's name"
+                    />
+                </label>
+
+
+
+
+                <div className='button-transferencia'>
+                    <button className='submit-transferencia' type="submit">Submit</button>
+                    <button className='cancel-transferencia' type="button" onClick={handleCancel}>Cancel</button>
+                </div>
+
+            </form>
+        </div>
+    );
+}
+
+export default Transferencia;
