@@ -366,7 +366,7 @@ export const user = [
 export const formSubmissions = [
     {
         imagenCat: "undefined",
-        nomGato: "name",
+        nomGato: "Poppy",
         nombre: "daniela",
         fechaNacimiento: "2016-09-20",
         telefono: "2222-2122",
@@ -394,6 +394,8 @@ export const formSubmissions = [
         submissionDate: "2023-11-30T00:17:20.927Z"
     },
     {
+        imagenCat: "undefined",
+        nomGato: "Kiki",
         nombre: "dorotea",
         fechaNacimiento: "1999-11-10",
         telefono: "33223322",
