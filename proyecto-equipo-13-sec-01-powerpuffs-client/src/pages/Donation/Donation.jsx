@@ -9,7 +9,35 @@ import plato from '../../assets/img/plato-donation.png';
 import './Donation.css';
 
 function Donation() {
-    // const [someState, setSomeState] = useState(initialValue);
+    const [formData, setFormData] = useState({
+        name: '',
+        apellido: '',
+        dui: '',
+        email: '',
+        telefono: '',
+        departamento: '',
+        direccion: '',
+        amount: '',
+        dedicar: '',
+        otro: '',
+        paymentMethod: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = () => {
+        // Do something with formData (e.g., save to JSON, send to server)
+        const jsonData = JSON.stringify(formData);
+        console.log(jsonData);
+
+        // Additional logic for saving or sending data can be added here
+    };
 
     return (
         <>
@@ -31,23 +59,24 @@ function Donation() {
                             <h3>Datos personales:</h3>
                             {/* Input fields for personal data */}
                             <label htmlFor="name">Tu nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="Nombre" />
+                            <input type="text" id="name" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
+
 
                             <label htmlFor="apellido">Tu apellido:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange}/>
 
                             <label htmlFor="dui">Número de Documento de Identidad:</label>
-                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" />
+                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" value={formData.dui} onChange={handleChange}/>
 
                             <label htmlFor="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" placeholder="correo@correo.com" />
+                            <input type="email" id="email" name="email" placeholder="correo@correo.com" value={formData.email} onChange={handleChange}/>
 
                             <label htmlFor="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" name="telefono" placeholder="telefono" />
+                            <input type="text" id="telefono" name="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange}/>
 
                             <label htmlFor="departamento">Departamento:</label>
-                            <select id="departamento" name="departamento">
-                                <option value="" selected disabled>Seleccione una opción</option>
+                            <select id="departamento" name="departamento" value={formData.departamento} onChange={handleChange}>
+                                <option value="" disabled>Seleccione una opción</option>
                                 <option value="Ahuachapan">Ahuachapán</option>
                                 <option value="Cabañas">Cabañas</option>
                                 <option value="Chalatenango">Chalatenango</option>
@@ -65,7 +94,8 @@ function Donation() {
                             </select>
 
                             <label htmlFor="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" value={formData.direccion} onChange={handleChange} />
+
 
                         </div>
 
@@ -89,7 +119,7 @@ function Donation() {
                             </select>
 
                             <label htmlFor="otro">En caso de haber seleccionado “Otros” en el apartado anterior, especifique:</label>
-                            <input type="text" id="otro" name="otro" placeholder="Especifique acá" />
+                            <input type="text" id="otro" name="otro" placeholder="Especifique acá" value={formData.otro} onChange={handleChange}/>
                         </div>
 
                         <div className='formas-pago'>
@@ -100,7 +130,7 @@ function Donation() {
                             </label>
 
                             <label>
-                                <input type="radio" name="paymentMethod" value="method2" />
+                                <input type="radio" name="paymentMethod"   />
                                 Transferencia
                             </label>
                         </div>
@@ -108,7 +138,10 @@ function Donation() {
                         <div className='terminos'>
                             <p>Le informamos que los datos que voluntariamente nos proporcione en el presente formulario serán tratados por nuestra organización con la finalidad de dar respuesta a su solicitud y gestionar su colaboración. Sus datos no serán cedidos a terceros, salvo cuando sea indispensable para la prestación del servicio u obligaciones legales. Puede ejercer sus derechos de acceso, rectificación, limitación, portabilidad, oposición y supresión de los datos a través del correo electrónico nomrefugio@gmail.com</p>
                             <p><span>He leído y acepto </span>la Política de Privacidad y doy mi consentimiento al sitio para que puedan contactar conmigo por teléfono o correo electrónico para responder a mi solicitud, así como recibir información sobre las acciones de la Fundación y posibles formas de colaboración. </p>
-                            <button className='donation-aceptar'>ACEPTAR Y ENVIAR</button>
+                            <button className='donation-aceptar' onClick={handleSubmit}>
+                                ACEPTAR Y ENVIAR
+                            </button>
+
                         </div>
 
 
