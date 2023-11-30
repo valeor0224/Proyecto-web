@@ -1,37 +1,42 @@
-.news2-container {
-
+.newspage-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
     font-family: var(--info-font);
-    color: var(--dark-gray)
+    color: var(--dark-gray);
+
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 
-.event-filter-containerN{
+
+.newspage-filter-containerN{
+    display: flex;
+    flex-direction: column;
     margin: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-.event-filter-txtN{
+.newspage-filter-txtN{
     display: flex;
     flex-direction: row;
     margin: auto;
 
     justify-content: center;
+
     
 }
 
-.event-filter-txtN h2{
+.newspage-filter-txtN h2 {
     font-size: 1.3rem;
-    width: auto;
     margin: 0px 20px;
-
-    
 }
 
-.event-filter-txtN #filter-icon{
+.newspage-filter-txtN #filter-icon{
     border: none;
     border-radius: 0px;
 
@@ -40,18 +45,18 @@
 
 }
 
-.event-filter-txtN img:hover{
+.newspage-filter-txtN img:hover{
     transform: scale(0.8);
 }
 
-.event-filterN {
+.newspage-filterN {
     font-family: var(--info-font);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 20px;
 }
 
-.event-filter-itemN{
+.newspage-filter-itemN{
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -59,10 +64,11 @@
     margin: 10px;
 }
 
-.event-filter-itemN p{
+.newspage-filter-itemN p{
     width: 20%
 }
-.event-filter-itemN input {
+
+.newspage-filter-itemN input {
     font-family: var(--info-font);
     width: 300px;
     padding: 10px;
@@ -71,7 +77,7 @@
     border: 1px solid var(--dark-gray);
 }
 
-.event-filter-itemN select {
+.newspage-filter-itemN select {
     font-family: var(--info-font);
     color: var(--dark-gray);
     width: 300px;
@@ -80,7 +86,6 @@
     border-radius: 0.5rem;
     border: 1px solid var(--dark-gray);
 }
-
 
 
 .filter-buttonsN {
@@ -118,25 +123,12 @@
     background-color: var(--green-hover);
 }
 
-.news-container {
-    display: flex;
-    flex-direction: column;
 
-    margin: 10px;
-    height: auto;
-    width: 700px;
-    padding: 0 auto;
-
-    
-
-    justify-content: center;
-    align-items: center;
-
-}
 
 .view-more-container2 {
-
+    display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .view-more-container2 button {
@@ -162,75 +154,68 @@
     
 }
 
-.news-container .no-result {
+.newspage-container .no-result {
     
     text-align: center;
     font-size: 1.5rem;
     width: auto;
-    height: auto;
 
     padding: 0 600px;
 }
 
   
-@media (max-width: 1023px){
-    .news2-container{
-        width: 95%;
+@media (max-width: 1024px){
+    .newspage-container{
+        width: 100%;
 
         padding: 0;
         margin: 0 auto;
-        justify-content: center;
-        
-        
+        justify-content: center;    
     }
 
-    .news-container{
-        width: 95%;
 
-        padding: 0;
-        margin: 0px 0px 8px 0px;
-
-        justify-content: center;
-
-        
-        
+    .newspage-filter-containerN{
+        margin: 20px auto;
+        width: 75%;
     }
+    
+    .newspage-filter-txtN{
+        margin: 10px auto ;
 
-    .event-filter-containerN{
-        margin: 20px;
         width: 100%;
-    }
-    
-    .event-filter-txtN{
-        margin: auto;
+        justify-content: center;
+        align-items: center;
 
-        width: 85%;
         
     }
     
-    .event-filter-txtN h2{
+    .newspage-filter-txtN h2{
         font-size: 0.9rem;
     }
 
     
-    .event-filterN {
+    .newspage-filterN {
         font-family: var(--info-font);
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        width: 100%;
+        margin:0;
     }
     
-    .event-filter-itemN{
-        gap: 20px;
+    .newspage-filter-itemN{
+        gap: 0;
+        width: 100%;
+        margin: 10px auto;
     }
     
-    .event-filter-itemN p{
-        width: 30%
+    .newspage-filter-itemN p{
+        width: 40%
     }
     
     
     .filter-buttonsN {
-        justify-content: center; 
+        justify-content: center;
+        width: 100%; 
     }
 
     .view-more-container2 {

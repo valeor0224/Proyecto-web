@@ -123,10 +123,11 @@ export const news = [
         dateCreated: "24/06/2023",
         newsTitle: "News 1",
         location: "San Salvador",
-        description: "Lorem ipsum 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1",
+        description: "Lorem ipsum 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1",
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Recomendaciones",
+        newsCreatedBy: "Buenas",
     },
     {
         dateCreated: "29/06/2023",
@@ -136,6 +137,8 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Success Story",
+        newsCreatedBy: "",
+        
     },
     {
         dateCreated: "30/06/2023",
@@ -145,6 +148,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Blog",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "30/06/2023",
@@ -154,6 +158,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Servicio Social",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "31/06/2023",
@@ -163,6 +168,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Servicio Social",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "01/07/2023",
@@ -172,6 +178,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Servicio Social",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "05/07/2023",
@@ -181,6 +188,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Blog",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "07/07/2023",
@@ -190,6 +198,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Success Story",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "08/07/2023",
@@ -199,6 +208,7 @@ export const news = [
         viewType: "",
         newsImage:"https://cataas.com/cat",
         newsType: "Success Story",
+        newsCreatedBy: "",
     },
     {
         dateCreated: "10/07/2023",
@@ -208,6 +218,7 @@ export const news = [
         viewType: "",
         newsImage: "https://cataas.com/cat",
         newsType: "Servicio Social",
+        newsCreatedBy: "",
     },
 
 ];
