@@ -1,0 +1,23 @@
+.DisplayFormulario {
+    color: var(--dark-gray);
+    border-radius: 21.029px;
+    border: 0.526px solid rgba(88, 91, 86, 0.80);
+    background: var(--Light-shade, #FFF);
+    box-shadow: 0px 4.20584px 4.20584px 10.5146px rgba(0, 0, 0, 0.10);
+    padding: 3rem;
+}
+
+.DisplayFormulario h1 {
+    font-family: var(--titles-font);
+    text-align: center;
+}
+
+.DisplayFormulario p {
+    font-family: var(--info-font);
+    margin: 1rem;
+
+}
+
+.formulario-datos-display span {
+    font-weight: bold;
+}

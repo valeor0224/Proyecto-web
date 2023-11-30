@@ -21,9 +21,11 @@ const DisplayAdopAdmin = ({ data, onClose }) => {
 
   return (
     <div className="DisplayAdopAdmin">
-      <h2>DisplayAdopAdmin</h2>
-      <p>Name: {data.nombre}</p>
-      <p>Submission date: {data.submissionDate}</p>
+      <h2>Solicitud de Adopción</h2>
+      <p>{data.nombre}</p>
+      <p>{data.email}</p>
+      <p>Desea adoptar a : {data.nomGato}</p>
+      <p>Fecha de envio de formulario: {data.submissionDate}</p>
       {/* Add more details based on your data structure */}
 
       <button className='view-formulario' onClick={handleViewFormularioClick}>
@@ -49,6 +51,7 @@ const DisplayAdopAdmin = ({ data, onClose }) => {
           <option value="aprobado">Aprobado</option>
           <option value="denegado">Denegado</option>
         </select>
+
         <input type="text" id="resolucion-input" name="resolucion-input" placeholder="Motivo de la resolucion" />
       </div>
 
