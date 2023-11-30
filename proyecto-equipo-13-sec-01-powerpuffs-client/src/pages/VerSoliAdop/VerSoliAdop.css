@@ -1,0 +1,11 @@
+.SoliAdop{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.titulo-soliadop{
+    color: var(--dark-gray);
+    font-family: var(--titles-font);
+    align-self: center;
+}

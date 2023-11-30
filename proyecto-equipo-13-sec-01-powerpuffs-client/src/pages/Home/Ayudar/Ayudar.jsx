@@ -7,13 +7,15 @@ const Ayudar = () => {
     return (
         <div className='Contenedor-Ayuda'>
 
+            <div className='Contenedor-Ayuda-text'>
+                <h1>¡Conviértete en patrocinador del refugio!</h1>
+                <h3>
+                    ¿No puedes adoptar ninguna mascota, pero aún quieres ayudar al refugio? También puedes brindarnos tu ayuda económicamente.
+                </h3>
 
-            <span className='Contenedor-Ayuda-title'>¡Conviértete en patrocinador del refugio!</span>
-            <span className='Contenedor-Ayuda-subtitle'>
-                ¿No puedes adoptar ninguna mascota, pero aún quieres ayudar al refugio? También puedes brindarnos tu ayuda económicamente.
-            </span>
+                <button>MÁS DETALLES</button>
+            </div>
 
-            <button>MÁS DETALLES</button>
 
         </div>
 

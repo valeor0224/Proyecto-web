@@ -13,7 +13,7 @@ import Donation from './pages/Donation/Donation.jsx';
 import Infopet from './pages/Infopet/Infopet.jsx';
 import AdoptionForm from './pages/AdoptionForm/AdoptionForm.jsx';
 import UserList from './pages/UserList/UserList.jsx';
-
+import VerSoliAdop from './pages/VerSoliAdop/VerSoliAdop.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 
@@ -27,6 +27,7 @@ function App() {
       <Header user={AuthService.getUser()} userRole={userRole} />
       <Routes>
         <Route path="user-list" element={<UserList />} />
+        <Route path="VerSoliAdop" element={<VerSoliAdop />} />
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
         <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />

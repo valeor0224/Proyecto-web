@@ -4,40 +4,50 @@
     background-color: var(--white);
     min-height: 750px;
     align-items: center;
+    justify-content: center;
     padding: 5rem 10rem 5rem 10rem;
-    gap: 3rem
+    gap: 3rem;
+    text-align: center;
 }
 
-.mision-title{
+.contenedor-mision h1 {
+    font-size: 45.588px;
     font-family: var(--titles-font);
     color: var(--dark-gray);
     font-weight: bold;
-    font-size: xx-large;
+    margin-bottom: 3rem;
 
 }
+
 
 .columns-mision {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    justify-content: center;
+    /* Center the content horizontally */
 }
 
-.mision-subtitulo{
+.contenedor-mision h2  {
     color: var(--pink);
+    font-size: 36px;
     margin: auto;
-    font-size: larger;
+    font-family: var(--info-font);
 }
 
-.column-mision {
+.contenedor-mision p {
     display: flex;
     flex-direction: column;
     font-family: var(--info-font);
     color: var(--dark-gray);
-    margin: 0 20px; /* Add margin for spacing between columns */
+    margin: 0 20px;
+    /* Add margin for spacing between columns */
     padding: 3rem;
     justify-content: center;
+    text-align: left;
+    font-size: 21px;
 }
 
-.mision-parrafo{
+.mision-parrafo {
     margin-top: 2rem;
 }

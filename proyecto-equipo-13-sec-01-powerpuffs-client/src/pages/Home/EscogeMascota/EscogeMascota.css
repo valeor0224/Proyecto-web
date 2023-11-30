@@ -1,16 +1,17 @@
 .contenedor-escoger{
     display: flex;
     flex-direction: column;
-    min-height: 850px;
+    min-height: 700px;
     gap: 20px;
-    padding: 0 4rem;
-    
+    align-items: center;  
+    justify-content: center;
+    margin-top: 3rem;
    
 
 
 }
 
-.Texto{
+.Texto-escoger-mascota{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -19,11 +20,7 @@
 
 }
 
-.Imagenes-Gatos{
-    
-}
-
-.Texto :first-child{
+.Texto-escoger-mascota h1{
     color: var(--blue);
     font-weight: bold;
     font-size: 3rem;
@@ -31,7 +28,7 @@
     
 }
 
-.Texto :last-child{
+.Texto-escoger-mascota p{
     font-family: var(--info-font);
     color: var(--dark-gray);
     font-size: 1.2rem;
@@ -40,7 +37,7 @@
 
 }
 
-.Mas-Info {
+.Mas-Info-escoger-mascota{
     background-color: var(--blue);
     display: flex;
     justify-content: center; /* Horizontally center */
@@ -52,7 +49,7 @@
     margin-top: 3rem;
 }
 
-.Mas-Info span{
+.Mas-Info-escoger-mascota h2{
     background-color: transparent;
     font-family: var(--titles-font);
     color: var(--white);
@@ -60,7 +57,7 @@
 }
 
 
-.Mas-Info button {
+.Mas-Info-escoger-mascota button {
     background-color: var(--pink);
     border-radius: var(--button-border);
     color: var(--white);
