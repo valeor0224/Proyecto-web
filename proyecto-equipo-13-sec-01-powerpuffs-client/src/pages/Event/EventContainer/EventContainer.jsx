@@ -6,7 +6,8 @@ import { useUserContext } from "../../../UserContext";
 
 function EventContainer({ events }) {
 
-    const { userRole } = useUserContext();
+    const { user2 } = useUserContext();
+
     const [filters, setFilters] = useState({
         location: "",
         date: "",
@@ -98,7 +99,7 @@ function EventContainer({ events }) {
                                 <option value="Festival de mascotas">Festival de mascotas</option>
                             </select>
                         </div>
-                        {userRole === '1' || userRole === '2' ? (
+                        {user2?.roleId === '1' || user2?.roleId === '2' ? (
                             <div className="event-filter-item">
                                 <p> Status: </p>
                                 <select
@@ -124,7 +125,7 @@ function EventContainer({ events }) {
             <div className="article-container">
                 {filteredEvents
                     .filter((event) => {
-                        if (userRole === '1' || userRole === '2') {
+                        if (user2?.roleId === '1' || user2?.roleId === '2') {
                             // Show all events for userRole 1 and 2
                             return true;
                         } else {

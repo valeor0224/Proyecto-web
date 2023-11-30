@@ -54,7 +54,7 @@
 
 .img-visible3 img{
     
-    width: auto;
+    min-width: 50vh !important;
     height: 48vh;
 }
 

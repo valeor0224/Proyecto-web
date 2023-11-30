@@ -16,18 +16,13 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
 
     const navigate = useNavigate();
     const [showDropdown, setShowDropdown] = useState(false);
-    const { userRole } = useUserContext();
+    const { user2 } = useUserContext();
 
     const maxDescriptionLength = isArticleView ? 100 : 160;
 
     const handleButtonClick = () => {
         navigate(`/NewsArticle?newsTitle=${newsTitle}&location=${location}&description=${description}&newsImage=${newsImage}&dateCreated=${dateCreated}&newsType=${newsType}&newsCreatedBy=${newsCreatedBy}`);
     };
-    
-
-      console.log(newsCreatedBy);
-      
-        
 
     const truncatedDescription = description.length > maxDescriptionLength
         ? `${description.substring(0, maxDescriptionLength)}...`
@@ -63,7 +58,7 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
                         <div className='titulo-noticiaNews'>
                             <h1>{newsTitle}</h1>
                         </div>
-                        {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+                        {user2?.roleId === '1' || user2?.roleId === '2' ? ( // Show only if roleId is 1 or 2
                             <div className="AM-container-news">
                                 <div className="AM-news-info">
                                     <span className="sr-only2">{newsCreatedBy}</span>
@@ -116,7 +111,7 @@ const NewsCard = ({ dateCreated, newsTitle, location, description, viewType, new
                             <p>{location}</p>
                         </div>
 
-                        {userRole === '1' || userRole === '2' ? ( // Show only if roleId is 1 or 2
+                        {user2?.roleId === '1' || user2?.roleId === '2' ? (  // Show only if roleId is 1 or 2
                             <div className="dropdown-menu-news2">
                                 <button onClick={handleEditClick}>
                                     <img src={editLogo} alt="edit-logo" />

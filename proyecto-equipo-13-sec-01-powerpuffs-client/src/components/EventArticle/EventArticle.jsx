@@ -11,18 +11,16 @@ import { useUserContext } from '../../UserContext';
 
 
 const EventArticle = ({ events }) => {
-  const { userRole } = useUserContext();
+  const { user2 } = useUserContext();
 
   const { eventName, location, description, eventImage, fullDate, eventType, eventHour, eventBudget, eventStatus, eventCreatedBy } = useParams();
 
   const currentIndex = events.findIndex(eventItem => eventItem.eventName === eventName);
 
-  console.log(userRole);
-
   const latestEvents = events
     .filter((_, index) => index !== currentIndex)
     .filter((eventItem) => {
-      if (userRole === '1' || userRole === '2') {
+      if (user2?.roleId === '1' || user2?.roleId === '2') {
         return true;
       } else {
         return eventItem.eventStatus.toLowerCase() === 'aprobado';
@@ -30,7 +28,8 @@ const EventArticle = ({ events }) => {
     })
     .slice(-3)
     .reverse();
-
+  
+    console.log(user2?.roleId)
 
   return (
     <div className='page-section'>
@@ -68,8 +67,8 @@ const EventArticle = ({ events }) => {
             </div>
           </div>
           
-          {userRole === '1' || userRole === '2' ? (
-            <div className="AM-data">
+          {user2?.roleId === '1' || user2?.roleId === '2' ? (
+            <div className="AM-data2">
               <div className='budget'>
                 <div className="image-calendar">
                   <img src={dollarLogo} alt="location-logo" />
@@ -106,7 +105,7 @@ const EventArticle = ({ events }) => {
         <div className='descripcion2'>
           <p>{description}</p>
         </div>
-        {userRole === '1' ? (
+        {user2?.roleId === '1'  ? (
           <div className="approve-disapprove-cont">
             <button className="approve-button">
               APROBAR
@@ -115,7 +114,7 @@ const EventArticle = ({ events }) => {
               DECLINAR
             </button>
           </div>
-        ) : userRole === '2' ? (
+        ) : user2?.roleId === '2' ? (
           <div className="blank-div" >
 
           </div>

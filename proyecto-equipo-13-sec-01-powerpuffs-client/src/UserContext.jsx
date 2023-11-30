@@ -1,28 +1,26 @@
-// UserContext.jsx
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
+import { user } from './components/initial-data'
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [userRole, setUserRole] = useState(null);
+  const [user2, setUser] = useState(user[0]); // Initialize with the first user
 
-  // Function to set the role and store it in localStorage
-  const setRole = (roleId) => {
-    setUserRole(roleId);
-    localStorage.setItem('userRole', JSON.stringify(roleId));
+  // Function to set the user and store it in localStorage
+  const setUserAndRole = (userData) => {
+    setUser(userData);
+    localStorage.setItem('user', JSON.stringify(userData));
   };
 
   // Check localStorage when the component mounts
   useEffect(() => {
-    const storedRole = localStorage.getItem('userRole');
-    if (storedRole) {
-      setUserRole(JSON.parse(storedRole));
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
     }
   }, []);
 
   return (
-    <UserContext.Provider value={{ userRole, setRole }}>
+    <UserContext.Provider value={{ user2, setUserAndRole }}>
       {children}
     </UserContext.Provider>
   );
@@ -31,4 +29,5 @@ export const UserProvider = ({ children }) => {
 export const useUserContext = () => {
   return useContext(UserContext);
 };
+
 

@@ -1,5 +1,6 @@
 export const events = [
     {
+        id: 1,
         date: "24/06/2023",
         eventName: "Event 1",
         location: "San Salvador",
@@ -13,6 +14,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 2,
         date: "25/06/2023",
         eventName: "Event 2",
         location: "San Salvador",
@@ -26,6 +28,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 3,
         date: "26/06/2023",
         eventName: "Event 3",
         location: "San Salvador",
@@ -39,6 +42,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 4,
         date: "27/06/2024",
         eventName: "Event 4",
         location: "San Salvador",
@@ -52,6 +56,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 5,
         date: "29/06/2024",
         eventName: "Event 5",
         location: "San Salvador",
@@ -65,6 +70,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 6,
         date: "30/06/2024",
         eventName: "Event 6",
         location: "San Salvador",
@@ -78,6 +84,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 7,
         date: "01/07/2024",
         eventName: "Event 7",
         location: "La Libertad",
@@ -91,6 +98,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 8,
         date: "02/07/2024",
         eventName: "Event 8",
         location: "La Libertad",
@@ -104,6 +112,7 @@ export const events = [
         eventCreatedBy: "",
     },
     {
+        id: 9,
         date: "02/07/2024",
         eventName: "Event 9",
         location: "La Libertad",
@@ -138,7 +147,7 @@ export const news = [
         newsImage: "https://cataas.com/cat",
         newsType: "Success Story",
         newsCreatedBy: "",
-        
+
     },
     {
         dateCreated: "30/06/2023",
