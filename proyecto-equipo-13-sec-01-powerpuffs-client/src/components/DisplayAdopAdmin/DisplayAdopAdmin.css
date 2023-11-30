@@ -1,8 +1,14 @@
-.Display-AdopAdmin {
+.DisplayAdopAdmin {
     border-radius: 21.029px;
     border: 0.526px solid rgba(88, 91, 86, 0.80);
     background: var(--Light-shade, #FFF);
     box-shadow: 0px 4.20584px 4.20584px 10.5146px rgba(0, 0, 0, 0.10);
     width: 839.065px;
     height: 1446.809px;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    gap: 1rem;
 }

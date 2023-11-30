@@ -9,8 +9,8 @@ function VerSoliAdop() {
   return (
     <>
       <div className="SoliAdop">
-        <EstadoSoliCardAdmin/> 
-        <DisplayAdopAdmin/>         
+      <EstadoSoliCardAdmin />
+      <DisplayAdopAdmin />        
       </div>
     </>
   );
