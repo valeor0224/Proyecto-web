@@ -18,8 +18,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: right;
-    margin-left: 900px;
+    margin-left: 1000px;
     gap: 2rem;
+    text-align: center;
+    max-width: 700px;
 
 }
 
@@ -45,4 +47,5 @@
     margin-right: 2rem;
     max-width: 200px;
     margin-top: 25px;
+    align-self: center;
 }
