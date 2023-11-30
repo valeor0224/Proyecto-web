@@ -1,0 +1,137 @@
+.page-section-news{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    margin: 20px;
+}
+
+.news-article-container{
+    display: flex;
+    flex-direction: column;
+
+    width:auto;
+
+    margin: 70px 160px 70px 70px;
+    justify-content: left;
+}
+
+.side-bar-news{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.tipo-evento3 {
+    width: 30%;  
+}
+
+.tipo-evento3 p{
+    font-family: var(--info-font);
+    color: var(--white);
+
+    background-color: var(--pink);
+    border-radius: 0.5rem;
+
+    
+    text-align: center;
+
+    padding: 0px 5px;
+    margin-bottom: 30px;
+}
+
+.img-visible3 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.img-visible3 img{
+    
+    width: auto;
+    height: 48vh;
+}
+
+.fecha-compartir{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: self-start;
+
+    margin-top: -10px;
+
+}
+
+
+.AM-data p{
+    color: var(--dark-gray)
+}
+
+@media (max-width: 1024px){
+    .page-section-news{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .news-article-container{
+        width:auto;
+        margin: 10%;
+    }
+
+    .titulo-evento3{
+        text-align: center;
+    }
+
+    .tipo-evento3 {
+        width: 40%;  
+    }
+
+    .img-visible3 {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .img-visible3 img{
+        
+        height: 30vh !important;
+        width: auto;
+    }
+
+    .descripcion2{
+        text-align: justify;
+    }
+
+    .map-container{
+        display: flex;
+        
+        
+        margin: 0 auto;
+    }
+
+    .side-bar-news{
+        display: flex;
+        flex-direction: column;
+    
+        width: 100%;
+    }
+
+    @media (max-width: 412px) {
+
+        .tipo-evento3 {
+            width: 70%;  
+        }
+        
+    }
+
+}

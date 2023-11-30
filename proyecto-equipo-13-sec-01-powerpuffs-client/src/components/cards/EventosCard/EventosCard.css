@@ -1,0 +1,554 @@
+.event-view .cuadro-informacion button:hover{
+  
+    background-color: var(--pink-hover);
+    
+}
+.home-view .cuadro-informacion button:hover{
+  
+    background-color: var(--pink-hover);
+    
+}
+
+
+.home-view .AM-event-info{
+    display: none;
+}
+.event-view .AM-event-info{
+    display: none;
+}
+
+.home-view .AM-container-event{
+    display: none;
+}
+.event-view .AM-container-event{
+    background-color: transparent;
+    margin-top: 12px;
+}
+
+.home-view .eventos-card-container {
+    height: auto;
+    width: 390px;
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-gray);
+    border-radius: 37.99px 37.99px 37.99px 37.99px;
+
+    margin: 10px;
+}
+
+.home-view .cont-superior{
+    width: 40%;
+    background-color: var(--dark-gray);
+    border-radius: 36.90px 0px 36.90px 36.90px;
+}
+
+
+.home-view .cuadro-fecha {
+    background-color: var(--blue);
+    border-radius: 37.99px 37.99px 0px 37.99px;
+    
+    width: auto;
+    height: 100%;
+    text-align: center;
+    
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-view .cuadro-fecha h1 {
+    font-family: var(--titles-font);
+    color: var(--dark-gray);
+    font-size: 1.8rem;
+    font-weight: 620;
+
+    background-color: transparent;
+    padding: 30px 0;
+    width: 60%; 
+    text-align: center;
+    margin: 2rem;
+}
+
+.home-view .cuadro-fecha span{
+    display: none;
+}
+
+
+.home-view .cuadro-informacion {
+    font-family: var(--info-font);
+    background-color: var(--dark-gray);
+    color: var(--white); 
+
+    width: 100%;
+
+    border-radius: 0 37.99px 37.99px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0.2rem;
+    width: 80%;
+    padding-left: 0.6rem; 
+    padding-right: 1rem;   
+
+    line-height: 1.5;
+}
+
+.home-view .titulo-evento {
+    background-color: transparent;
+    font-weight: 600;
+    order: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.home-view .titulo-evento h1 {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+.home-view .ubicacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    margin: 0.2rem 0rem;
+
+}
+
+
+.home-view .ubicacion img {
+    background-color: transparent;
+    max-height: 30px;
+}
+
+.home-view .ubicacion p {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.home-view .descripcion  {
+    background-color: transparent;
+    width: 110%; 
+}
+
+.home-view .descripcion p {
+    background-color: transparent;
+    
+}
+
+.home-view .config-event-box{
+    background-color: transparent;
+}
+
+.home-view .admin-config-event{
+    display: none;
+}
+
+.home-view .config-event-box2{
+    background-color: transparent;
+}
+
+.home-view .dropdown-menu-event2{
+    display: none;
+}
+
+
+.home-view .cuadro-informacion .mas-info-event {
+    background-color: var(--pink);
+    font-family: var(--info-font);
+    border: none;
+    border-radius: var(--button-border);
+    cursor: pointer;
+    width: 80%;
+    height: 3.0rem; 
+    color: var(--white);
+    padding: 0.3rem;
+    margin-top: auto;  
+    margin-bottom: 0.4rem; 
+    margin-left: -4px;
+    align-items: baseline;
+}
+
+.home-view .img-cont-hidden {
+    display: none;
+    background-color: transparent;
+}
+
+
+/*#######################################################*/
+  
+
+.event-view{
+    width: 450px;
+}
+.event-view .eventos-card-container {
+    height: 350px;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--dark-gray);
+    border-radius: 37.99px;
+}
+
+.event-view .cont-superior{
+    display: flex;
+    flex-direction: row;
+
+    background-color: transparent;
+    height: 150px;
+}
+
+.event-view .cuadro-fecha {
+    background-color: var(--blue);
+    border-radius: 37.99px 0px 0px 0px;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    padding: 2px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-view .cuadro-fecha h1 {
+    font-family: var(--titles-font);
+    color: black;
+    font-size: 2.0rem;
+    font-weight: 620;
+    background-color: transparent;
+    padding: 0;
+    width: 60%;
+    text-align: center;
+    margin: 2rem;
+}
+
+.event-view .cuadro-fecha span{
+    display: none;
+}
+
+.event-view .cuadro-informacion {
+    font-family: var(--info-font);
+    background-color: var(--dark-gray);
+    color: var(--white);
+
+    border-radius: 37.99px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0;
+    width: 100%; 
+    height: 100%;
+    
+    line-height: 1.5;
+}
+
+.event-view .titulo-evento {
+    background-color: transparent;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    order: 0;
+}
+
+.event-view .titulo-evento h1 {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.event-view .ubicacion {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+
+    margin-top: auto;  
+    margin-bottom: 0.9rem; 
+    margin-left: 0.5rem;
+    align-items: center;
+
+    order: 2;
+    
+}
+
+.event-view .ubicacion img {
+    background-color: transparent;
+    max-height: 30px;
+}
+
+.event-view .ubicacion p {
+    background-color: transparent;
+    margin-left: 0;
+    
+}
+
+.event-view .descripcion  {
+    background-color: transparent;
+    width: 100%;
+    margin-left: 0.5rem;
+}
+.event-view .descripcion p {
+    background-color: transparent;
+    
+}
+
+.event-view .cuadro-informacion .mas-info-event {
+    align-self: flex-end; 
+
+    font-family: var(--info-font);
+    
+    background-color: var(--pink);
+    border: none;
+    border-radius: var(--button-border);
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    color: var(--white); 
+
+    margin-left: auto;
+
+    transform: translate(-15%, 70%); 
+
+}
+
+
+.event-view .config-event-box{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event-view .admin-config-event{
+    display: block;
+    width: 30px;
+    background-color: transparent;
+    margin-top: auto;
+    margin-right: 1.2rem;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.event-view .three-dots-event{
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+}
+
+.event-view .three-dots-event:hover{
+    transform: scale(0.9);
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.event-view .three-dots-event img{
+    background-color: transparent;
+}
+
+.event-view .dropdown-menu-event {
+    position: absolute;
+    top: -30%;
+    right: -250%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 15px 15px 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 55px;
+    background-color: var(--dark-gray);
+
+    display: block;
+  }
+
+  .event-view .dropdown-menu-event button {
+    background-color: transparent;
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .event-view .dropdown-menu-event img {
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .event-view .dropdown-menu-event button:hover {
+    background-color: var(--pink-hover);
+    border-radius: 0 15px 15px 0;
+  }
+
+
+.img-cont-visible {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    
+
+    background-color:transparent;
+    border: none;
+}
+
+.event-view .img-cont-visible img {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0px 37.99px  0px 0px;
+}
+
+
+.event-view .config-event-box2{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event-view .dropdown-menu-event2 {
+        display: none; 
+}
+
+
+@media (max-width: 1024px){
+    .event-view{
+        width: 370px;
+        
+    }
+    .event-view .eventos-card-container{
+        height: auto;
+        width: 360px;
+        font-size: smaller; 
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-view .cont-superior{
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        height: 130px;
+    }
+
+    .event-view .cuadro-fecha {
+        
+        width: 30%;
+        height: 100%;
+        text-align: center;
+        padding: 2px 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .event-view .img-cont-visible img{
+        height: 100%;
+    }
+
+    .event-view .cuadro-fecha h1{
+        font-size: 1.2rem;
+        margin-top: 30%;
+    }
+
+    .event-view .titulo-evento h1{
+        font-size: 1.2rem;
+        margin-top: 10%;
+        margin-left: 10%;
+        width: 100%;
+        order: 0;
+    }
+
+    .event-view .ubicacion{
+        transform: translate(3%, 8%); 
+        margin: 0px 0px 8px 0px;
+        order: 2;
+    }
+
+    .event-view .descripcion{
+        
+        width: 90%;
+        padding: 0 0 15px 0;
+        transform: translate(2%, 15%); 
+
+        order: 1;
+    }
+
+
+    .event-view .cuadro-informacion .mas-info-event {   
+        width: 160px;
+        height: 50px;
+        transform: translate(-10%, 0%); 
+
+        margin-top: 0%;  
+        margin-bottom: 0.8rem; 
+
+        align-items: baseline;
+
+        order: 3;
+    
+    }
+
+
+    .event-view .config-event-box{
+        width: auto;
+    }
+
+    .event-view .config-event-box2{
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        order: 3;
+
+        justify-content: space-between;
+    }
+
+    .event-view .dropdown-menu-event2 {
+        display: block;
+        background-color: transparent;
+        margin-left: 1rem;
+      }
+
+    .event-view .dropdown-menu-event2 button {
+        background-color: transparent;
+        background: none;
+        border: none;
+        padding: 2px;
+        cursor: pointer;
+        align-items: center;
+      }
+    
+      .event-view .dropdown-menu-event2 img {
+        background-color: transparent;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+      
+      .event-view .dropdown-menu-event2 button:hover {
+        background-color: var(--pink-hover);
+        border-radius: 15px;
+      }
+     
+    .event-view .admin-config-event{
+        display: none;
+        
+    }
+
+}

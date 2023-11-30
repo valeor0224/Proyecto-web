@@ -1,0 +1,25 @@
+.user-table {
+    border-collapse: collapse;
+    width: 100%;
+    color: var(--dark-gray);
+    margin: 1rem;
+    
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 0.5rem;
+   
+  }
+
+  
+  .user-table tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  /* Add the following style for rounded borders */
+  .user-table .rounded-row {
+    border-radius: 10px;
+  }
+  

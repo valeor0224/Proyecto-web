@@ -1,0 +1,74 @@
+.contenedor-escoger{
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    gap: 20px;
+    align-items: center;  
+    justify-content: center;
+    margin-top: 3rem;
+   
+
+
+}
+
+.Texto-escoger-mascota{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+        
+
+}
+
+.Texto-escoger-mascota h1{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: var(--titles-font);
+    
+}
+
+.Texto-escoger-mascota p{
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+    padding-top: 3rem;
+    
+
+}
+
+.Mas-Info-escoger-mascota{
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    width: 80%;
+    min-height: 5rem;
+    border-radius: 0.2rem;
+    margin: auto; /* Center the div itself */
+    margin-top: 3rem;
+}
+
+.Mas-Info-escoger-mascota h2{
+    background-color: transparent;
+    font-family: var(--titles-font);
+    color: var(--white);
+    margin-left: 2rem;
+}
+
+
+.Mas-Info-escoger-mascota button {
+    background-color: var(--pink);
+    border-radius: var(--button-border);
+    color: var(--white);
+    border: none;
+    min-height: 3.5rem;
+    font-family: var(--info-font);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 2rem;
+    padding: 1rem;
+    
+}
+
+
