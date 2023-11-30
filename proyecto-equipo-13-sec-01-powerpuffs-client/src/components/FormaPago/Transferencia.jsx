@@ -19,10 +19,9 @@ function Transferencia({ onClose }) {
         alert('La transacción ha sido exitosa!');
         // For educational purposes, log the submitted data
         console.log('Submitted:', { recipient, amount, banco, cuenta, correo });
-        // You can add further actions here if needed
 
-        // Close the popup after submission
-        onClose();
+        // Pass the transfer amount to the Donation component
+        onClose(amount);
     };
 
     const handleCancel = () => {
@@ -79,12 +78,13 @@ function Transferencia({ onClose }) {
                 <label>
                     <p>Amount:</p>
                     <input
-                        type="text"
+                        type="number"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
                         placeholder="Enter transfer amount"
                     />
                 </label>
+
 
                 <label>
                     <p>Recipient:</p>

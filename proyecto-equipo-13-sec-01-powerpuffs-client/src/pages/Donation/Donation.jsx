@@ -58,15 +58,24 @@ function Donation() {
         setShowTransferenciaPopup(value === 'method2');
     };
 
-    const handleTarjetaClose = () => {
+    const handleTarjetaClose = (tarjetaAmount) => {
         // Perform any additional cleanup or logic needed when the Tarjeta component is closed
         setShowTarjetaPopup(false);
+        setFormData((prevData) => ({
+            ...prevData,
+            amount: tarjetaAmount,
+        }));
     };
 
-    const handleTransferenciaClose = () => {
-        // Perform any additional cleanup or logic needed when the Transferencia component is closed
+    // In Donation.js
+    const handleTransferenciaClose = (transferAmount) => {
         setShowTransferenciaPopup(false);
+        setFormData((prevData) => ({
+            ...prevData,
+            amount: transferAmount,
+        }));
     };
+
 
     return (
         <>
@@ -135,7 +144,7 @@ function Donation() {
                         <div className='donacion-fields'>
                             <h3>Donación</h3>
                             {/* Input fields for donation amount */}
-                            <label htmlFor="amount">Cantidad a donar:</label>
+                           {/* <label htmlFor="amount">Cantidad a donar:</label>-->
                             <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="$" />
 
                             <label htmlFor="dedicar">¿A que te gustaría dedicar tu donativo?</label>

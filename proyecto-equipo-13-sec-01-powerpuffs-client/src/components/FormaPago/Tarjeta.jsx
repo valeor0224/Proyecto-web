@@ -6,21 +6,22 @@ function Tarjeta({ onClose }) {
     const [cardNumber, setCardNumber] = useState('');
     const [expiryDate, setExpiryDate] = useState('');
     const [cvv, setCvv] = useState('');
+    const [amount, setAmount] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // Input validation
-        if (!cardName || !cardNumber || !expiryDate || !cvv) {
+        if (!cardName || !cardNumber || !expiryDate || !cvv || !amount) {
             alert('Please fill in all fields');
             return;
         }
 
         // You can perform additional validation here (e.g., checking card number format, expiry date validity, etc.)
 
-        console.log('Submitted:', { cardNumber, expiryDate, cvv });
+        console.log('Submitted:', { cardName, cardNumber, expiryDate, cvv, amount });
         alert('La transacción ha sido exitosa!');
-        onClose(); // Close the popup after successful submission
+        onClose(amount); // Close the popup after successful submission
     };
 
     const handleCancel = () => {
@@ -74,6 +75,16 @@ function Tarjeta({ onClose }) {
                         value={cvv}
                         onChange={(e) => setCvv(e.target.value)}
                         placeholder="Enter CVV"
+                    />
+                </label>
+
+                <label>
+                    <p>Amount:</p>
+                    <input
+                        type="number"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder="Enter transfer amount"
                     />
                 </label>
 
