@@ -1,12 +1,19 @@
 //importando modelo del articulo
 const Article = require("../models/article.model");
+const debug = require("debug")("app:post-controller");
 
 const controller = {};
 
 controller.save = async (req, res, next) => {
+
+    //premisa- la ruta save debe de estar autenticado
+
     try {
         const { title, description, publication_date, image, label, publication_zone, author_name } = req.body;
         const { id } = req.params;
+        const { user } = req;
+
+        debug({user});
 
         /*const article = new Article({
             title: title,
@@ -23,11 +30,11 @@ controller.save = async (req, res, next) => {
 
         article["title"] = title;
         article["description"] = description;
-        article["publication_date"]= publication_date; 
+        article["publication_date"] = publication_date;
         article["image"] = image;
         article["label"] = label;
-        article["publication_zone"]= publication_zone;
-        article ["author_name"]=  author_name;
+        article["publication_zone"] = publication_zone;
+        article["author_name"] = author_name;
 
         const articleSaved = await article.save();
         if (!articleSaved) {
@@ -35,7 +42,7 @@ controller.save = async (req, res, next) => {
             return res.status(409).json({ error: "Error saving article" });
         }
 
-        return res.status(201).json({articleSaved});
+        return res.status(201).json({ articleSaved });
     } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Internal Server Error" });
