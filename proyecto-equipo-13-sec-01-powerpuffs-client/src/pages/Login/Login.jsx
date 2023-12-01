@@ -13,30 +13,35 @@ const Login = () => {
     const navigate = useNavigate();
     const { setRole } = useUserContext();
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
 
-  const handleLoginClick = () => {
-    const isAuthenticated = authService.login(email, password);
+    const handleLoginClick = () => {
+        const isAuthenticated = authService.login(email, password);
 
-    if (isAuthenticated) {
-      const user = authService.getUser();
-      const roleId = user?.roleId || null;
+        if (isAuthenticated) {
+            const user = authService.getUser();
+            const roleId = user?.roleId || null;
 
-      // Set the user role globally
-      setRole(roleId);
+            // Set the user role globally
+            setRole(roleId);
 
-      // Navigate back to the previous page
-      navigate(-1);
-    } else {
-      setError('Invalid email or password');
-    }
-  };
+            // Navigate back to the previous page
+            navigate(-1);
+        } else {
+            setError('Invalid email or password');
+        }
+    };
+
+    const handleRegisterClick = () => {
+        // Navigate to the Register page when the button is clicked
+        navigate('/register');
+    };
 
     return (
         <div>
@@ -77,10 +82,13 @@ const Login = () => {
                     <button id="login-btn" onClick={handleLoginClick}> INICIAR SESIÓN </button>
                     <div className="register-btn">
                         <span>¿Eres nuevo?</span>
-                        <button id="registerbtn">Regístrate ahora</button>
+                        {/* Trigger the handleRegisterClick function when the button is clicked */}
+                        <button id="registerbtn" onClick={handleRegisterClick}>
+                            Regístrate ahora
+                        </button>
                     </div>
                     <div className="error-cont">
-                    {error && <p className="error-message">{error}</p>}
+                        {error && <p className="error-message">{error}</p>}
                     </div>
                 </div>
             </div>
