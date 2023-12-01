@@ -28,7 +28,13 @@ const userSchema = new Schema({
 
     salt: {
         type: String
-    }
+    },
+
+    tokens:{
+        type: [String],
+        defaul :[]
+    },
+    
 }, { timestamps: true });
 
 userSchema.methods = {
