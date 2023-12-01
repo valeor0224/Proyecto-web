@@ -1,7 +1,7 @@
 const { SignJWT, jwtVerify } = require("jose");
 
 const secret = new TextEncoder().encode(process.env.TOKEN_SECRET || "Super Secret Value");
-const expTime = process.env.TOKEN_EXP || "15d";
+const expTime = process.env.TOKEN_EXP || "15d"; //durabilidad del token
 
 const tools = {};
 
