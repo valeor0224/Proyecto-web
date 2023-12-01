@@ -15,6 +15,7 @@ import AdoptionForm from './pages/AdoptionForm/AdoptionForm.jsx';
 import UserList from './pages/UserList/UserList.jsx';
 import VerSoliAdop from './pages/VerSoliAdop/VerSoliAdop.jsx';
 import VerDonaciones from './pages/VerDonaciones/VerDonaciones.jsx';
+import Register from './pages/Register/Register.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 import SmallAddEvent from './pages/Event/SmallAddEvent/SmallAddEvent.jsx';
@@ -26,6 +27,7 @@ function App() {
       <Header user={AuthService.getUser()} />
       <Routes>
         <Route path="user-list" element={<UserList />} />
+        <Route path='Register' element={<Register/>}/>
         <Route path="VerSoliAdop" element={<VerSoliAdop />} />
         <Route path="VerDonaciones" element={<VerDonaciones/>} />
         <Route path="/" element={<Home />} />
