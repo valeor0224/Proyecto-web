@@ -28,12 +28,12 @@ label:{
 },
 
 publication_zone:{
-    Type:String,
+    type:String,
     trim:true,
 },
 
 author_name:{
-    Type:String,
+    type:String,
     trim:true,
 },
 
