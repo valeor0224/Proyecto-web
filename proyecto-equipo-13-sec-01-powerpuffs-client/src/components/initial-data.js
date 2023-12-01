@@ -443,3 +443,36 @@ export const formSubmissions = [
         submissionDate: "2023-11-30T00:32:29.359Z"
     }
 ];
+
+export const donaciones =
+[{
+    name: "valeria",
+    apellido: "ortiz",
+    dui: "123456",
+    email: "valeria@correo.com",
+    telefono: "123456",
+    departamento: "Cabañas",
+    direccion: "casa",
+    amount: "200",
+    dedicar: "",
+    otro: "",
+    paymentMethod: "method1",
+    date:"2023-12-01T00:53:11.852Z"
+},
+{
+    name: "dani",
+    apellido: "rodas",
+    dui: "123456",
+    email: "dani@correo.com",
+    telefono: "123456",
+    departamento: "San Vicente",
+    direccion: "casa",
+    amount: "500",
+    dedicar: "",
+    otro: "",
+    paymentMethod: "method2",
+    date:"2023-12-01T00:53:11.852Z"
+},
+
+]
+

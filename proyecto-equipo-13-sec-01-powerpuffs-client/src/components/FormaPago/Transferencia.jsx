@@ -21,7 +21,7 @@ function Transferencia({ onClose }) {
         console.log('Submitted:', { recipient, amount, banco, cuenta, correo });
 
         // Pass the transfer amount to the Donation component
-        onClose(amount);
+        onClose(amount, new Date());
     };
 
     const handleCancel = () => {

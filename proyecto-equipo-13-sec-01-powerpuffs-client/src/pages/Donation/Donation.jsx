@@ -26,6 +26,7 @@ function Donation() {
         dedicar: '',
         otro: '',
         paymentMethod: '',
+        date: ''
     });
 
     const handleChange = (e) => {
@@ -58,21 +59,23 @@ function Donation() {
         setShowTransferenciaPopup(value === 'method2');
     };
 
-    const handleTarjetaClose = (tarjetaAmount) => {
+    const handleTarjetaClose = (tarjetaAmount, transactionDate) => {
         // Perform any additional cleanup or logic needed when the Tarjeta component is closed
         setShowTarjetaPopup(false);
         setFormData((prevData) => ({
             ...prevData,
             amount: tarjetaAmount,
+            date: transactionDate.toISOString(),
         }));
     };
 
     // In Donation.js
-    const handleTransferenciaClose = (transferAmount) => {
+    const handleTransferenciaClose = (transferAmount, transactionDate) => {
         setShowTransferenciaPopup(false);
         setFormData((prevData) => ({
             ...prevData,
             amount: transferAmount,
+            date: transactionDate.toISOString(),
         }));
     };
 
