@@ -1,35 +1,38 @@
-const express = require ("express");
+const express = require("express");
 const router = express.Router();
 
-const{createArticleValidator, labelInParamsValidator, idInParamsValidator}= require("../validators/article.validators");
+const { createArticleValidator, labelInParamsValidator, idInParamsValidator } = require("../validators/article.validators");
 const validateFields = require("../validators/index.middleware");
+
+const { authentication } = require("../middlewares/auth.middlewares");
 
 const articleController = require("../controllers/article.controller");
 
 
 //llegan desde /artficle/....
-router.get("/",articleController.findAll);
+router.get("/", articleController.findAll);
 
-router.get("/looking/:identifier", 
-labelInParamsValidator, 
-validateFields, 
-articleController.findOneByLabel);
+router.get("/looking/:identifier",
+    labelInParamsValidator,
+    validateFields,
+    articleController.findOneByLabel);
 
-router.get("/find/:id", 
-idInParamsValidator, 
-validateFields,
-articleController.findOneById);
+router.get("/find/:id",
+    idInParamsValidator,
+    validateFields,
+    articleController.findOneById);
 
 
 router.post(["/", "/:id"],
-createArticleValidator, 
-validateFields, 
-articleController.save);
+    authentication,
+    createArticleValidator,
+    validateFields,
+    articleController.save);
 
 router.delete("/:id",
-idInParamsValidator,
-validateFields,
-articleController.deleteById);
+    idInParamsValidator,
+    validateFields,
+    articleController.deleteById);
 
 module.exports = router;
 
