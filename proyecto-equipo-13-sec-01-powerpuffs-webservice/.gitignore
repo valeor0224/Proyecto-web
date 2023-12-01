@@ -71,5 +71,3 @@ auth.router.js
 #validator
 auth.validators.js
 
-#controllers
-auth.controller.js
