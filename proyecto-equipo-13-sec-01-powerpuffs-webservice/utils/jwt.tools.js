@@ -26,4 +26,4 @@ tools.verifyToken = async (token) => {
     }
 }
 
-module.exports = tools;s
+module.exports = tools;
