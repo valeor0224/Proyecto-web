@@ -1,0 +1,12 @@
+.Ver-Donaciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.Ver-Donaciones h1 {
+    font-family: var(--titles-font);
+    color: var(--dark-gray);
+}

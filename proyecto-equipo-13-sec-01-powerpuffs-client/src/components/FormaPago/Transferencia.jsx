@@ -21,18 +21,21 @@ function Transferencia({ onClose }) {
         console.log('Submitted:', { recipient, amount, banco, cuenta, correo });
 
         // Pass the transfer amount to the Donation component
-        onClose(amount);
+        onClose(amount, new Date());
     };
 
+    // In Tarjeta.jsx
     const handleCancel = () => {
-        setRecipient('');
+        setCardName('');
+        setCardNumber('');
+        setExpiryDate('');
+        setCvv('');
         setAmount('');
-        setBanco('');
-        setCuenta('');
-        setCorreo('');
 
-        onClose(); // Close the popup when cancel is clicked
+        // Pass default values or empty values to onClose
+        onClose(0, new Date()); // You can adjust the default values as needed
     };
+
 
     return (
         <div className="transferencia-popup">

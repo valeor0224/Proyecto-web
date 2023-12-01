@@ -8,6 +8,7 @@ function Tarjeta({ onClose }) {
     const [cvv, setCvv] = useState('');
     const [amount, setAmount] = useState('');
 
+    // Modify the onClose call to pass the required date
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -17,28 +18,35 @@ function Tarjeta({ onClose }) {
             return;
         }
 
-        // You can perform additional validation here (e.g., checking card number format, expiry date validity, etc.)
+        // You can perform additional validation here
 
         console.log('Submitted:', { cardName, cardNumber, expiryDate, cvv, amount });
         alert('La transacción ha sido exitosa!');
-        onClose(amount); // Close the popup after successful submission
+
+        // Pass the amount and the current date to the onClose function
+        onClose(amount, new Date());
     };
 
-    const handleCancel = () => {
-        setCardName('');
-        setCardNumber('');
-        setExpiryDate('');
-        setCvv('');
 
-        onClose(); // Close the popup when cancel is clicked
-    };
+// In Tarjeta.jsx
+const handleCancel = () => {
+    setCardName('');
+    setCardNumber('');
+    setExpiryDate('');
+    setCvv('');
+    setAmount('');
+
+    // Pass default values or empty values to onClose
+    onClose(0, new Date()); // You can adjust the default values as needed
+};
+
 
     return (
         <div className='tarjeta-popup'>
             <h1>Ingrese sus datos</h1>
             <form onSubmit={handleSubmit}>
 
-            <label>
+                <label>
                     <p>Nombre del tarjetahabiente:</p>
                     <input
                         type="text"
