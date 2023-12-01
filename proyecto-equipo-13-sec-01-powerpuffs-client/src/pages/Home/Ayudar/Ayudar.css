@@ -1,5 +1,5 @@
 .Contenedor-Ayuda {
-    min-height: 900px;
+    height: 900px;
     position: relative;
     background: url('../../../assets/img/cat2-home.png') 50% / cover no-repeat;
     background-size: cover;
@@ -10,10 +10,25 @@
     align-items: right;
     color: var(--white);
     background-color: var(--green);
-   
+    border: none;
+}
+
+.Contenedor-Ayuda::before {
+    border: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-end-start-radius: 18.81%;
+    background: linear-gradient(rgba(243, 237, 237, 0.274), rgba(255, 255, 255, 0.212)), url('../../../assets/img/cat2-home.png') 50% / cover no-repeat;
+    background-size: cover;
+    z-index: 1; /* Place the pseudo-element behind the content */
 }
 
 .Contenedor-Ayuda-text{
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +37,8 @@
     gap: 2rem;
     text-align: center;
     max-width: 700px;
+
+    z-index: 2;
 
 }
 
@@ -48,4 +65,82 @@
     max-width: 200px;
     margin-top: 25px;
     align-self: center;
+}
+
+@media (max-width: 1024px){
+
+    .Contenedor-Ayuda {
+        min-width: 40vh !important;
+        height: 550px; 
+    }
+
+    .Contenedor-Ayuda::before {
+        border-end-start-radius: 34%;
+        background: linear-gradient(rgba(243, 237, 237, 0.274), rgba(255, 255, 255, 0.212)), url('../../../assets/img/cat2-home.png') 50% / cover no-repeat;
+        background-size: contain;
+        z-index: 1; 
+    }
+    
+    .Contenedor-Ayuda-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        align-items: right;
+        margin-left: auto;
+
+        gap: 1rem;
+        text-align: right;
+        max-width: 30vh !important;
+    
+    }
+    
+    .Contenedor-Ayuda-text h1{
+        font-family: var(--titles-font);
+
+        font-size: 1.2rem;
+        margin-right: 40px;
+    }
+    
+    .Contenedor-Ayuda-text h3{
+        font-family: var(--info-font);
+        font-size: 0.75rem;
+        margin-right: 40px;
+    }
+    
+    .Contenedor-Ayuda button {
+        padding: 0.9rem 1.75rem;
+        background-color: var(--pink);
+        font-family: var(--info-font);
+        color: var(--white);
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        max-width: 175px;
+        margin-top: 20px;
+        align-self: center;
+    }
+   
+    @media (max-width:600px){
+        .Contenedor-Ayuda {
+            min-width: 40vh !important;
+            height: 300px;
+            background-size: contain;
+            
+           
+        }
+
+        .Contenedor-Ayuda::before {
+            border-end-start-radius: 34%;
+            background: linear-gradient(rgba(243, 237, 237, 0.274), rgba(255, 255, 255, 0.212)), url('../../../assets/img/cat2-home.png') 50% / cover no-repeat;
+            z-index: 1; 
+        }
+        
+        
+    }
+    
 }

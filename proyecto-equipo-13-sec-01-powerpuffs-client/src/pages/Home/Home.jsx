@@ -10,13 +10,26 @@ import Adopcion from './Adopcion/Adopcion';
 import Eventos from './Eventos/Eventos';
 
 import { events } from '../../components/initial-data.js';
+import Dashboard from './Dashboard/Dashboard.jsx';
+import { useUserContext } from '../../UserContext.jsx';
 
 function Home() {
-  //const [someState, setSomeState] = useState(initialValue);
+  
+  const { user2 } = useUserContext();
+
+  if (user2?.roleId === '1' || user2?.roleId === '2') {
+    return (
+      <div className="Home">
+        <HeaderContainer />
+        <Dashboard />
+      </div>
+    );
+  }
 
   return (
     <>  
         <div className="Home">
+          <Dashboard />
           <HeaderContainer />
           <EscogeMascota />
           <Mision />

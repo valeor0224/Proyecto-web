@@ -11,7 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-    const { setRole } = useUserContext();
+    const { setUserAndRole,user2 } = useUserContext();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -21,22 +21,23 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLoginClick = () => {
-    const isAuthenticated = authService.login(email, password);
+  const handleLoginClick = async () => {
+  try {
+    const isAuthenticated = await authService.login(email, password);
 
     if (isAuthenticated) {
-      const user = authService.getUser();
-      const roleId = user?.roleId || null;
-
-      // Set the user role globally
-      setRole(roleId);
-
-      // Navigate back to the previous page
+      const userData = authService.getUser();
+      setUserAndRole(userData);
+      console.log('User Role:', user2?.roleId);
       navigate(-1);
     } else {
       setError('Invalid email or password');
     }
-  };
+  } catch (error) {
+    setError('An error occurred during login');
+    console.error('Login error:', error);
+  }
+};
 
     return (
         <div>
@@ -44,6 +45,7 @@ const Login = () => {
                 <div className="login-container">
                     <div className="return-btn-container">
                         <button className="return-btn-login">
+
                             <img src={Back} alt="Return-logo" />
                         </button>
                         <img id="logo" src={patitasLogoPink} alt="Pink-logo" />

@@ -13,12 +13,12 @@ class AuthService {
     );
 
     if (foundUser) {
-
       this.user = foundUser;
       localStorage.setItem('user', JSON.stringify(foundUser));
       localStorage.setItem('userRole', foundUser.roleId); 
 
       this.notifyListeners();
+
       return true;
     } else {
       return false;
@@ -26,12 +26,20 @@ class AuthService {
   }
 
   logout() {
-
-    localStorage.removeItem('user');
-    localStorage.removeItem('userRole');
-    this.user = null;
-
-    this.notifyListeners();
+    return new Promise((resolve, reject) => {
+      try {
+        localStorage.removeItem('user');
+        localStorage.removeItem('userRole');
+    
+        this.user = null; // Set this.user to null
+        this.notifyListeners();
+  
+        resolve(true);
+      } catch (error) {
+        console.error('Logout error:', error);
+        reject(false);
+      }
+    });
   }
 
   getUser() {
@@ -47,8 +55,12 @@ class AuthService {
   }
 
   unregisterListener(listener) {
-    this.listeners = this.listeners.filter((l) => l !== listener);
+    const index = this.listeners.indexOf(listener);
+    if (index !== -1) {
+      this.listeners.splice(index, 1);
+    }
   }
+
   notifyListeners() {
     this.listeners.forEach((listener) => listener());
   }

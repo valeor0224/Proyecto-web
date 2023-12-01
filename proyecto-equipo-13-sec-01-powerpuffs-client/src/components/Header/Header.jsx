@@ -10,10 +10,7 @@ import { useUserContext } from '../../UserContext';
 
 const Header = () => {
 
-  const {user2} = useUserContext();
-
-  //console.log(userRole);
-
+  const {user2, clearUserData} = useUserContext();
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -22,6 +19,8 @@ const Header = () => {
   const [userProfilePic, setUserProfilePic] = useState(AuthService.getUser()?.userProfilePic);
 
 
+  //console.log(userRole);
+  console.log(user2?.roleId);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -42,29 +41,36 @@ const Header = () => {
     setShowDropdown(!showDropdown);
   };
 
-  const handleLogout = () => {
-    AuthService.logout();
-    setShowDropdown(false);
-    setShowMenu(false);
+  const handleLogout = async () => {
+    try {
+      await AuthService.logout();
+      clearUserData(); 
+      setIsLoggedIn(false); 
+      setShowDropdown(false);
+      setShowMenu(false);
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
 
   useEffect(() => {
     const updateLoginStatus = () => {
       setIsLoggedIn(AuthService.isAuthenticated());
     };
-
+  
     AuthService.registerListener(updateLoginStatus);
-
+  
     return () => {
       AuthService.unregisterListener(updateLoginStatus);
     };
   }, []);
+  
 
   useEffect(() => {
     const isAuthenticated = AuthService.isAuthenticated();
     console.log('Is Authenticated:', isAuthenticated);
     setIsLoggedIn(isAuthenticated);
-  }, [isLoggedIn]);
+  }, [AuthService.getUser()]);
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -100,7 +106,8 @@ const Header = () => {
     setShowMenu(false);
   };
 
-  console.log(user2?.roleId);
+  
+
 
   return (
     <nav>
