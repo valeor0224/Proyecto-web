@@ -13,13 +13,14 @@ const Login = () => {
     const navigate = useNavigate();
     const { setUserAndRole,user2 } = useUserContext();
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
 
   const handleLoginClick = async () => {
   try {
@@ -38,6 +39,7 @@ const Login = () => {
     console.error('Login error:', error);
   }
 };
+
 
     return (
         <div>
@@ -79,10 +81,13 @@ const Login = () => {
                     <button id="login-btn" onClick={handleLoginClick}> INICIAR SESIÓN </button>
                     <div className="register-btn">
                         <span>¿Eres nuevo?</span>
-                        <button id="registerbtn">Regístrate ahora</button>
+                        {/* Trigger the handleRegisterClick function when the button is clicked */}
+                        <button id="registerbtn" onClick={handleRegisterClick}>
+                            Regístrate ahora
+                        </button>
                     </div>
                     <div className="error-cont">
-                    {error && <p className="error-message">{error}</p>}
+                        {error && <p className="error-message">{error}</p>}
                     </div>
                 </div>
             </div>
