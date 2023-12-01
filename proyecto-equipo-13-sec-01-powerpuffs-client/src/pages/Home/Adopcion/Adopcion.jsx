@@ -43,11 +43,6 @@ const Adopcion = () => {
 
         </div>
 
-
-
-
-
-
     );
 
 };
