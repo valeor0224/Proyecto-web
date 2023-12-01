@@ -8,8 +8,8 @@ function VerDonaciones() {
   return (
     <>
       <div className="Ver-Donaciones">
+      <h1 className='titulo-donaciones-admin'>DONACIONES</h1>
         <DonacionesAdminCard/>       
-
       </div>
     </>
   );

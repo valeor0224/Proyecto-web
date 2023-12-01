@@ -55,8 +55,8 @@ function Donation() {
         }));
 
         // Open or close popups based on the selected payment method
-        setShowTarjetaPopup(value === 'method1');
-        setShowTransferenciaPopup(value === 'method2');
+        setShowTarjetaPopup(value === 'Tarjeta');
+        setShowTransferenciaPopup(value === 'Transferencia');
     };
 
     const handleTarjetaClose = (tarjetaAmount, transactionDate) => {
@@ -147,12 +147,12 @@ function Donation() {
                         <div className='donacion-fields'>
                             <h3>Donación</h3>
                             {/* Input fields for donation amount */}
-                           {/* <label htmlFor="amount">Cantidad a donar:</label>-->
-                            <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="$" />
+                            {/* <label htmlFor="amount">Cantidad a donar:</label>-->
+                            <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="$" />*/}
 
                             <label htmlFor="dedicar">¿A que te gustaría dedicar tu donativo?</label>
                             {/* Dropdown box for "Dedicar" */}
-                            <select id="dedicar" name="dedicar">
+                            <select id="dedicar" name="dedicar" value={formData.dedicar} onChange={handleChange}>
                                 <option value="" selected disabled>Seleccione una opción</option>
                                 <option value="actividad">Actividad informativa y de asesoramiento técnico y legal</option>
                                 <option value="proyecto">Proyecto específico</option>
@@ -167,12 +167,12 @@ function Donation() {
                         <div className='formas-pago'>
                             <h3>Forma de pago</h3>
                             <label>
-                                <input type="radio" name="paymentMethod" value="method1" onChange={handlePaymentMethodChange} />
+                                <input type="radio" name="paymentMethod" value="Tarjeta" onChange={handlePaymentMethodChange} />
                                 Tarjeta
                             </label>
 
                             <label>
-                                <input type="radio" name="paymentMethod" value="method2" onChange={handlePaymentMethodChange} />
+                                <input type="radio" name="paymentMethod" value="Transferencia" onChange={handlePaymentMethodChange} />
                                 Transferencia
                             </label>
                         </div>

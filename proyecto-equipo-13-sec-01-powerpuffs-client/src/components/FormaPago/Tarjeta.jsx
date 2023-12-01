@@ -28,15 +28,18 @@ function Tarjeta({ onClose }) {
     };
 
 
-    const handleCancel = () => {
-        setCardName('');
-        setCardNumber('');
-        setExpiryDate('');
-        setCvv('');
-        setAmount('');
+// In Tarjeta.jsx
+const handleCancel = () => {
+    setCardName('');
+    setCardNumber('');
+    setExpiryDate('');
+    setCvv('');
+    setAmount('');
 
-        onClose(); // Close the popup when cancel is clicked
-    };
+    // Pass default values or empty values to onClose
+    onClose(0, new Date()); // You can adjust the default values as needed
+};
+
 
     return (
         <div className='tarjeta-popup'>

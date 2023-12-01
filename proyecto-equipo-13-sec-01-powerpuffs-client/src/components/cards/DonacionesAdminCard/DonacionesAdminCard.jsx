@@ -16,7 +16,7 @@ function DonacionesAdminCard() {
             <div className="Donaciones-AdminCard">
                 <div className='container-cards-donaciones'>
                     {TransactionsDonaciones.map((TransactionsDonaciones, index) => (
-                        <div key={index} className="AdopcionAdmin-Card">
+                        <div key={index} className="DonacionAdmin-Card">
                             {/*name of object*/}
                             <p>Name: {TransactionsDonaciones.name}</p>
                             <p>Date: {TransactionsDonaciones.date}</p>
