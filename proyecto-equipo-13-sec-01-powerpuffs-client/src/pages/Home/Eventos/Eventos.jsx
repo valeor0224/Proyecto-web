@@ -1,13 +1,31 @@
-// Eventos.jsx
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Eventos.css";
 import EventosCard from "../../../components/cards/EventosCard/EventosCard";
 import { useUserContext } from "../../../UserContext";
 
 const Eventos = ({ events }) => {
-
   const { userRole } = useUserContext();
+  const [sliceValue, setSliceValue] = useState(-3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      if (windowWidth >= 600 && windowWidth <= 1024) {
+        setSliceValue(-2);
+      } else {
+        setSliceValue(-3);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const latestEvents = events
     .filter((eventItem) => {
@@ -17,7 +35,7 @@ const Eventos = ({ events }) => {
         return eventItem.eventStatus.toLowerCase() === "aprobado";
       }
     })
-    .slice(-3)
+    .slice(sliceValue)
     .reverse();
 
   return (
@@ -47,3 +65,4 @@ const Eventos = ({ events }) => {
 };
 
 export default Eventos;
+

@@ -383,6 +383,52 @@ export const user = [
     },
 ];
 
+export const donationsA = [
+    {
+        name: 'juan',
+        apellido: 'de la mar',
+        dui: '00000000-1',
+        email: 'juanmar@gmail',
+        telefono: '1215-2218',
+        departamento: 'San Salvador',
+        direccion: 'buenas buenas',
+        amount: '$12.00',
+        dedicar: '',
+        otro: '',
+        paymentMethod: 'tarjeta de débito',
+        fechaTrans: "01-10-2023"
+    },
+    {
+        name: 'paco',
+        apellido: 'de la mar',
+        dui: '00000000-2',
+        email: 'pacomar@gmail',
+        telefono: '1215-2219',
+        departamento: 'La Libertad',
+        direccion: 'buenas buenas',
+        amount: '$80.00',
+        dedicar: '',
+        otro: '',
+        paymentMethod: 'transferencia',
+        fechaTrans: "01-05-2023"
+    },
+    {
+        name: 'pedro',
+        apellido: 'de la mar',
+        dui: '00000000-3',
+        email: 'pedromar@gmail',
+        telefono: '1215-2211',
+        departamento: 'Usulután',
+        direccion: 'buenas buenas',
+        amount: '$400.00',
+        dedicar: '',
+        otro: '',
+        paymentMethod: 'tarjeta de débito',
+        fechaTrans: "01-09-2023"
+    }
+];
+
+
 export const formSubmissions = [
     {
         imagenCat: "undefined",
@@ -411,7 +457,8 @@ export const formSubmissions = [
         otrasMascotas: "no mas mascotas",
         conocimientoCuidados: "si conozco cuidado",
         circunstanciasRenuncia: "mi muerte",
-        submissionDate: "2023-11-30T00:17:20.927Z"
+        submissionDate: "2023-11-30T00:17:20.927Z",
+        formStatus: "aprobado",
     },
     {
         imagenCat: "undefined",
@@ -440,6 +487,37 @@ export const formSubmissions = [
         otrasMascotas: "si tengo otro gato",
         conocimientoCuidados: "si conozco cuidado muy bien",
         circunstanciasRenuncia: "me mudo de pais",
-        submissionDate: "2023-11-30T00:32:29.359Z"
+        submissionDate: "2023-11-30T00:32:29.359Z",
+        formStatus: "aprobado",
+    },
+    {
+        imagenCat: "undefined",
+        nomGato: "Kiki2",
+        nombre: "dorotea2",
+        fechaNacimiento: "1999-11-09",
+        telefono: "33223324",
+        apellido: "mendez2",
+        email: "dora@mendez2",
+        direccion: "mi casita2",
+        educacion: "Media",
+        profesion: "Doctora2",
+        tipoInmueble: "Apartamento2",
+        espacioChecked: true,
+        acuerdoChecked: true,
+        gastos: "800",
+        alergias: "no hay alergicos2",
+        razon: "pq quiero compañia2",
+        mascotas: "",
+        mascotasPasadas: "si he tenido gato2",
+        responsabilidadChecked: false,
+        cuidados: "",
+        renuncia: "",
+        aceptoChecked: false,
+        responsabilidad: true,
+        otrasMascotas: "si tengo otro gato2",
+        conocimientoCuidados: "si conozco cuidado muy bien2",
+        circunstanciasRenuncia: "me mudo de pais2",
+        submissionDate: "2023-11-30T00:32:29.359Z",
+        formStatus: "pendiente",
     }
 ];
