@@ -1,0 +1,39 @@
+.Display-DonacionesAdmin{
+    border-radius: 21.029px;
+    border: 0.526px solid rgba(88, 91, 86, 0.80);
+    background: var(--Light-shade, #FFF);
+    box-shadow: 0px 4.20584px 4.20584px 10.5146px rgba(0, 0, 0, 0.10);
+    width: 839.065px;
+    min-height: 500px;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.Display-DonacionesAdmin h1{
+    font-family: var(--titles-font);
+}
+
+.Display-DonacionesAdmin span{
+    font-weight: bold;
+}
+
+.Display-DonacionesAdmin h2{
+    font-family: var(--titles-font);
+}
+
+
+
+.Display-DonacionesAdmin p{
+    font-family: var(--info-font);
+    margin: 0.5rem;
+}
+
+.datos-extra-transferencia{
+    align-self: self-start;   
+}

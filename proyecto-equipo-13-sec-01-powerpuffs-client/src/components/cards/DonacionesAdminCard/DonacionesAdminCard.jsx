@@ -1,25 +1,42 @@
 import React, { useState } from 'react';
 import './DonacionesAdminCard.css';
-import { donaciones } from '../../initial-data';
+import { TransactionsDonaciones } from '../../initial-data';
+import DisplayDonacionesAdmin from '../../DisplayDonacionesAdmin/DisplayDonacionesAdmin';
 
 function DonacionesAdminCard() {
+
+    const [selectedData, setSelectedData] = useState(null);
+
+    const handleOpenButtonClick = (data) => {
+        setSelectedData(data);
+    };
 
     return (
         <>
             <div className="Donaciones-AdminCard">
                 <div className='container-cards-donaciones'>
-                    {formSubmissions.map((donaciones, index) => (
+                    {TransactionsDonaciones.map((TransactionsDonaciones, index) => (
                         <div key={index} className="AdopcionAdmin-Card">
-                            <p>Name: {donaciones.nombre}</p>
-                            <p>Date: {donaciones.submissionDate}</p>
+                            {/*name of object*/}
+                            <p>Name: {TransactionsDonaciones.name}</p>
+                            <p>Date: {TransactionsDonaciones.date}</p>
+                            <p>${TransactionsDonaciones.amount}</p>
                             <button
-                                className='envelop-adopcion-admin'
-                                onClick={() => handleOpenButtonClick(donaciones)}
+                                className='open-donacion'
+                                onClick={() => handleOpenButtonClick(TransactionsDonaciones)}
                             >
                                 Open
                             </button>
                         </div>
                     ))}
+
+                </div>
+
+                <div className='displayadopadmin-container'>
+                    {/* Display DisplayAdopAdmin when selectedData is available */}
+                    {selectedData && (
+                        <DisplayDonacionesAdmin data={selectedData} onClose={() => setSelectedData(null)} />
+                    )}
 
                 </div>
 

@@ -444,7 +444,7 @@ export const formSubmissions = [
     }
 ];
 
-export const donaciones =
+export const TransactionsDonaciones =
 [{
     name: "valeria",
     apellido: "ortiz",
