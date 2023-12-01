@@ -68,6 +68,3 @@ pet.model.js
 #routes
 auth.router.js
 
-#validator
-auth.validators.js
-
