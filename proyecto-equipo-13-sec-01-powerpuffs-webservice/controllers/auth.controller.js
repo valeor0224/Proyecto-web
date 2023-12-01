@@ -1,5 +1,5 @@
 const User = require("../models/User.model");
-
+const { createToken, verifyToken } = require("./../utils/jwt.tools");
 
 const controller = {};
 
@@ -50,7 +50,28 @@ controller.login = async (req, res, next) => {
         }
 
         //Si la password coincide ->Loggeamos (TODO)
-        return res.status(200).json({ message: "Succesfuly login" });
+        //Crear un TOKEN
+        const token = await createToken(user._id);
+
+        //Almacenar un token
+        let _tokens = [...user.tokens];
+        //Verificar la integridad de los token actuales -> max 5 sesiones
+        const _verifyPromises = _tokens.map(async (_t) => {
+            const status = await verifyToken(_t);
+            return status ? _t : null;
+        });
+
+        _tokens = (await Promise.all(_verifyPromises))
+            .filter(_t => _t)
+            .slice(0, 4);
+
+        _tokens = [token, ..._tokens];
+        user.tokens = _tokens;
+
+        await user.save();
+
+        //Devolver token
+        return res.status(200).json({ token });
     } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Internal Server Error" });
