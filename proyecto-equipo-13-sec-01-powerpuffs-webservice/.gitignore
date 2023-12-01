@@ -63,10 +63,8 @@ typings/
 #models
 donation.model.js
 pet.model.js
-User.model.js
+
 
 #routes
 auth.router.js
 
-#controllers
-auth.controller.js
