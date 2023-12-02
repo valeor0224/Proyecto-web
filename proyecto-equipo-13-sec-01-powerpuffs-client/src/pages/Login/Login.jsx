@@ -40,6 +40,10 @@ const Login = () => {
   }
 };
 
+const handleRegisterClick = () =>{
+    navigate(`/register`)
+}
+
 
     return (
         <div>

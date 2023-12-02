@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   const handleButtonNav2 = () => {
-    navigate(`/My-profile`);
+    navigate(`/MyProfile`);
     setShowMenu(false);
     setShowDropdown(false);
   };
@@ -48,6 +48,7 @@ const Header = () => {
       setIsLoggedIn(false); 
       setShowDropdown(false);
       setShowMenu(false);
+      navigate(`/`);
     } catch (error) {
       console.error('Logout error:', error);
     }
@@ -105,6 +106,8 @@ const Header = () => {
     
     setShowMenu(false);
   };
+
+  console.log(isLoggedIn);
 
   
 
