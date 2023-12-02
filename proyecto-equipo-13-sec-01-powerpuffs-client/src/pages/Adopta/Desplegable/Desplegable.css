@@ -58,7 +58,7 @@
 
 .dropdown-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute;
   top: 100%;
   left: 0;
@@ -117,12 +117,14 @@
 .dropdown-content img {
   background-color: transparent;
   max-width: 300px;
+ 
+
 }
 
 .button-container {
   background-color: transparent;
   align-self: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .text-desplegable-form{
@@ -179,4 +181,12 @@
   font-size: 2rem;
   margin-bottom: 2rem;
 
+}
+
+.foto-form-desplegable{
+  display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+  margin-top: 2rem;
+  align-self: center;
 }
