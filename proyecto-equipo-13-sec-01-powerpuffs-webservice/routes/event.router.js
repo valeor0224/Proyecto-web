@@ -4,7 +4,7 @@ const router = express.Router();
 const { createEventValidator, labelInParamsValidator, idInParamsValidator } = require("../validators/event.validators");
 const validateFields = require("../validators/index.middleware");
 
-const { authentication } = require("../middlewares/auth.middlewares");
+//const { authentication } = require("../middlewares/auth.middlewares");
 
 const eventController = require("../controllers/event.controller");
 
@@ -12,7 +12,7 @@ const eventController = require("../controllers/event.controller");
 //llegan desde /event/....
 router.get("/event", eventController.findAll);
 
-router.get("/looking/event/:identifier",
+router.get("/looking/:identifier",
     labelInParamsValidator,
     validateFields,
     eventController.findOneByLabel);
@@ -24,7 +24,7 @@ router.get("/find/event/:id",
 
 
 router.post(["/post/", "/event/:id"],
-    authentication,
+   // authentication,
     createEventValidator,
     validateFields,
     eventController.save);
