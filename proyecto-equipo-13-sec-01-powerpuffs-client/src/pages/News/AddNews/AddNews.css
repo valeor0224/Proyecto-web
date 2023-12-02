@@ -1,0 +1,485 @@
+.add-news-container{
+    font-family: var(--info-font);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    z-index: 4;
+}
+
+.add-news-trigger{
+    background-color: var(--pink);
+    width: 800px;
+    height: 190px;
+
+    border-radius: var(--button-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.add-news-trigger:hover{
+    background-color: var(--pink-hover);
+    transform: scale(0.97);
+}
+
+.user-pic-N{
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-pic-N {
+    width: 90px; 
+    height: 90px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+
+    background-color: transparent;
+    margin-bottom: 65%;
+}
+
+.modal-txt-btn-N{
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    width: 70%;
+}
+
+.modal-placeholder-N{
+    background-color: white;
+    border-radius: 15px;
+    height: 50px;
+    padding: 15px;
+
+    color: var(--dark-gray);
+}
+
+.upload-pic-modal-N{
+    display: flex;
+    align-items: center;
+
+    width: 160px;
+    height: 50px;
+
+
+    margin-left: 0;
+    padding: 0 11px;
+
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+
+    font-family: var(--info-font);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.upload-pic-modal-N:hover{
+    background-color: var(--blue-hover);
+}
+
+.modal-close-button-N{
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto 0px 10px;
+    border: none;
+}
+
+.modal-close-button-N:hover{
+    transform: scale(0.87);
+}
+
+.add-event-modal-N{
+    background-color: var(--pink);
+    width: 800px;
+    height: auto;
+
+    border-radius: var(--button-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    z-index: 1;
+
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 20px;
+
+    justify-content: center;
+}
+
+.title-N-pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.user-pic-No{
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-pic-No {
+    width: 90px; 
+    height: 90px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    background-color: transparent;
+}
+
+.title-N-pic input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+
+    border: none;
+
+    padding: 5px 15px;
+}
+
+.date-loc-h-No{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date-loc-h-No label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.date-loc-h-No input {
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+}
+
+.description-cost-No{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    width: 100%;
+}
+
+.description-cost-No textarea{
+    width: 600px;
+    min-height: 250px;
+
+    gap: 5px;
+
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+
+.submit-tippic-No{
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin-bottom: 20px;
+
+    justify-content: space-between;
+}
+
+.tipo-pic-No{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 90px;
+}
+
+.tipo-pic-No label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--blue);
+    font-family: var(--info-font);
+    color: var(--dark-gray);
+    font-size: 1.0rem;
+    padding: auto;
+    height: 40px;
+
+    border-radius: 8px;
+}
+
+.tipo-pic-No #subir-foto{
+    width: 120px;
+}
+
+.tipo-pic-No span{
+    padding-top: 6px;
+    margin-left: 12px;
+    z-index: 1;
+}
+
+.tipo-pic-No input{
+    margin: 0;
+    width: 80px;
+    z-index: 2;
+    transform: translate(-300%, 10%);
+    visibility: hidden;
+    
+}
+
+.tipo-pic-No input:hover{
+    background-color: var(--blue-hover);
+
+}
+
+.tipo-pic-No select{
+    font-family: var(--info-font);
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--dark-gray);
+
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+
+
+.submit-tippic-No button{
+    font-weight: 600;
+    font-family: var(--info-font);
+    background-color: var(--blue);
+    color: var(--dark-gray);
+
+    width: 180px;
+
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.add-news-trigger:hover{
+    background-color: var(--pink-hover);
+    cursor: pointer;
+
+    transform: scale(0.97);
+}
+
+@media (max-width: 1024px){
+
+
+    .add-news-trigger{
+        background-color: var(--pink);
+        width: 95%;
+        height: 180px;
+        gap: 10px;
+    }
+
+    .add-news-container{
+        font-family: var(--info-font);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+    
+    
+    .modal-close-button-N{
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto 0px 10px;
+        border: none;
+    }
+    
+    .modal-close-button-N:hover{
+        transform: scale(0.87);
+    }
+    
+    .add-event-modal-N{
+        width: 85%;
+    }
+    
+    .submit-tippic-No{
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 120px;
+    }
+    
+    .tipo-pic-No{    
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+
+        gap: 10px;
+        margin-right: auto;
+    }
+
+    @media (max-width: 910px){
+
+        
+        .title-N-pic{
+        
+            gap: 20px;
+        }
+        
+        
+        .profile-pic-No {
+            width: 80px; 
+            height: 80px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            background-color: transparent;
+        }
+        
+        .title-N-pic input{
+            width: 100%;
+            height: 50px;
+        
+            padding: 5px 15px;
+        }
+        
+        .date-loc-h-No{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            
+        }
+        
+        .date-loc-h-No label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        
+            gap: 40px;
+            margin-left: 15px;
+        }
+        
+        .date-loc-h-No input {
+            border-radius: 8px;
+            border: none;
+            padding: 5px;
+            width: 250px;
+        }
+        
+        .date-loc-h-No .pic-date-No{
+            height: 35px;
+        }
+        
+        .description-cost-No{
+            display: flex;
+            flex-direction: column;
+        
+            align-items: center;
+            justify-content: center;
+        
+            gap: 15px;
+            width: auto;
+        }
+        
+        .description-cost-No textarea{
+            width: 330px;
+            min-height: 250px;
+            padding: 10px;
+        }
+        
+        .submit-tippic-No{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+        }
+        
+        .tipo-pic-No{    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-right: 85px;
+            
+        }
+        
+        .tipo-pic-No label{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        
+            height: 40px;
+        
+            border-radius: 8px;
+        }
+        
+        .tipo-pic-No #subir-foto{
+            padding-left: 10px;
+        }
+        
+        .tipo-pic-No select{
+            padding: 10px;
+        
+            width: 150px;
+        }
+        
+        .tipo-pic-No input{
+            
+            width: 105px;
+            transform: translate(-500%, 10%);
+            visibility: visible;
+        
+        }
+        
+        .tipo-pic-No span {
+            padding-top: 7px; 
+            font-weight: 600;
+        }
+        
+        .submit-tippic-No button{
+            width: 100%;
+            padding: 10px;
+        }
+
+    }
+    
+    
+}

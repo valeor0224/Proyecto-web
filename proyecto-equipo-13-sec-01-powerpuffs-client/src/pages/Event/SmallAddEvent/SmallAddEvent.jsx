@@ -13,9 +13,6 @@ const SmallAddEvent = () => {
     const { user2 } = useUserContext();
     const navigate = useNavigate();
 
-    // State to manage modal visibility
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
     const [selectedFile, setSelectedFile] = useState(null);
 
