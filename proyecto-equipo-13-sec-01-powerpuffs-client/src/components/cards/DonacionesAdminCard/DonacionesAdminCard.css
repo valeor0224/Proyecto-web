@@ -24,3 +24,13 @@
 .DonacionAdmin-Card p{
     margin: 1rem;
 }
+
+.open-donacion{
+    background-color: var(--pink);
+    font-family: var(--info-font);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    min-width: 50px;
+    cursor: pointer;
+}

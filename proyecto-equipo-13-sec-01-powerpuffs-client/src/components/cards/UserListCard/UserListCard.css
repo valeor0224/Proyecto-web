@@ -22,4 +22,10 @@
   .user-table .rounded-row {
     border-radius: 10px;
   }
+
+  .user-table button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
   

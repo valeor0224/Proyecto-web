@@ -1,12 +1,21 @@
 import React from 'react'
 import { useUserContext } from '../../UserContext'
+import { useNavigate } from 'react-router-dom'
 import { donationsA, events } from '../../components/initial-data'
 import EventosCard from '../../components/cards/EventosCard/EventosCard'
 import './MyProfile.css'
 
 const MyProfile = () => {
+    const navigate = useNavigate();
 
     const { user2 } = useUserContext();
+
+    const handleEditProfileClick = () => {
+        // Navigate to the Register page when the button is clicked
+        navigate('/edit-my-profile');
+      };
+
+    
 
     const userEvents = events.filter((event) =>
         (event.eventAssistList || []).some((assist) => assist.userId === user2?.userId)
@@ -39,7 +48,7 @@ const MyProfile = () => {
                         <img src={user2?.userProfilePic} alt="your-profile" />
                         <h1>{user2?.userName} {user2?.userLastName}</h1>
                     </div>
-                    <button> EDITAR MY PERFIL </button>
+                    <button className='edit-profile-button' onClick={handleEditProfileClick}> EDITAR MY PERFIL </button>
                 </div>
                 <hr></hr>
                 <div className="lower-prof-sect">
