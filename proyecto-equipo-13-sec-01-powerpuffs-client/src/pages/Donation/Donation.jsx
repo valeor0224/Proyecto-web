@@ -1,16 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import gatoTop from '../../assets/img/gato-donation-top.png';
 import blob from '../../assets/img/blob-donation.png';
 import plato from '../../assets/img/plato-donation.png';
 import Tarjeta from '../../components/FormaPago/Tarjeta';
 import Transferencia from '../../components/FormaPago/Transferencia';
-
+import { useUserContext } from '../../UserContext';
 
 import './Donation.css';
 
 function Donation() {
+    const { user2 } = useUserContext(); // Assuming you have a user context
+
+
     const [showTarjetaPopup, setShowTarjetaPopup] = useState(false);
     const [showTransferenciaPopup, setShowTransferenciaPopup] = useState(false);
 
@@ -28,6 +31,22 @@ function Donation() {
         paymentMethod: '',
         date: ''
     });
+
+    useEffect(() => {
+        // Fetch user data when the component mounts
+        if (user2) {
+            const { userName, userLastName, userEmail, userPhone, userDepto, userAddress } = user2;
+            setFormData({
+                ...formData,
+                name: userName,
+                apellido: userLastName,
+                email: userEmail,
+                telefono: userPhone,
+                departamento: userDepto,
+                direccion: userAddress,
+            });
+        }
+    }, [user2]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -100,23 +119,23 @@ function Donation() {
                             <h3>Datos personales:</h3>
                             {/* Input fields for personal data */}
                             <label htmlFor="name">Tu nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
+                            <input type="text" id="name" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} disabled={user2 != null} />
 
 
                             <label htmlFor="apellido">Tu apellido:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange} />
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange} disabled={user2 != null} />
 
                             <label htmlFor="dui">Número de Documento de Identidad:</label>
-                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" value={formData.dui} onChange={handleChange} />
+                            <input type="text" id="dui" name="dui" placeholder="Ingresar sin guiones" value={formData.dui} onChange={handleChange}/>
 
                             <label htmlFor="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" placeholder="correo@correo.com" value={formData.email} onChange={handleChange} />
+                            <input type="email" id="email" name="email" placeholder="correo@correo.com" value={formData.email} onChange={handleChange} disabled={user2 != null}/>
 
                             <label htmlFor="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" name="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange} />
+                            <input type="text" id="telefono" name="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange} disabled={user2 != null}/>
 
                             <label htmlFor="departamento">Departamento:</label>
-                            <select id="departamento" name="departamento" value={formData.departamento} onChange={handleChange}>
+                            <select id="departamento" name="departamento" value={formData.departamento} onChange={handleChange} disabled={user2 != null}>
                                 <option value="" disabled>Seleccione una opción</option>
                                 <option value="Ahuachapan">Ahuachapán</option>
                                 <option value="Cabañas">Cabañas</option>
@@ -135,7 +154,7 @@ function Donation() {
                             </select>
 
                             <label htmlFor="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" value={formData.direccion} onChange={handleChange} />
+                            <input type="text" id="direccion" name="direccion" placeholder="Dirección" value={formData.direccion} onChange={handleChange} disabled={user2 != null}/>
 
 
                         </div>
