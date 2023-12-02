@@ -37,7 +37,7 @@ const Desplegable = ({ onFilterChange }) => {
               <div className="foto-form-desplegable">
                 <img src={carita} alt="carita-gato" />
                 <div className="desplegablefields">
-                  <label>
+               {/* <label>
                     <p className="text-desplegable-form">Me gustaría que mi gato sea:</p>
                     <select
                       name="name"
@@ -49,7 +49,8 @@ const Desplegable = ({ onFilterChange }) => {
                       <option value="Jane">Jane</option>
                       <option value="Doe">Doe</option>
                     </select>
-                  </label>
+                  </label>*/}  
+                   
                   <label>
                     <p className="text-desplegable-form">La edad ideal de mi gato:</p>
                     <select
