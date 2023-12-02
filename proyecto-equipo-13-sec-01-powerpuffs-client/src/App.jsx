@@ -21,6 +21,7 @@ import { events, news } from '../src/components/initial-data.js';
 import SmallAddEvent from './pages/Event/SmallAddEvent/SmallAddEvent.jsx';
 import EditMyProfile from './pages/EditMyProfile/EditMyProfile.jsx';
 import MyProfile from './pages/MyProfile/MyProfile.jsx';
+import SmallAddNews from './pages/News/SmallAddNews/SmallAddNews.jsx';
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
         />
         
         <Route path="/SmallAddEvent" element={ <SmallAddEvent />} />
+        <Route path="/SmallAddNews" element={ <SmallAddNews />} />
         <Route path='/edit-my-profile' element={<EditMyProfile />} />
         <Route path='/MyProfile' element={<MyProfile />} />
 
