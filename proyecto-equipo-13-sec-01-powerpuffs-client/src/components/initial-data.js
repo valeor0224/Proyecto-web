@@ -397,19 +397,6 @@ export const user = [
         userProfilePic: "https://cataas.com/cat",
     },
 
-    {
-        "nombre": "valeria",
-        "apellido": "eliza",
-        "fechaNacimiento": "2023-12-20",
-        "numeroContacto": "777777",
-        "correoElectronico": "valer@ortiz",
-        "direccion": "Casa",
-        "departamento": "San-Salvador",
-        "contrasena": "ilovecheese",
-        "confirmContrasena": "ilovecheese",
-        "presentacion": "hola people",
-        
-      }
 ];
 
 export const donationsA = [

@@ -213,6 +213,11 @@ hr{
     background-color: var(--pink-hover);
 }
 
+.edit-profile-button{
+    cursor: pointer;
+}
+
+
 @media (max-width: 1024px){
     .my-prof-cont{
         padding: 60px 20px;

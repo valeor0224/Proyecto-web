@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AdopcionAdminCard.css';
 import { formSubmissions } from '../../initial-data';
 import DisplayAdopAdmin from '../../DisplayAdopAdmin/DisplayAdopAdmin';
+import envelopelogo from '../../../assets/img/envelope-gray.svg';
 
 function AdopcionAdminCard() {
   const [selectedData, setSelectedData] = useState(null);
@@ -21,7 +22,7 @@ function AdopcionAdminCard() {
               className='envelop-adopcion-admin'
               onClick={() => handleOpenButtonClick(submission)}
             >
-              Open
+             <img src={envelopelogo} alt="delete-logo"/> 
             </button>
           </div>
         ))}
