@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import defaultImage from "../../assets/img/default-profilepic.svg";
 import './EditMyProfile.css';
+import { useUserContext } from '../../UserContext';
 
 function EditMyProfile() {
+    const { user2 } = useUserContext(); // Assuming you have a user context
+
     const [selectedFile, setSelectedFile] = useState(null);
     const [formData, setFormData] = useState({
         nombre: '',
@@ -18,43 +21,63 @@ function EditMyProfile() {
         profilePicture: null,
     });
 
+    useEffect(() => {
+        // Fetch user data when the component mounts
+        if (user2) {
+            const { userName, userLastName, userEmail, userPhone, userDepto, userAddress, userDescription, password } = user2;
+            setFormData({
+                ...formData,
+                nombre: userName,
+                apellido: userLastName,
+                correoElectronico: userEmail,
+                numeroContacto: userPhone,
+                departamento: userDepto,
+                direccion: userAddress,
+                presentacion: userDescription,
+                contrasena: password,
+
+            });
+        }
+    }, [user2]);
+
+
     const [passwordError, setPasswordError] = useState('');
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-    
+
         // Update the profilePicture in formData
         setFormData({
-          ...formData,
-          profilePicture: file,
+            ...formData,
+            profilePicture: file,
         });
-    
+
         setSelectedFile(file);
-      };
-    
-      const handleInputChange = (event) => {
+    };
+
+    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData({
-          ...formData,
-          [name]: value,
+            ...formData,
+            [name]: value,
         });
-      };
-    
-      const handleSubmit = (event) => {
+    };
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-    
+
         // Password validation
         if (formData.contrasena !== formData.confirmContrasena) {
-          setPasswordError('Las contraseñas no coinciden');
-          return;
+            setPasswordError('Las contraseñas no coinciden');
+            return;
         }
-    
+
         // Clear password error if validation passes
         setPasswordError('');
-    
+
         // Log form data including the profilePicture
         console.log(formData);
-      };
+    };
 
     return (
         <>
@@ -157,17 +180,7 @@ function EditMyProfile() {
                                     placeholder="Cree su contraseña"
                                 />
 
-                                <label htmlFor="confirmContrasena">Confirmar Contraseña:</label>
-                                <input
-                                    type="password"
-                                    id="confirmContrasena"
-                                    name="confirmContrasena"
-                                    value={formData.confirmContrasena}
-                                    onChange={handleInputChange}
-                                    required
-                                    placeholder="Escriba de nuevo su contraseña"
-                                />
-                                {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
+
 
                             </div>
 
@@ -221,6 +234,18 @@ function EditMyProfile() {
                                     required
                                     placeholder="Escriba algo sobre usted"
                                 />
+
+                                <label htmlFor="confirmContrasena">Confirmar Contraseña:</label>
+                                <input
+                                    type="password"
+                                    id="confirmContrasena"
+                                    name="confirmContrasena"
+                                    value={formData.confirmContrasena}
+                                    onChange={handleInputChange}
+                                    required
+                                    placeholder="Escriba de nuevo su contraseña"
+                                />
+                                {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
 
                             </div>
 

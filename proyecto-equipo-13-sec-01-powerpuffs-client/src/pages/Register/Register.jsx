@@ -22,39 +22,80 @@ function Register() {
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-    
+
         // Update the profilePicture in formData
         setFormData({
-          ...formData,
-          profilePicture: file,
+            ...formData,
+            profilePicture: file,
         });
-    
+
         setSelectedFile(file);
-      };
-    
-      const handleInputChange = (event) => {
+    };
+
+    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData({
-          ...formData,
-          [name]: value,
+            ...formData,
+            [name]: value,
         });
-      };
-    
-      const handleSubmit = (event) => {
+    };
+
+
+ /*   const handleSubmit = async (event) => {
         event.preventDefault();
-    
+      
+        // Password validation, etc.
+      
+        const formDataToSend = new FormData();
+        formDataToSend.append('profilePicture', formData.profilePicture);
+      
+        // Append other form data
+        Object.keys(formData).forEach((key) => {
+          if (key !== 'profilePicture') {
+            formDataToSend.append(key, formData[key]);
+          }
+        });
+      
+        try {
+          // Send form data to the server
+          const response = await fetch('http://localhost:3001/upload', {
+            method: 'POST',
+            body: formDataToSend,
+          });
+      
+          if (response.ok) {
+            const { success } = await response.json();
+      
+            if (success) {
+              console.log('File uploaded and data saved successfully.');
+              // Redirect or perform any other actions after successful upload
+            } else {
+              console.error('File upload succeeded, but data saving failed.');
+            }
+          } else {
+            console.error('File upload failed.');
+          }
+        } catch (error) {
+          console.error('Error uploading file:', error);
+        }
+      };
+*/
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
         // Password validation
         if (formData.contrasena !== formData.confirmContrasena) {
-          setPasswordError('Las contraseñas no coinciden');
-          return;
+            setPasswordError('Las contraseñas no coinciden');
+            return;
         }
-    
+
         // Clear password error if validation passes
         setPasswordError('');
-    
+
         // Log form data including the profilePicture
         console.log(formData);
-      };
+    };
 
     return (
         <>
@@ -157,17 +198,7 @@ function Register() {
                                     placeholder="Cree su contraseña"
                                 />
 
-                                <label htmlFor="confirmContrasena">Confirmar Contraseña:</label>
-                                <input
-                                    type="password"
-                                    id="confirmContrasena"
-                                    name="confirmContrasena"
-                                    value={formData.confirmContrasena}
-                                    onChange={handleInputChange}
-                                    required
-                                    placeholder="Escriba de nuevo su contraseña"
-                                />
-                                {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
+
 
                             </div>
 
@@ -221,6 +252,19 @@ function Register() {
                                     required
                                     placeholder="Escriba algo sobre usted"
                                 />
+
+
+                                <label htmlFor="confirmContrasena">Confirmar Contraseña:</label>
+                                <input
+                                    type="password"
+                                    id="confirmContrasena"
+                                    name="confirmContrasena"
+                                    value={formData.confirmContrasena}
+                                    onChange={handleInputChange}
+                                    required
+                                    placeholder="Escriba de nuevo su contraseña"
+                                />
+                                {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
 
                             </div>
 
