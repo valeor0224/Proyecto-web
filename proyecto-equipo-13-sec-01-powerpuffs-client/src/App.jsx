@@ -30,8 +30,8 @@ function App() {
       <Routes>
         <Route path="user-list" element={<UserList />} />
         <Route path='/register' element={<Register/>}/>
-        <Route path="VerSoliAdop" element={<VerSoliAdop />} />
-        <Route path="VerDonaciones" element={<VerDonaciones/>} />
+        <Route path="/Solicitudes-de-adopcion" element={<VerSoliAdop />} />
+        <Route path="/Donaciones-tool" element={<VerDonaciones/>} />
         <Route path="/" element={<Home />} />
         <Route path="Adopta" element={<Adopta />} />
         <Route path="/AdoptionForm/:gatoImage/:nameCat" element={<AdoptionForm />} />
