@@ -1,6 +1,6 @@
 //importando modelo del articulo
 const Event = require("../models/event.model");
-//const debug = require("debug")("app:event-controller");
+const debug = require("debug")("app:event-controller");
 
 const controller = {};
 
@@ -11,9 +11,9 @@ controller.save = async (req, res, next) => {
     try {
         const { title, description, publication_date, image, label, publication_zone, author_name } = req.body;
         const { id } = req.params;
-        //const { user } = req;
+        const { user } = req;
 
-        //debug({user});
+        debug({user});
 
         /*const article = new Event({
             title: title,
@@ -68,7 +68,7 @@ controller.findOneByLabel = async (req, res, next) => {
             return res.status(404).json({ error: "Event not found" })
         }
 
-        return res.status(200).json({ post });
+        return res.status(200).json({ publication });
     } catch (error) {
         console.error(error);
         return res.status(500).json({ error: "Internal Server Error" });
