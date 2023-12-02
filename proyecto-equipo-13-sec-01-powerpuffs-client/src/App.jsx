@@ -19,6 +19,8 @@ import Register from './pages/Register/Register.jsx';
 
 import { events, news } from '../src/components/initial-data.js';
 import SmallAddEvent from './pages/Event/SmallAddEvent/SmallAddEvent.jsx';
+import EditMyProfile from './pages/EditMyProfile/EditMyProfile.jsx';
+import MyProfile from './pages/MyProfile/MyProfile.jsx';
 
 function App() {
 
@@ -48,6 +50,8 @@ function App() {
         />
         
         <Route path="/SmallAddEvent" element={ <SmallAddEvent />} />
+        <Route path='/edit-my-profile' element={<EditMyProfile />} />
+        <Route path='/MyProfile' element={<MyProfile />} />
 
 
 
