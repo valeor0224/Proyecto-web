@@ -35,6 +35,12 @@ const PetSchema = new Schema({
         trim: true,
         required: true,
     },
+    
+    image:{
+        type: String,
+        trim: true,
+        required: true, 
+    },
 }, { timestamps: true });
 
 module.exports = mongoose.model("pet", PetSchema);
