@@ -40,10 +40,12 @@ const Login = () => {
   }
 };
 
+
 const handleRegisterClick = () => {
     // Navigate to the Register page when the button is clicked
     navigate('/register');
   };
+
 
 
     return (

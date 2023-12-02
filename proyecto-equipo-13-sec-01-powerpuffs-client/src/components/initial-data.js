@@ -12,6 +12,7 @@ export const events = [
         eventBudget: "$100.00",
         eventStatus: "pendiente",
         eventCreatedBy: "",
+        eventAssistList:["1", "3"],
     },
     {
         id: 2,
@@ -26,6 +27,7 @@ export const events = [
         eventBudget: "$200.00",
         eventStatus: "aprobado",
         eventCreatedBy: "",
+        eventAssistList:["1", "4"],
     },
     {
         id: 3,
@@ -313,7 +315,7 @@ export const user = [
         userPhone: "503 7777 7777",
         userAddress: "Rpto Metro",
         userDepto: "San Salvador",
-        userDescription: "About me.......",
+        userDescription: "About me. Lorem ipsum 1 Lorem ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1 ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1ipsum 1 Lorem ipsum 1 Lorem aaaaa ipsum 1 Lorem aaaaa ipsum 1",
         userProfilePic: "https://i0.wp.com/puppis.blog/wp-content/uploads/2022/02/abc-cuidado-de-los-gatos-min.jpg?resize=1024%2C681&ssl=1",
     },
     {
@@ -431,6 +433,20 @@ export const donationsA = [
         dui: '00000000-3',
         email: 'pedromar@gmail',
         telefono: '1215-2211',
+        departamento: 'Usulután',
+        direccion: 'buenas buenas',
+        amount: '$400.00',
+        dedicar: '',
+        otro: '',
+        paymentMethod: 'tarjeta de débito',
+        fechaTrans: "01-09-2023"
+    },
+    {
+        name: 'UsuarioAdmin',
+        apellido: 'AdminUsuario',
+        dui: '00000000-3',
+        email: 'admin@gmail.com',
+        telefono: "503 7777 7777",
         departamento: 'Usulután',
         direccion: 'buenas buenas',
         amount: '$400.00',
