@@ -8,7 +8,7 @@ controller.save = async (req, res, next) => {
     //premisa- la ruta save debe de estar autenticado
 
     try {
-        const { name, story, gender, qualities, condition, age, colour } = req.body;
+        const { name, story, gender, qualities, condition, age, colour, image } = req.body;
         const { id } = req.params;
         //const { user } = req;
 
@@ -34,6 +34,7 @@ controller.save = async (req, res, next) => {
         pet["condition"] = condition;
         pet["age"] = age;
         pet["colour"] = colour;
+        pet["image"] = image;
 
         const petSaved = await pet.save();
         if (!petSaved) {
