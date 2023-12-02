@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import './AplicarCard.css';
+import { useUserContext } from '../../../UserContext';
 
 function AplicarCard({ gatoImage, nameCat }) {
-
+  const { user2 } = useUserContext(); 
+  const navigate = useNavigate();
+  
   const handleAdoptionClick = () => {
-    // Redirect to the AdoptionForm and pass the data as query params
-    window.location.href = `/AdoptionForm/${encodeURIComponent(gatoImage)}/${encodeURIComponent(nameCat)}`;
+     // Check if the user is logged in before redirecting to AdoptionForm
+     if (user2) {
+      // If logged in, navigate to the AdoptionForm and pass the data as query params
+      navigate(`/AdoptionForm/${encodeURIComponent(gatoImage)}/${encodeURIComponent(nameCat)}`);
+    } else {
+      // If not logged in, navigate to the login page
+      navigate('/login');
+    }
 
   };
 

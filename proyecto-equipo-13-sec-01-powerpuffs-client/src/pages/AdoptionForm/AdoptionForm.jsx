@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './AdoptionForm.css';
-
+import { useUserContext } from '../../UserContext';
 
 function AdoptionForm() {
+    const { user2 } = useUserContext(); // Assuming you have a user context
     const { gatoImage, nameCat } = useParams();
 
     const [formData, setFormData] = useState({
@@ -31,6 +32,21 @@ function AdoptionForm() {
         aceptoChecked: false, // Set initial value for boolean fields
     });
 
+    useEffect(() => {
+        // Fetch user data when the component mounts
+        if (user2) {
+            const { userName, userLastName, userEmail, userPhone, userDepto, userAddress } = user2;
+            setFormData({
+                ...formData,
+                nombre: userName,
+                apellido: userLastName,
+                email: userEmail,
+                telefono: userPhone,
+                departamento: userDepto,
+                direccion: userAddress,
+            });
+        }
+    }, [user2]);
 
     /* const handleAceptoChange = () => {
          console.log('Acepto checked:', !formData.aceptoChecked);
