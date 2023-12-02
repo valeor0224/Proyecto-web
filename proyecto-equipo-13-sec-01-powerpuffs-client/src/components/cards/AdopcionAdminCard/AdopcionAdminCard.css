@@ -24,3 +24,9 @@
 .AdopcionAdmin-Card p{
     margin: 1rem;
 }
+
+.envelop-adopcion-admin{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

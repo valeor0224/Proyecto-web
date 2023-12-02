@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './UserListCard.css';
 import EditRoleCard from '../EditRoleCard/EditRoleCard';
+import deletebutton from '../../../assets/img/delete-gray.svg';
+import editbutton from '../../../assets/img/edit-button-gray.svg';
 
 const UserTable = ({ users, onDeleteUser, openEditRolePopup }) => {
   return (
@@ -24,8 +26,8 @@ const UserTable = ({ users, onDeleteUser, openEditRolePopup }) => {
             <td>{user.userEmail}</td>
             <td>{user.roleId}</td>
             <td>
-              <button onClick={() => onDeleteUser(user.id)}>Delete</button>
-              <button onClick={() => openEditRolePopup(user.id)}>Edit Role</button>
+              <button onClick={() => onDeleteUser(user.id)}><img src={deletebutton} alt="delete-logo"/></button>
+              <button onClick={() => openEditRolePopup(user.id)}><img src={editbutton} alt="edit-logo"/></button>
             </td>
           </tr>
         ))}
