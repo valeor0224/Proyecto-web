@@ -1,6 +1,6 @@
 //importando modelo del articulo
 const Event = require("../models/event.model");
-const debug = require("debug")("app:event-controller");
+//const debug = require("debug")("app:event-controller");
 
 const controller = {};
 
@@ -11,9 +11,9 @@ controller.save = async (req, res, next) => {
     try {
         const { title, description, publication_date, image, label, publication_zone, author_name } = req.body;
         const { id } = req.params;
-        const { user } = req;
+        //const { user } = req;
 
-        debug({user});
+        //debug({user});
 
         /*const article = new Event({
             title: title,
